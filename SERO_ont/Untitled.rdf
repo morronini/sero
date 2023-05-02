@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.test.org/test01"
+         xmlns="http://www.test.org/test01#">
+
+<owl:Ontology rdf:about="http://www.test.org/test01"/>
+
+<owl:Class rdf:about="#SteelBeam">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<SteelBeam rdf:about="#SteelBeam_ed7fdb25-0b15-4e5d-9d4f-6220eb4702f3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</SteelBeam>
+
+<SteelBeam rdf:about="#SteelBeam_70c7eb7d-6fba-443e-aa8c-7a2b1034871f">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</SteelBeam>
+
+<SteelBeam rdf:about="#SteelBeam_36414450-ebe4-4307-b42a-437e7d02ca51">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</SteelBeam>
+
+
+</rdf:RDF>

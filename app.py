@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request
 import argparse
+import uuid
 
 app = Flask(__name__)
-
 
 @app.route('/userinput', methods=['GET', 'POST'])
 def userinput():
@@ -10,18 +10,18 @@ def userinput():
         form_data = request.form.to_dict()
         reusable_or_non_reusable = perform_calcs(form_data)
         replacements = {"reusable_or_non_reusable": reusable_or_non_reusable}
-        return render_template('result.html', **replacements)
+        return render_template('result.html', **replacements) #'result.html'
     else:
-        return render_template('userinput_custom.html')
+        return render_template('userinput_custom_05.html') #'userinput_custom.html'
 
 def perform_calcs(form_data):
     print(form_data)
     if form_data["is_reusable"] == "Yes":
-        return "REUSABLE"
+        return "REUSABLE"dddd
     elif form_data["is_reusable"] == "No":
         return "NOT REUSABLE"
     else:
-        return "WE DON'T KNOW"
+        return "MORE INFORMATION NEEDED"
 
 def parseArguments():
     parser = argparse.ArgumentParser()
@@ -36,4 +36,3 @@ if __name__ == "__main__":
   else:
     from waitress import serve
     serve(app, host="0.0.0.1", port=8081)
-

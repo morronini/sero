@@ -1,0 +1,2849 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.sero.org/SteelElementReuseOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.sero.org/SteelElementReuseOntology"
+     versionIRI="http://www.sero.org/SteelElementReuseOntology/1.0.0">
+    <Prefix name="" IRI="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="ns" IRI="http://www.w3.org/2003/06/sw-vocab-status/ns#"/>
+    <Prefix name="dc1" IRI="http://purl.org/dc/"/>
+    <Prefix name="dot" IRI="https://w3id.org/dot#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="swrla" IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"/>
+    <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb#"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="schema" IRI="http://schema.org/#"/>
+    <Prefix name="SteelElementReuseOntology" IRI="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#"/>
+    <Prefix name="SteelElementReuseOntology1" IRI="http://www.sero.org/SteelElementReuseOntology#"/>
+    <Import>https://pi.pauwel.be/voc/buildingelement</Import>
+    <Import>https://w3id.org/digitalconstruction/0.5/Materials</Import>
+    <Import>https://w3id.org/dot/0.8</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:contributor"/>
+        <Literal>Leonhard Schönfelder</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="terms:title"/>
+        <Literal>SERO - Steel Element Reuse Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Ontology about the Reuse domain, focusing on Reuse of structural steel elements</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="SteelElementReuseOntology:ChemicalDamageCorrosion"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="SteelElementReuseOntology:Documentation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="SteelElementReuseOntology:MaterialHunter"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamage"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamageAbrasion"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamageEmbrittlement"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamageFatigue"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamagePlasticDeformation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="SteelElementReuseOntology:TechnicalDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AdequacyTestingDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CEMarking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoatingDamage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HProfile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HollowProfile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IProfile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LProfile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NewCEMarking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonReusable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonReusableSteelBeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OriginalCEMarking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OriginalMaterialDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OriginalTestCertificatesDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicalDamageRadiation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProfilePart"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProfilePartBar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProfilePartFlange"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProfilePartWeb"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProfileShape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProfileShapeH"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProfileShapeI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProfileShapeL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProfileShapeT"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProfileShapeU"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProfileShapeZ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ReliabilityTestingDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reusable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ReusableSteelBeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ReuseAudit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ReuseClassA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ReuseClassASteelBeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ReuseClassB"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ReuseClassBSteelBeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ReuseClassC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ReuseClassCSteelBeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ReusePotential"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SolidProfile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SteelBeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SteelDamageCausation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TProfile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TestingProtocolDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UProfile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ZProfile"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://pi.pauwel.be/voc/buildingelement#Beam-BEAM"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://pi.pauwel.be/voc/buildingelement#BuildingElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://schema.org/Product"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/damagemodels/cdo#ChemicalDamage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Entities#MaterialEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Material"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#MaterialObjectStructure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#MetallicMaterial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dot:Causation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dot:ClassifiedDamage"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dot:Damage"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dot:DamageArea"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dot:DamageDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dot:DamageElement"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dot:Defect"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dot:Inspection"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dot:Inspector"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dot:StructuralDamage"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dot:UnclassifiedDamage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#coveredByReuseAudit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#documentationFromReuseAudit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAdequacyTestingDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCEMarking"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCausationCorrosiveExposure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCausationFire"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCausationRadiation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDamageDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMaterialHunter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNewCEMarking"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOriginalCEMarking"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOriginalMaterialDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOriginalTestCertificatesDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasProfilePart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasProfileShape"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasReliabilityTestingDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasReuseClassA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasReuseClassB"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasReuseClassC"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasReusePotential"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTestingProtocolDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCausationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDamageOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isNonReusable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isProfileShapeOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isReusable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasProfile"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="Https://w3id.org/digitalconstruction/0.5/Materials#hasDefinedValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="Https://w3id.org/digitalconstruction/0.5/Materials#hasEstimatedValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="Https://w3id.org/digitalconstruction/0.5/Materials#hasMeasuredValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAge"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasBarHeight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasBarThickness"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasBarWidth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFlangeHeight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFlangeThickness"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFlangeWidth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMaterialThickness"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasProfileDiameter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasProfileHeight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasProfileWidth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSteelGrade"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasWebHeight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasWebThickness"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasWebWidth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasValue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="SteelElementReuseOntology:Age"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AdequacyTestingDocumentation_SteelBeam02"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Aluminium"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CorrosiveExposure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Damage01_SteelBeam03"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Damage01_SteelBeam04"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Damage01_SteelBeam06"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Damage01_SteelBeam07"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Damage02_SteelBeam04"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DamageDocumentation_SteelBeam01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DamageDocumentation_SteelBeam02"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DamageDocumentation_SteelBeam04"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DamageDocumentation_SteelBeam06"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Earthquake"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fire"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Impact"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NewCEMarking_SteelBeam02"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NonReusable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OriginalCEMarking_SteelBeam01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OriginalMaterialDocumentation_SteelBeam01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OriginalTestCertificatesDocumentation_SteelBeam01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Radiation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ReclamationAudit01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ReliabilityTestingDocumentation_SteelBeam02"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Reusable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ReuseClassA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ReuseClassB"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ReuseClassC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SteelBeam01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SteelBeam02"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SteelBeam03"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SteelBeam04"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SteelBeam05"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SteelBeam06"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SteelBeam07"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TestingProtocolDocumentation_SteelBeam06"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wear"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/digitalconstruction/0.5/Materials#CastIron"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://w3id.org/digitalconstruction/0.5/Materials#Steel"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:sameAs"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="SteelElementReuseOntology:ChemicalDamageCorrosion"/>
+        <ObjectIntersectionOf>
+            <Class IRI="https://w3id.org/damagemodels/cdo#ChemicalDamage"/>
+            <ObjectHasValue>
+                <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+                <NamedIndividual IRI="#CorrosiveExposure"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamageAbrasion"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamage"/>
+            <ObjectHasValue>
+                <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+                <NamedIndividual IRI="#Wear"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamageEmbrittlement"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamage"/>
+            <ObjectHasValue>
+                <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+                <NamedIndividual IRI="#CorrosiveExposure"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+                <NamedIndividual IRI="#Radiation"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamageFatigue"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamage"/>
+            <ObjectHasValue>
+                <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+                <NamedIndividual IRI="#Fire"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+                <NamedIndividual IRI="#Impact"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamagePlasticDeformation"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamage"/>
+            <ObjectHasValue>
+                <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+                <NamedIndividual IRI="#Earthquake"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+                <NamedIndividual IRI="#Fire"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+                <NamedIndividual IRI="#Impact"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#HProfile"/>
+        <ObjectIntersectionOf>
+            <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasProfileShape"/>
+                <Class IRI="#ProfileShapeH"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NonReusable"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasReusePotential"/>
+            <NamedIndividual IRI="#NonReusable"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NonReusableSteelBeam"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SteelBeam"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasReusePotential"/>
+                <NamedIndividual IRI="#NonReusable"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PhysicalDamageRadiation"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamage"/>
+            <ObjectHasValue>
+                <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+                <NamedIndividual IRI="#Radiation"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ProfilePartBar"/>
+        <Class IRI="#ProfilePartWeb"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ReusableSteelBeam"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SteelBeam"/>
+            <ObjectComplementOf>
+                <Class IRI="#NonReusableSteelBeam"/>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SteelBeam"/>
+        <ObjectIntersectionOf>
+            <Class IRI="https://pi.pauwel.be/voc/buildingelement#Beam-BEAM"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial"/>
+                <NamedIndividual IRI="https://w3id.org/digitalconstruction/0.5/Materials#Steel"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+        <ObjectIntersectionOf>
+            <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#MaterialObjectStructure"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasProfilePart"/>
+                <Class IRI="#ProfilePart"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class abbreviatedIRI="SteelElementReuseOntology:MaterialHunter"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamage"/>
+        <Class abbreviatedIRI="dot:ClassifiedDamage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="SteelElementReuseOntology:TechnicalDocumentation"/>
+        <Class abbreviatedIRI="SteelElementReuseOntology:Documentation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AdequacyTestingDocumentation"/>
+        <Class IRI="#TestingProtocolDocumentation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CEMarking"/>
+        <Class abbreviatedIRI="SteelElementReuseOntology:Documentation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CoatingDamage"/>
+        <Class abbreviatedIRI="dot:ClassifiedDamage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HollowProfile"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IProfile"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LProfile"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NewCEMarking"/>
+        <Class IRI="#CEMarking"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonReusable"/>
+        <Class IRI="#ReusePotential"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OriginalCEMarking"/>
+        <Class IRI="#CEMarking"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OriginalMaterialDocumentation"/>
+        <Class abbreviatedIRI="SteelElementReuseOntology:Documentation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OriginalTestCertificatesDocumentation"/>
+        <Class abbreviatedIRI="SteelElementReuseOntology:Documentation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProfilePart"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#MaterialObjectStructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProfilePartBar"/>
+        <Class IRI="#ProfilePart"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProfilePartFlange"/>
+        <Class IRI="#ProfilePart"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProfilePartWeb"/>
+        <Class IRI="#ProfilePart"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProfileShape"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#MaterialObjectStructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProfileShapeH"/>
+        <Class IRI="#ProfileShape"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProfileShapeI"/>
+        <Class IRI="#ProfileShape"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProfileShapeL"/>
+        <Class IRI="#ProfileShape"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProfileShapeT"/>
+        <Class IRI="#ProfileShape"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProfileShapeU"/>
+        <Class IRI="#ProfileShape"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProfileShapeZ"/>
+        <Class IRI="#ProfileShape"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ReliabilityTestingDocumentation"/>
+        <Class IRI="#TestingProtocolDocumentation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reusable"/>
+        <Class IRI="#ReusePotential"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ReuseAudit"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ReuseClassA"/>
+        <Class IRI="#Reusable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ReuseClassASteelBeam"/>
+        <Class IRI="#ReusableSteelBeam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ReuseClassB"/>
+        <Class IRI="#Reusable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ReuseClassBSteelBeam"/>
+        <Class IRI="#ReusableSteelBeam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ReuseClassC"/>
+        <Class IRI="#Reusable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ReuseClassCSteelBeam"/>
+        <Class IRI="#ReusableSteelBeam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SolidProfile"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SteelDamageCausation"/>
+        <Class abbreviatedIRI="dot:Causation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TProfile"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TestingProtocolDocumentation"/>
+        <Class abbreviatedIRI="SteelElementReuseOntology:Documentation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UProfile"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ZProfile"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://pi.pauwel.be/voc/buildingelement#Beam-BEAM"/>
+        <Class IRI="https://pi.pauwel.be/voc/buildingelement#BuildingElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://pi.pauwel.be/voc/buildingelement#BuildingElement"/>
+        <Class IRI="https://schema.org/Product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/damagemodels/cdo#ChemicalDamage"/>
+        <Class abbreviatedIRI="dot:ClassifiedDamage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject"/>
+        <Class IRI="https://schema.org/Product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Material"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Entities#MaterialEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#MaterialObjectStructure"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#MetallicMaterial"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dot:ClassifiedDamage"/>
+        <Class abbreviatedIRI="dot:Damage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dot:DamageArea"/>
+        <Class abbreviatedIRI="dot:Damage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dot:DamageDocumentation"/>
+        <Class abbreviatedIRI="SteelElementReuseOntology:Documentation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dot:DamageElement"/>
+        <Class abbreviatedIRI="dot:Damage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dot:Defect"/>
+        <Class abbreviatedIRI="dot:Damage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dot:Description"/>
+        <Class abbreviatedIRI="dot:DamageDocumentation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dot:ExternalResource"/>
+        <Class abbreviatedIRI="dot:DamageDocumentation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dot:Inspection"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dot:Inspector"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dot:StructuralDamage"/>
+        <Class abbreviatedIRI="dot:Damage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="dot:UnclassifiedDamage"/>
+        <Class abbreviatedIRI="dot:Damage"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#HProfile"/>
+        <Class IRI="#HollowProfile"/>
+        <Class IRI="#IProfile"/>
+        <Class IRI="#LProfile"/>
+        <Class IRI="#SolidProfile"/>
+        <Class IRI="#TProfile"/>
+        <Class IRI="#UProfile"/>
+        <Class IRI="#ZProfile"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#NonReusable"/>
+        <Class IRI="#Reusable"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ProfileShapeH"/>
+        <Class IRI="#ProfileShapeI"/>
+        <Class IRI="#ProfileShapeL"/>
+        <Class IRI="#ProfileShapeT"/>
+        <Class IRI="#ProfileShapeU"/>
+        <Class IRI="#ProfileShapeZ"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ReuseClassA"/>
+        <Class IRI="#ReuseClassB"/>
+        <Class IRI="#ReuseClassC"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ReuseClassASteelBeam"/>
+        <Class IRI="#ReuseClassBSteelBeam"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="dot:ClassifiedDamage"/>
+        <Class abbreviatedIRI="dot:UnclassifiedDamage"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="dot:Defect"/>
+        <Class abbreviatedIRI="dot:StructuralDamage"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#MetallicMaterial"/>
+        <NamedIndividual IRI="#Aluminium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SteelDamageCausation"/>
+        <NamedIndividual IRI="#CorrosiveExposure"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="dot:DamageDocumentation"/>
+        <NamedIndividual IRI="#DamageDocumentation_SteelBeam01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SteelDamageCausation"/>
+        <NamedIndividual IRI="#Earthquake"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SteelDamageCausation"/>
+        <NamedIndividual IRI="#Fire"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SteelDamageCausation"/>
+        <NamedIndividual IRI="#Impact"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ReusePotential"/>
+        <NamedIndividual IRI="#NonReusable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OriginalMaterialDocumentation"/>
+        <NamedIndividual IRI="#OriginalMaterialDocumentation_SteelBeam01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OriginalTestCertificatesDocumentation"/>
+        <NamedIndividual IRI="#OriginalTestCertificatesDocumentation_SteelBeam01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SteelDamageCausation"/>
+        <NamedIndividual IRI="#Radiation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ReuseAudit"/>
+        <NamedIndividual IRI="#ReclamationAudit01"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ReusePotential"/>
+        <NamedIndividual IRI="#Reusable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UProfile"/>
+        <NamedIndividual IRI="#SteelBeam04"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SteelDamageCausation"/>
+        <NamedIndividual IRI="#Wear"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#MetallicMaterial"/>
+        <NamedIndividual IRI="https://w3id.org/digitalconstruction/0.5/Materials#CastIron"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#MetallicMaterial"/>
+        <NamedIndividual IRI="https://w3id.org/digitalconstruction/0.5/Materials#Steel"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Aluminium"/>
+        <NamedIndividual IRI="https://w3id.org/digitalconstruction/0.5/Materials#CastIron"/>
+        <NamedIndividual IRI="https://w3id.org/digitalconstruction/0.5/Materials#Steel"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#CorrosiveExposure"/>
+        <NamedIndividual IRI="#Earthquake"/>
+        <NamedIndividual IRI="#Fire"/>
+        <NamedIndividual IRI="#Impact"/>
+        <NamedIndividual IRI="#Radiation"/>
+        <NamedIndividual IRI="#Wear"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Damage01_SteelBeam04"/>
+        <NamedIndividual IRI="#Damage02_SteelBeam04"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#NonReusable"/>
+        <NamedIndividual IRI="#Reusable"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#SteelBeam01"/>
+        <NamedIndividual IRI="#SteelBeam02"/>
+        <NamedIndividual IRI="#SteelBeam03"/>
+        <NamedIndividual IRI="#SteelBeam04"/>
+        <NamedIndividual IRI="#SteelBeam05"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coveredByReuseAudit"/>
+        <NamedIndividual IRI="#Damage01_SteelBeam04"/>
+        <NamedIndividual IRI="#ReclamationAudit01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dot:coveredInDocumentation"/>
+        <NamedIndividual IRI="#Damage01_SteelBeam04"/>
+        <NamedIndividual IRI="#DamageDocumentation_SteelBeam04"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+        <NamedIndividual IRI="#Damage01_SteelBeam04"/>
+        <NamedIndividual IRI="#Radiation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coveredByReuseAudit"/>
+        <NamedIndividual IRI="#Damage01_SteelBeam06"/>
+        <NamedIndividual IRI="#ReclamationAudit01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+        <NamedIndividual IRI="#Damage01_SteelBeam06"/>
+        <NamedIndividual IRI="#Fire"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+        <NamedIndividual IRI="#Damage01_SteelBeam07"/>
+        <NamedIndividual IRI="#Radiation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coveredByReuseAudit"/>
+        <NamedIndividual IRI="#Damage02_SteelBeam04"/>
+        <NamedIndividual IRI="#ReclamationAudit01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dot:coveredInDocumentation"/>
+        <NamedIndividual IRI="#Damage02_SteelBeam04"/>
+        <NamedIndividual IRI="#DamageDocumentation_SteelBeam04"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+        <NamedIndividual IRI="#Damage02_SteelBeam04"/>
+        <NamedIndividual IRI="#CorrosiveExposure"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coveredByReuseAudit"/>
+        <NamedIndividual IRI="#SteelBeam01"/>
+        <NamedIndividual IRI="#ReclamationAudit01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDamageDocumentation"/>
+        <NamedIndividual IRI="#SteelBeam01"/>
+        <NamedIndividual IRI="#DamageDocumentation_SteelBeam01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOriginalCEMarking"/>
+        <NamedIndividual IRI="#SteelBeam01"/>
+        <NamedIndividual IRI="#OriginalCEMarking_SteelBeam01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOriginalMaterialDocumentation"/>
+        <NamedIndividual IRI="#SteelBeam01"/>
+        <NamedIndividual IRI="#OriginalMaterialDocumentation_SteelBeam01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasOriginalTestCertificatesDocumentation"/>
+        <NamedIndividual IRI="#SteelBeam01"/>
+        <NamedIndividual IRI="#OriginalTestCertificatesDocumentation_SteelBeam01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAdequacyTestingDocumentation"/>
+        <NamedIndividual IRI="#SteelBeam02"/>
+        <NamedIndividual IRI="#AdequacyTestingDocumentation_SteelBeam02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDamageDocumentation"/>
+        <NamedIndividual IRI="#SteelBeam02"/>
+        <NamedIndividual IRI="#DamageDocumentation_SteelBeam02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasNewCEMarking"/>
+        <NamedIndividual IRI="#SteelBeam02"/>
+        <NamedIndividual IRI="#NewCEMarking_SteelBeam02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasReliabilityTestingDocumentation"/>
+        <NamedIndividual IRI="#SteelBeam02"/>
+        <NamedIndividual IRI="#ReliabilityTestingDocumentation_SteelBeam02"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dot:hasDamage"/>
+        <NamedIndividual IRI="#SteelBeam03"/>
+        <NamedIndividual IRI="#Damage01_SteelBeam03"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coveredByReuseAudit"/>
+        <NamedIndividual IRI="#SteelBeam04"/>
+        <NamedIndividual IRI="#ReclamationAudit01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDamageDocumentation"/>
+        <NamedIndividual IRI="#SteelBeam04"/>
+        <NamedIndividual IRI="#DamageDocumentation_SteelBeam04"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dot:hasDamage"/>
+        <NamedIndividual IRI="#SteelBeam04"/>
+        <NamedIndividual IRI="#Damage01_SteelBeam04"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dot:hasDamage"/>
+        <NamedIndividual IRI="#SteelBeam04"/>
+        <NamedIndividual IRI="#Damage02_SteelBeam04"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#coveredByReuseAudit"/>
+        <NamedIndividual IRI="#SteelBeam06"/>
+        <NamedIndividual IRI="#ReclamationAudit01"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDamageDocumentation"/>
+        <NamedIndividual IRI="#SteelBeam06"/>
+        <NamedIndividual IRI="#DamageDocumentation_SteelBeam06"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dot:hasDamage"/>
+        <NamedIndividual IRI="#SteelBeam06"/>
+        <NamedIndividual IRI="#Damage01_SteelBeam06"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dot:hasDamage"/>
+        <NamedIndividual IRI="#SteelBeam07"/>
+        <NamedIndividual IRI="#Damage01_SteelBeam07"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAge"/>
+        <NamedIndividual IRI="#SteelBeam01"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">70</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFlangeThickness"/>
+        <NamedIndividual IRI="#SteelBeam01"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">11.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProfileHeight"/>
+        <NamedIndividual IRI="#SteelBeam01"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">120.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProfileWidth"/>
+        <NamedIndividual IRI="#SteelBeam01"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">120.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSteelGrade"/>
+        <NamedIndividual IRI="#SteelBeam01"/>
+        <Literal>S235JR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasWebHeight"/>
+        <NamedIndividual IRI="#SteelBeam01"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">107.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasWebThickness"/>
+        <NamedIndividual IRI="#SteelBeam01"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">6.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAge"/>
+        <NamedIndividual IRI="#SteelBeam02"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">13</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFlangeThickness"/>
+        <NamedIndividual IRI="#SteelBeam02"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">6.3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProfileHeight"/>
+        <NamedIndividual IRI="#SteelBeam02"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">120.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProfileWidth"/>
+        <NamedIndividual IRI="#SteelBeam02"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">64.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSteelGrade"/>
+        <NamedIndividual IRI="#SteelBeam02"/>
+        <Literal>S235JR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasWebHeight"/>
+        <NamedIndividual IRI="#SteelBeam02"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">98.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasWebThickness"/>
+        <NamedIndividual IRI="#SteelBeam02"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAge"/>
+        <NamedIndividual IRI="#SteelBeam03"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">34</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFlangeThickness"/>
+        <NamedIndividual IRI="#SteelBeam03"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">21.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProfileHeight"/>
+        <NamedIndividual IRI="#SteelBeam03"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">140.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProfileWidth"/>
+        <NamedIndividual IRI="#SteelBeam03"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">126.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSteelGrade"/>
+        <NamedIndividual IRI="#SteelBeam03"/>
+        <Literal>S235JR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasWebHeight"/>
+        <NamedIndividual IRI="#SteelBeam03"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">98.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasWebThickness"/>
+        <NamedIndividual IRI="#SteelBeam03"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">12.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial"/>
+        <NamedIndividual IRI="#SteelBeam03"/>
+        <Literal>Steel</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAge"/>
+        <NamedIndividual IRI="#SteelBeam04"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFlangeThickness"/>
+        <NamedIndividual IRI="#SteelBeam04"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">8.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLength"/>
+        <NamedIndividual IRI="#SteelBeam04"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">12.4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProfileHeight"/>
+        <NamedIndividual IRI="#SteelBeam04"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">120.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProfileWidth"/>
+        <NamedIndividual IRI="#SteelBeam04"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">60.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSteelGrade"/>
+        <NamedIndividual IRI="#SteelBeam04"/>
+        <Literal>S235JR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasWebThickness"/>
+        <NamedIndividual IRI="#SteelBeam04"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial"/>
+        <NamedIndividual IRI="#SteelBeam04"/>
+        <Literal>Steel</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBarHeight"/>
+        <NamedIndividual IRI="#SteelBeam05"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">158.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBarThickness"/>
+        <NamedIndividual IRI="#SteelBeam05"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">7.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFlangeThickness"/>
+        <NamedIndividual IRI="#SteelBeam05"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">11.3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasLength"/>
+        <NamedIndividual IRI="#SteelBeam05"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProfileHeight"/>
+        <NamedIndividual IRI="#SteelBeam05"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">200.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProfileWidth"/>
+        <NamedIndividual IRI="#SteelBeam05"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">90.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSteelGrade"/>
+        <NamedIndividual IRI="#SteelBeam05"/>
+        <Literal>S235RJ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial"/>
+        <NamedIndividual IRI="#SteelBeam05"/>
+        <Literal>Steel</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasBarHeight"/>
+        <NamedIndividual IRI="#SteelBeam06"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">142.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasFlangeThickness"/>
+        <NamedIndividual IRI="#SteelBeam06"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">10.4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProfileHeight"/>
+        <NamedIndividual IRI="#SteelBeam06"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">180.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasProfileWidth"/>
+        <NamedIndividual IRI="#SteelBeam06"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">82.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSteelGrade"/>
+        <NamedIndividual IRI="#SteelBeam06"/>
+        <Literal>S255RJ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasWebThickness"/>
+        <NamedIndividual IRI="#SteelBeam06"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">6.9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial"/>
+        <NamedIndividual IRI="#SteelBeam06"/>
+        <Literal>Steel</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAdequacyTestingDocumentation"/>
+        <ObjectProperty IRI="#hasTestingProtocolDocumentation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCEMarking"/>
+        <ObjectProperty abbreviatedIRI="dot:hasDocumentation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCausationCorrosiveExposure"/>
+        <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCausationFire"/>
+        <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCausationRadiation"/>
+        <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDamageDocumentation"/>
+        <ObjectProperty abbreviatedIRI="dot:hasDocumentation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMaterialHunter"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasNewCEMarking"/>
+        <ObjectProperty IRI="#hasCEMarking"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasOriginalCEMarking"/>
+        <ObjectProperty IRI="#hasCEMarking"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasOriginalMaterialDocumentation"/>
+        <ObjectProperty abbreviatedIRI="dot:hasDocumentation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasOriginalTestCertificatesDocumentation"/>
+        <ObjectProperty abbreviatedIRI="dot:hasDocumentation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasReliabilityTestingDocumentation"/>
+        <ObjectProperty IRI="#hasTestingProtocolDocumentation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasReuseClassA"/>
+        <ObjectProperty IRI="#isReusable"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasReuseClassB"/>
+        <ObjectProperty IRI="#isReusable"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasReuseClassC"/>
+        <ObjectProperty IRI="#isReusable"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTestingProtocolDocumentation"/>
+        <ObjectProperty abbreviatedIRI="dot:hasDocumentation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isNonReusable"/>
+        <ObjectProperty IRI="#hasReusePotential"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isReusable"/>
+        <ObjectProperty IRI="#hasReusePotential"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#documentationFromReuseAudit"/>
+        <ObjectProperty abbreviatedIRI="dot:hasDocumentation"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasProfileShape"/>
+        <ObjectProperty IRI="#isProfileShapeOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isCausationOf"/>
+        <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isDamageOf"/>
+        <ObjectProperty abbreviatedIRI="dot:hasDamage"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isNonReusable"/>
+        <ObjectProperty IRI="#isReusable"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasProfile"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCausationCorrosiveExposure"/>
+        <Class abbreviatedIRI="SteelElementReuseOntology:ChemicalDamageCorrosion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCausationCorrosiveExposure"/>
+        <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamageEmbrittlement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCausationFire"/>
+        <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamageFatigue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCausationFire"/>
+        <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamagePlasticDeformation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCausationRadiation"/>
+        <Class IRI="#PhysicalDamageRadiation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMaterialHunter"/>
+        <Class IRI="#ReuseAudit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasProfilePart"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasProfileShape"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasReuseClassA"/>
+        <Class IRI="#SteelBeam"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasReuseClassB"/>
+        <Class IRI="#SteelBeam"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasReuseClassC"/>
+        <Class IRI="#SteelBeam"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isCausationOf"/>
+        <Class abbreviatedIRI="dot:Causation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isDamageOf"/>
+        <Class abbreviatedIRI="dot:Damage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isProfileShapeOf"/>
+        <Class IRI="#ProfileShape"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="dot:adjacentDamageElement"/>
+        <Class abbreviatedIRI="dot:DamageElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="dot:aggregatesDamageElement"/>
+        <Class abbreviatedIRI="dot:DamageArea"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+        <Class abbreviatedIRI="dot:Damage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="dot:hasDamage"/>
+        <Class IRI="https://schema.org/Product"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="dot:hasDocumentation"/>
+        <Class IRI="#ReuseAudit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="dot:hasDocumentation"/>
+        <Class abbreviatedIRI="dot:Inspection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="dot:hasInspector"/>
+        <Class abbreviatedIRI="dot:Inspection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#coveredByReuseAudit"/>
+        <Class IRI="#ReuseAudit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAdequacyTestingDocumentation"/>
+        <Class IRI="#AdequacyTestingDocumentation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDamageDocumentation"/>
+        <Class abbreviatedIRI="dot:DamageDocumentation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMaterialHunter"/>
+        <Class abbreviatedIRI="SteelElementReuseOntology:MaterialHunter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMaterialHunter"/>
+        <Class abbreviatedIRI="foaf:Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNewCEMarking"/>
+        <Class IRI="#NewCEMarking"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOriginalCEMarking"/>
+        <Class IRI="#OriginalCEMarking"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOriginalMaterialDocumentation"/>
+        <Class IRI="#OriginalMaterialDocumentation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOriginalTestCertificatesDocumentation"/>
+        <Class IRI="#OriginalTestCertificatesDocumentation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasProfilePart"/>
+        <Class IRI="#ProfilePart"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasProfileShape"/>
+        <Class IRI="#ProfileShape"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasReliabilityTestingDocumentation"/>
+        <Class IRI="#ReliabilityTestingDocumentation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasReuseClassA"/>
+        <Class IRI="#ReuseClassA"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasReuseClassB"/>
+        <Class IRI="#ReuseClassB"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasReuseClassC"/>
+        <Class IRI="#ReuseClassC"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasReusePotential"/>
+        <Class IRI="#ReusePotential"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTestingProtocolDocumentation"/>
+        <Class IRI="#TestingProtocolDocumentation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isCausationOf"/>
+        <Class abbreviatedIRI="dot:Damage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDamageOf"/>
+        <Class IRI="https://schema.org/Product"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isProfileShapeOf"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isReusable"/>
+        <Class IRI="#Reusable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Material"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasProfile"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="dot:adjacentDamageElement"/>
+        <Class abbreviatedIRI="dot:DamageElement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="dot:aggregatesDamageElement"/>
+        <Class abbreviatedIRI="dot:DamageElement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="dot:coveredByInspection"/>
+        <Class abbreviatedIRI="dot:Inspection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="dot:coveredInDocumentation"/>
+        <Class abbreviatedIRI="SteelElementReuseOntology:Documentation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+        <Class abbreviatedIRI="dot:Causation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="dot:hasDamage"/>
+        <Class abbreviatedIRI="dot:Damage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="dot:hasDocumentation"/>
+        <Class abbreviatedIRI="SteelElementReuseOntology:Documentation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="dot:hasInspector"/>
+        <Class abbreviatedIRI="SteelElementReuseOntology:MaterialHunter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="dot:hasInspector"/>
+        <Class abbreviatedIRI="dot:Inspector"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasProfile"/>
+            <ObjectProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty abbreviatedIRI="dot:aggregatesDamageElement"/>
+            <ObjectProperty abbreviatedIRI="dot:adjacentDamageElement"/>
+        </ObjectPropertyChain>
+        <ObjectProperty abbreviatedIRI="dot:aggregatesDamageElement"/>
+    </SubObjectPropertyOf>
+    <EquivalentDataProperties>
+        <DataProperty IRI="#hasBarHeight"/>
+        <DataProperty IRI="#hasWebHeight"/>
+    </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="#hasBarThickness"/>
+        <DataProperty IRI="#hasWebThickness"/>
+    </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="#hasBarWidth"/>
+        <DataProperty IRI="#hasWebThickness"/>
+    </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="#hasFlangeHeight"/>
+        <DataProperty IRI="#hasFlangeThickness"/>
+    </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="#hasFlangeWidth"/>
+        <DataProperty IRI="#hasProfileWidth"/>
+    </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="#hasWebThickness"/>
+        <DataProperty IRI="#hasWebWidth"/>
+    </EquivalentDataProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="Https://w3id.org/digitalconstruction/0.5/Materials#hasDefinedValue"/>
+        <DataProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="Https://w3id.org/digitalconstruction/0.5/Materials#hasEstimatedValue"/>
+        <DataProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="Https://w3id.org/digitalconstruction/0.5/Materials#hasMeasuredValue"/>
+        <DataProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasAge"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasBarHeight"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasBarThickness"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasBarWidth"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasFlangeHeight"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasFlangeThickness"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasFlangeWidth"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasLength"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasMaterialThickness"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasProfileDiameter"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasProfileHeight"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasProfileWidth"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasWebHeight"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasWebThickness"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasWebWidth"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasAge"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasBarHeight"/>
+        <Class IRI="#SteelBeam"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasBarHeight"/>
+        <ObjectUnionOf>
+            <Class IRI="#HProfile"/>
+            <Class IRI="#IProfile"/>
+            <Class IRI="#TProfile"/>
+            <Class IRI="#UProfile"/>
+            <Class IRI="#ZProfile"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasBarThickness"/>
+        <Class IRI="#SteelBeam"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasBarThickness"/>
+        <ObjectUnionOf>
+            <Class IRI="#HProfile"/>
+            <Class IRI="#IProfile"/>
+            <Class IRI="#TProfile"/>
+            <Class IRI="#UProfile"/>
+            <Class IRI="#ZProfile"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasBarWidth"/>
+        <Class IRI="#SteelBeam"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasBarWidth"/>
+        <ObjectUnionOf>
+            <Class IRI="#HProfile"/>
+            <Class IRI="#IProfile"/>
+            <Class IRI="#TProfile"/>
+            <Class IRI="#UProfile"/>
+            <Class IRI="#ZProfile"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFlangeHeight"/>
+        <Class IRI="#SteelBeam"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFlangeHeight"/>
+        <ObjectUnionOf>
+            <Class IRI="#HProfile"/>
+            <Class IRI="#IProfile"/>
+            <Class IRI="#TProfile"/>
+            <Class IRI="#UProfile"/>
+            <Class IRI="#ZProfile"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFlangeThickness"/>
+        <Class IRI="#SteelBeam"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFlangeThickness"/>
+        <ObjectUnionOf>
+            <Class IRI="#HProfile"/>
+            <Class IRI="#IProfile"/>
+            <Class IRI="#TProfile"/>
+            <Class IRI="#UProfile"/>
+            <Class IRI="#ZProfile"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFlangeWidth"/>
+        <Class IRI="#SteelBeam"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFlangeWidth"/>
+        <ObjectUnionOf>
+            <Class IRI="#HProfile"/>
+            <Class IRI="#IProfile"/>
+            <Class IRI="#TProfile"/>
+            <Class IRI="#UProfile"/>
+            <Class IRI="#ZProfile"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLength"/>
+        <ObjectUnionOf>
+            <Class IRI="https://pi.pauwel.be/voc/buildingelement#BuildingElement"/>
+            <Class IRI="https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMaterialThickness"/>
+        <Class IRI="#SteelBeam"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMaterialThickness"/>
+        <ObjectUnionOf>
+            <Class IRI="#HollowProfile"/>
+            <Class IRI="#LProfile"/>
+            <Class IRI="#SolidProfile"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasProfileHeight"/>
+        <Class IRI="#SteelBeam"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasProfileHeight"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasProfileWidth"/>
+        <Class IRI="#SteelBeam"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasProfileWidth"/>
+        <Class IRI="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasWebHeight"/>
+        <Class IRI="#SteelBeam"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasWebHeight"/>
+        <ObjectUnionOf>
+            <Class IRI="#HProfile"/>
+            <Class IRI="#IProfile"/>
+            <Class IRI="#TProfile"/>
+            <Class IRI="#UProfile"/>
+            <Class IRI="#ZProfile"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasWebThickness"/>
+        <Class IRI="#SteelBeam"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasWebThickness"/>
+        <ObjectUnionOf>
+            <Class IRI="#HProfile"/>
+            <Class IRI="#IProfile"/>
+            <Class IRI="#TProfile"/>
+            <Class IRI="#UProfile"/>
+            <Class IRI="#ZProfile"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasWebWidth"/>
+        <Class IRI="#SteelBeam"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasWebWidth"/>
+        <ObjectUnionOf>
+            <Class IRI="#HProfile"/>
+            <Class IRI="#IProfile"/>
+            <Class IRI="#TProfile"/>
+            <Class IRI="#UProfile"/>
+            <Class IRI="#ZProfile"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="Https://w3id.org/digitalconstruction/0.5/Materials#hasMeasuredValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAge"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasBarHeight"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasBarThickness"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasBarWidth"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFlangeHeight"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFlangeThickness"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFlangeWidth"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLength"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMaterialThickness"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasProfileHeight"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasProfileWidth"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSteelGrade"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasWebHeight"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasWebThickness"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasWebWidth"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Rule to detect to which Profile-Class SteelBeam-Individuals belong</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HProfile_02</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#SteelBeam"/>
+                <Variable abbreviatedIRI=":sb"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasWebHeight"/>
+                <Variable abbreviatedIRI=":sb"/>
+                <Variable abbreviatedIRI=":wh"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasProfileHeight"/>
+                <Variable abbreviatedIRI=":sb"/>
+                <Variable abbreviatedIRI=":ph"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasProfileWidth"/>
+                <Variable abbreviatedIRI=":sb"/>
+                <Variable abbreviatedIRI=":pw"/>
+            </DataPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#IProfile"/>
+                <Variable abbreviatedIRI=":ip"/>
+            </ClassAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:booleanNot">
+                <Variable abbreviatedIRI=":sb"/>
+                <Variable abbreviatedIRI=":ip"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#HProfile"/>
+                <Variable abbreviatedIRI=":sb"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#SteelBeam"/>
+                <Variable abbreviatedIRI=":sb"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <BuiltInAtom IRI="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#count">
+                <Variable abbreviatedIRI=":sb"/>
+            </BuiltInAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Determine if a SteelBeam belongs to ReuseClassB</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>ReuseClassBSteelBeam</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#SteelBeam"/>
+                <Variable abbreviatedIRI=":sb"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasDamageDocumentation"/>
+                <Variable abbreviatedIRI=":sb"/>
+                <Variable abbreviatedIRI=":dd"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasReliabilityTestingDocumentation"/>
+                <Variable abbreviatedIRI=":sb"/>
+                <Variable abbreviatedIRI=":rtd"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasAdequacyTestingDocumentation"/>
+                <Variable abbreviatedIRI=":sb"/>
+                <Variable abbreviatedIRI=":atd"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasNewCEMarking"/>
+                <Variable abbreviatedIRI=":sb"/>
+                <Variable abbreviatedIRI=":ncem"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#ReuseClassBSteelBeam"/>
+                <Variable abbreviatedIRI=":sb"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Determine if a SteelBeam belongs to ReuseClassA</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>ReuseClassASteelBeam</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#SteelBeam"/>
+                <Variable abbreviatedIRI=":sb"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasDamageDocumentation"/>
+                <Variable abbreviatedIRI=":sb"/>
+                <Variable abbreviatedIRI=":dd"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasOriginalCEMarking"/>
+                <Variable abbreviatedIRI=":sb"/>
+                <Variable abbreviatedIRI=":ocem"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasOriginalMaterialDocumentation"/>
+                <Variable abbreviatedIRI=":sb"/>
+                <Variable abbreviatedIRI=":omd"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasOriginalTestCertificatesDocumentation"/>
+                <Variable abbreviatedIRI=":sb"/>
+                <Variable abbreviatedIRI=":otcd"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#ReuseClassASteelBeam"/>
+                <Variable abbreviatedIRI=":sb"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Rule to detect to which Profile-Class SteelBeam-Individuals belong</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HProfile</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#SteelBeam"/>
+                <Variable abbreviatedIRI=":sb"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasWebHeight"/>
+                <Variable abbreviatedIRI=":sb"/>
+                <Variable abbreviatedIRI=":wh"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:greaterThanOrEqual">
+                <Variable abbreviatedIRI=":pw"/>
+                <Variable abbreviatedIRI=":wh"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasProfileWidth"/>
+                <Variable abbreviatedIRI=":sb"/>
+                <Variable abbreviatedIRI=":pw"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#HProfile"/>
+                <Variable abbreviatedIRI=":sb"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Rule to detect to which Profile-Class SteelBeam-Individuals belong</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>IProfile</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#SteelBeam"/>
+                <Variable abbreviatedIRI=":sb"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasWebHeight"/>
+                <Variable abbreviatedIRI=":sb"/>
+                <Variable abbreviatedIRI=":wh"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:lessThan">
+                <Variable abbreviatedIRI=":pw"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">300</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasProfileWidth"/>
+                <Variable abbreviatedIRI=":sb"/>
+                <Variable abbreviatedIRI=":pw"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:lessThanOrEqual">
+                <Variable abbreviatedIRI=":pw"/>
+                <Variable abbreviatedIRI=":wh"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#IProfile"/>
+                <Variable abbreviatedIRI=":sb"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Rule to detect to which Profile-Class SteelBeam-Individuals belong</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HProfile</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#SteelBeam"/>
+                <Variable abbreviatedIRI=":sb"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasWebHeight"/>
+                <Variable abbreviatedIRI=":sb"/>
+                <Variable abbreviatedIRI=":wh"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasProfileWidth"/>
+                <Variable abbreviatedIRI=":sb"/>
+                <Variable abbreviatedIRI=":pw"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:multiply">
+                <Variable abbreviatedIRI=":wh"/>
+                <Variable abbreviatedIRI=":pw"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.66</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#HProfile"/>
+                <Variable abbreviatedIRI=":sb"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>HEB_Profile</Literal>
+        </Annotation>
+        <Body>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasProfileHeight"/>
+                <Variable abbreviatedIRI=":x"/>
+                <Variable abbreviatedIRI=":ph"/>
+            </DataPropertyAtom>
+            <BuiltInAtom abbreviatedIRI="swrlb:equal">
+                <Variable abbreviatedIRI=":ph"/>
+                <Variable abbreviatedIRI=":pw"/>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasProfileWidth"/>
+                <Variable abbreviatedIRI=":x"/>
+                <Variable abbreviatedIRI=":pw"/>
+            </DataPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#SteelBeam"/>
+                <Variable abbreviatedIRI=":x"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#HProfile"/>
+                <Variable abbreviatedIRI=":x"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Define a Damage as ChemicalDamageCorrosion</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Damage - Corrosion</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class abbreviatedIRI="dot:Damage"/>
+                <Variable abbreviatedIRI=":d"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+                <Variable abbreviatedIRI=":d"/>
+                <NamedIndividual IRI="#CorrosiveExposure"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class abbreviatedIRI="SteelElementReuseOntology:ChemicalDamageCorrosion"/>
+                <Variable abbreviatedIRI=":d"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Classify a Damage caused by Fire</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Damage - Fire</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class abbreviatedIRI="dot:Damage"/>
+                <Variable abbreviatedIRI=":d"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+                <Variable abbreviatedIRI=":d"/>
+                <NamedIndividual IRI="#Fire"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class abbreviatedIRI="SteelElementReuseOntology:PhysicalDamageFatigue"/>
+                <Variable abbreviatedIRI=":d"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Define a Damage as PhysicalDamageRadiation</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Damage - Radiation</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class abbreviatedIRI="dot:Damage"/>
+                <Variable abbreviatedIRI=":d"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+                <Variable abbreviatedIRI=":d"/>
+                <NamedIndividual IRI="#Radiation"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#PhysicalDamageRadiation"/>
+                <Variable abbreviatedIRI=":d"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="swrla:isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Render an Element non reusable due to the Damage &quot;Radiation&quot;</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>NonReusable - Radiation</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="dot:hasDamage"/>
+                <Variable abbreviatedIRI=":x"/>
+                <Variable abbreviatedIRI=":y"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="dot:hasCausation"/>
+                <Variable abbreviatedIRI=":y"/>
+                <NamedIndividual IRI="#Radiation"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasReusePotential"/>
+                <Variable abbreviatedIRI=":x"/>
+                <NamedIndividual IRI="#NonReusable"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#NonReusable"/>
+                <Variable abbreviatedIRI=":x"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SteelElementReuseOntology:MaterialHunter</AbbreviatedIRI>
+        <Literal xml:lang="en">A Person gathering information on the built environment (among other tasks) to find building components and materials that have potential for reuse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SteelElementReuseOntology:MaterialHunter</AbbreviatedIRI>
+        <Literal xml:lang="en">Materialhunter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>SteelElementReuseOntology:PhysicalDamage</AbbreviatedIRI>
+        <Literal>Physical Damage means any tangible injury to a Property, whether caused by accident, natural occurrence, or any other reason, including damage caused by defects in construction, land subsidence, earth movement or slippage, fire, flood, earthquake, riot, vandalism or any Environmental Condition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SteelElementReuseOntology:PhysicalDamage</AbbreviatedIRI>
+        <Literal xml:lang="en">Physical Damage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>SteelElementReuseOntology:TechnicalDocumentation</AbbreviatedIRI>
+        <Literal xml:lang="en">Profile Documentation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Activity</IRI>
+        <Literal xml:lang="en">Activity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:sameAs"/>
+        <IRI>#Activity</IRI>
+        <IRI>http://ontology.eil.utoronto.ca/icity/Activity/Activity</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CEMarking</IRI>
+        <Literal xml:lang="en">The CE (Conformité Européenne) mark, is an authentication symbol for products that can be legally sold in Europe. The CE mark ostensibly means that the product manufacturer(s) take responsibility for each products’ compliance with European Directives.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CEMarking</IRI>
+        <Literal>CE Marking</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#HProfile</IRI>
+        <Literal xml:lang="en">Profiles whose cross-section resembles the letter H and whose flange width is greater than 0.66 times the nominal height or ≥ 300 mm. H profiles whose flange width is greater than 0.8 times the nominal height, are also called column sections [DIN EN:10079:2007]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HProfile</IRI>
+        <Literal xml:lang="en">H Profile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>#IProfile</IRI>
+        <Literal xml:lang="en">Profiles whose cross-section resembles the letters I and whose flange width is less than or equal to 0.66 times the nominal height of the profile and less than 300 mm [DIN EN 10079:2007]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IProfile</IRI>
+        <Literal xml:lang="en">I Profile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProfilePart</IRI>
+        <Literal xml:lang="en">Part of a Profile - in this case either the Flange or Web (or Bar). The horizontal elements of the I or H are flanges, and the vertical element is the &quot;web&quot; (or bar)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ProfilePart</IRI>
+        <Literal xml:lang="en">Profile Part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProfilePartFlange</IRI>
+        <Literal xml:lang="en">A flange is a projecting ridge, rim, collar or ring on an object such as a column, beam, pipe and so on that provides additional strength or stiffness or additional surface area for the attachment of, or to, another object.
+
+Horizontal element of a beam, resisting most of the bending moment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ProfilePartFlange</IRI>
+        <Literal>Flange</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProfilePartWeb</IRI>
+        <Literal xml:lang="en">Vertical Element of a beam, resisting shear forces.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ProfilePartWeb</IRI>
+        <Literal>Bar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ProfilePartWeb</IRI>
+        <Literal xml:lang="en">Web</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ReuseAudit</IRI>
+        <Literal xml:lang="en">Reuse Audit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SolidProfile</IRI>
+        <Literal xml:lang="en">Hot-rolled products in bar form with open, usually smaller cross-section or of special cross-sectional shape, which are usually produced only in relatively small quantities and are not covered by either I or H Profile.
+
+This group includes in particular Z-sections, T-sections with unequal flanges,
+sharp-edged L, U and T profiles, profiles for caterpillar tracks, etc. [DIN EN 10079:2007]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SteelBeam</IRI>
+        <Literal xml:lang="en">Steel Beam</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>owl:sameAs</AbbreviatedIRI>
+        <Literal>&quot;The property that determines that two given individuals are equal.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>owl:sameAs</AbbreviatedIRI>
+        <Literal>&lt;http://www.w3.org/2002/07/owl#&gt;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>owl:sameAs</AbbreviatedIRI>
+        <Literal>&quot;sameAs&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>foaf:Person</AbbreviatedIRI>
+        <Literal xml:lang="en">The foaf:Person class represents people. Something is a foaf:Person if it is a person. We don&apos;t nitpic about whether they&apos;re alive, dead, real, or imaginary. The foaf:Person class is a sub-class of the foaf:Agent class, since all people are considered &apos;agents&apos; in FOAF.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>foaf:Person</AbbreviatedIRI>
+        <IRI>http://xmlns.com/foaf/0.1/#term_Person</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>foaf:Person</AbbreviatedIRI>
+        <Literal xml:lang="en">Person - A person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://w3id.org/damagemodels/cdo#ChemicalDamage</IRI>
+        <Literal xml:lang="en">Damage that is caused by chemical reactions in the concrete material or the reinforcement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>https://w3id.org/damagemodels/cdo#ChemicalDamage</IRI>
+        <Literal>https://w3id.org/damagemodels/cdo#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/damagemodels/cdo#ChemicalDamage</IRI>
+        <Literal>Chemical Damage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/digitalconstruction/0.5/Materials#CastIron</IRI>
+        <Literal>CastIron</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>https://w3id.org/digitalconstruction/0.5/Materials#Material</IRI>
+        <Literal>a homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). [ISO 16739]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/digitalconstruction/0.5/Materials#Material</IRI>
+        <Literal xml:lang="en">Material</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/digitalconstruction/0.5/Materials#MetallicMaterial</IRI>
+        <Literal>MetallicMaterial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="terms:description"/>
+        <IRI>https://w3id.org/digitalconstruction/0.5/Materials#Profile</IRI>
+        <Literal>Profile is a single and identifiable cross section of an element which is constructed of a number of profiles (one or more) (Source:IFC).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/digitalconstruction/0.5/Materials#Profile</IRI>
+        <Literal xml:lang="en">Profile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://w3id.org/digitalconstruction/0.5/Materials#hasProfile</IRI>
+        <Literal>hasProfile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dot:Causation</AbbreviatedIRI>
+        <Literal xml:lang="en">Represents the causation of a damage.
+Should be extended with domain-specific subclasses.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dot:Causation</AbbreviatedIRI>
+        <Literal>https://w3id.org/dot#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dot:Causation</AbbreviatedIRI>
+        <Literal xml:lang="en">Causation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dot:ClassifiedDamage</AbbreviatedIRI>
+        <Literal xml:lang="en">A damage classification is used to denote the kind of damage. Subclasses of this class are defined in extensions 
+			  such as CDO (Concrete Damage Ontology), NSO (the Natural Stone Ontology), etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dot:ClassifiedDamage</AbbreviatedIRI>
+        <Literal>https://w3id.org/dot#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dot:ClassifiedDamage</AbbreviatedIRI>
+        <Literal xml:lang="en">Classified Damage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dot:DamageArea</AbbreviatedIRI>
+        <Literal xml:lang="en">Area in a component where damage is located. Holds collection of multiple DamageElements or DamagePatterns. Used to be attached with simplified geometry.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dot:DamageArea</AbbreviatedIRI>
+        <AbbreviatedIRI>dot:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dot:DamageArea</AbbreviatedIRI>
+        <Literal xml:lang="en">Damage Area</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dot:DamageElement</AbbreviatedIRI>
+        <Literal xml:lang="en">Damage that is modeled on a very detailed level and belongs with other adjacent Damage Element instances to a broader damage area or damage pattern</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dot:DamageElement</AbbreviatedIRI>
+        <AbbreviatedIRI>dot:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dot:DamageElement</AbbreviatedIRI>
+        <Literal xml:lang="en">Damage Element</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dot:Defect</AbbreviatedIRI>
+        <Literal xml:lang="en">Should be used on nodes that are already classified as dot:DamageArea or dot:DamageElement.
+Damage that does not impair the structural integrity of the structure, but can still have influence on the durability, usability and / or value.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dot:Defect</AbbreviatedIRI>
+        <Literal>https://w3id.org/dot#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dot:Defect</AbbreviatedIRI>
+        <Literal xml:lang="en">Defect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dot:Inspector</AbbreviatedIRI>
+        <Literal xml:lang="en">A person who inspects constructions (for damages) or whose task it is to carry out inspections on constructions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dot:Inspector</AbbreviatedIRI>
+        <Literal>https://w3id.org/dot#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dot:Inspector</AbbreviatedIRI>
+        <Literal xml:lang="en">Inspector</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dot:StructuralDamage</AbbreviatedIRI>
+        <Literal xml:lang="en">Should be used on nodes that are already classified as dot:DamageArea, dot:DamagePattern or dot:DamageElement.
+Damage that impairs the structural integrity of the structure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dot:StructuralDamage</AbbreviatedIRI>
+        <Literal>https://w3id.org/dot#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dot:StructuralDamage</AbbreviatedIRI>
+        <Literal xml:lang="en">Structural Damage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>dot:UnclassifiedDamage</AbbreviatedIRI>
+        <Literal xml:lang="en">A dot:Damage instance that is not further classified with domain-specific classes (subclasses of dot:ClassifiedDamage). 
+This class can be used in cases where the damage classification is unknown.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dot:UnclassifiedDamage</AbbreviatedIRI>
+        <Literal>https://w3id.org/dot#</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dot:UnclassifiedDamage</AbbreviatedIRI>
+        <Literal xml:lang="en">Unclassified Damage</Literal>
+    </AnnotationAssertion>
+    <AnnotationPropertyRange>
+        <AnnotationProperty abbreviatedIRI="owl:sameAs"/>
+        <AbbreviatedIRI>owl:Thing</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty abbreviatedIRI="owl:sameAs"/>
+        <AbbreviatedIRI>owl:Thing</AbbreviatedIRI>
+    </AnnotationPropertyDomain>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

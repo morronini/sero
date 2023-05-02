@@ -1,0 +1,2883 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/"
+     xml:base="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:dc1="http://purl.org/dc/"
+     xmlns:dot="https://w3id.org/dot#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/#"
+     xmlns:Materials="https://w3id.org/digitalconstruction/0.5/Materials#"
+     xmlns:SteelElementReuseOntology="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#"
+     xmlns:SteelElementReuseOntology1="http://www.sero.org/SteelElementReuseOntology#">
+    <owl:Ontology rdf:about="http://www.sero.org/SteelElementReuseOntology">
+        <owl:versionIRI rdf:resource="http://www.sero.org/SteelElementReuseOntology/1.0.0"/>
+        <owl:imports rdf:resource="https://pi.pauwel.be/voc/buildingelement"/>
+        <owl:imports rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials"/>
+        <owl:imports rdf:resource="https://w3id.org/dot/0.8"/>
+        <terms:contributor>Leonhard Schönfelder</terms:contributor>
+        <terms:title>SERO - Steel Element Reuse Ontology</terms:title>
+        <rdfs:comment>Ontology about the Reuse domain, focusing on Reuse of structural steel elements</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs">
+        <rdfs:comment>&quot;The property that determines that two given individuals are equal.&quot;</rdfs:comment>
+        <rdfs:isDefinedBy>&lt;http://www.w3.org/2002/07/owl#&gt;</rdfs:isDefinedBy>
+        <rdfs:label>&quot;sameAs&quot;</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#coveredByReuseAudit -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#coveredByReuseAudit">
+        <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReuseAudit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#documentationFromReuseAudit -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#documentationFromReuseAudit">
+        <owl:inverseOf rdf:resource="https://w3id.org/dot#hasDocumentation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasAdequacyTestingDocumentation -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasAdequacyTestingDocumentation">
+        <rdfs:subPropertyOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasTestingProtocolDocumentation"/>
+        <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#AdequacyTestingDocumentation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasCEMarking -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasCEMarking">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/dot#hasDocumentation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasCausationCorrosiveExposure -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasCausationCorrosiveExposure">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/dot#hasCausation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#ChemicalDamageCorrosion"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamageEmbrittlement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasCausationFire -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasCausationFire">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/dot#hasCausation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamageFatigue"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamagePlasticDeformation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasCausationRadiation -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasCausationRadiation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/dot#hasCausation"/>
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#PhysicalDamageRadiation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasDamageDocumentation -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasDamageDocumentation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/dot#hasDocumentation"/>
+        <rdfs:range rdf:resource="https://w3id.org/dot#DamageDocumentation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasMaterialHunter -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasMaterialHunter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReuseAudit"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#MaterialHunter"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasNewCEMarking -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasNewCEMarking">
+        <rdfs:subPropertyOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasCEMarking"/>
+        <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#NewCEMarking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasOriginalCEMarking -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasOriginalCEMarking">
+        <rdfs:subPropertyOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasCEMarking"/>
+        <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#OriginalCEMarking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasOriginalMaterialDocumentation -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasOriginalMaterialDocumentation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/dot#hasDocumentation"/>
+        <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#OriginalMaterialDocumentation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasOriginalTestCertificatesDocumentation -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasOriginalTestCertificatesDocumentation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/dot#hasDocumentation"/>
+        <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#OriginalTestCertificatesDocumentation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasProfilePart -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasProfilePart">
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+        <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#ProfilePart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasProfileShape -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasProfileShape">
+        <owl:inverseOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#isProfileShapeOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+        <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#ProfileShape"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasReliabilityTestingDocumentation -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasReliabilityTestingDocumentation">
+        <rdfs:subPropertyOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasTestingProtocolDocumentation"/>
+        <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReliabilityTestingDocumentation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasReuseClassA -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasReuseClassA">
+        <rdfs:subPropertyOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#isReusable"/>
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+        <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReuseClassA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasReuseClassB -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasReuseClassB">
+        <rdfs:subPropertyOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#isReusable"/>
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+        <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReuseClassB"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasReuseClassC -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasReuseClassC">
+        <rdfs:subPropertyOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#isReusable"/>
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+        <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReuseClassC"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasReusePotential -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasReusePotential">
+        <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReusePotential"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasTestingProtocolDocumentation -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasTestingProtocolDocumentation">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/dot#hasDocumentation"/>
+        <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#TestingProtocolDocumentation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#isCausationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#isCausationOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/dot#hasCausation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dot#Causation"/>
+        <rdfs:range rdf:resource="https://w3id.org/dot#Damage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#isDamageOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#isDamageOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/dot#hasDamage"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dot#Damage"/>
+        <rdfs:range rdf:resource="https://schema.org/Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#isNonReusable -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#isNonReusable">
+        <rdfs:subPropertyOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasReusePotential"/>
+        <owl:inverseOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#isReusable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#isProfileShapeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#isProfileShapeOf">
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#ProfileShape"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#isReusable -->
+
+    <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#isReusable">
+        <rdfs:subPropertyOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasReusePotential"/>
+        <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#Reusable"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial">
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#Material"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#hasProfile"/>
+            <rdf:Description rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Materials#hasProfile -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#hasProfile">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+        <rdfs:label>hasProfile</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dot#adjacentDamageElement -->
+
+    <rdf:Description rdf:about="https://w3id.org/dot#adjacentDamageElement">
+        <rdfs:domain rdf:resource="https://w3id.org/dot#DamageElement"/>
+        <rdfs:range rdf:resource="https://w3id.org/dot#DamageElement"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/dot#aggregatesDamageElement -->
+
+    <rdf:Description rdf:about="https://w3id.org/dot#aggregatesDamageElement">
+        <rdfs:domain rdf:resource="https://w3id.org/dot#DamageArea"/>
+        <rdfs:range rdf:resource="https://w3id.org/dot#DamageElement"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/dot#aggregatesDamageElement"/>
+            <rdf:Description rdf:about="https://w3id.org/dot#adjacentDamageElement"/>
+        </owl:propertyChainAxiom>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/dot#coveredByInspection -->
+
+    <rdf:Description rdf:about="https://w3id.org/dot#coveredByInspection">
+        <rdfs:range rdf:resource="https://w3id.org/dot#Inspection"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/dot#coveredInDocumentation -->
+
+    <rdf:Description rdf:about="https://w3id.org/dot#coveredInDocumentation">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#Documentation"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/dot#hasCausation -->
+
+    <rdf:Description rdf:about="https://w3id.org/dot#hasCausation">
+        <rdfs:domain rdf:resource="https://w3id.org/dot#Damage"/>
+        <rdfs:range rdf:resource="https://w3id.org/dot#Causation"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/dot#hasDamage -->
+
+    <rdf:Description rdf:about="https://w3id.org/dot#hasDamage">
+        <rdfs:domain rdf:resource="https://schema.org/Product"/>
+        <rdfs:range rdf:resource="https://w3id.org/dot#Damage"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/dot#hasDocumentation -->
+
+    <rdf:Description rdf:about="https://w3id.org/dot#hasDocumentation">
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReuseAudit"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dot#Inspection"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#Documentation"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/dot#hasInspector -->
+
+    <rdf:Description rdf:about="https://w3id.org/dot#hasInspector">
+        <rdfs:domain rdf:resource="https://w3id.org/dot#Inspection"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#MaterialHunter"/>
+        <rdfs:range rdf:resource="https://w3id.org/dot#Inspector"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- Https://w3id.org/digitalconstruction/0.5/Materials#hasDefinedValue -->
+
+    <owl:DatatypeProperty rdf:about="Https://w3id.org/digitalconstruction/0.5/Materials#hasDefinedValue">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#hasValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- Https://w3id.org/digitalconstruction/0.5/Materials#hasEstimatedValue -->
+
+    <owl:DatatypeProperty rdf:about="Https://w3id.org/digitalconstruction/0.5/Materials#hasEstimatedValue">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#hasValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- Https://w3id.org/digitalconstruction/0.5/Materials#hasMeasuredValue -->
+
+    <owl:DatatypeProperty rdf:about="Https://w3id.org/digitalconstruction/0.5/Materials#hasMeasuredValue">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#hasValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasAge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasBarHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasBarHeight">
+        <owl:equivalentProperty rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasWebHeight"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#HProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#IProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#TProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#UProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ZProfile"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasBarThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasBarThickness">
+        <owl:equivalentProperty rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasWebThickness"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#HProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#IProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#TProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#UProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ZProfile"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasBarWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasBarWidth">
+        <owl:equivalentProperty rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasWebThickness"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#HProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#IProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#TProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#UProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ZProfile"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasFlangeHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasFlangeHeight">
+        <owl:equivalentProperty rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasFlangeThickness"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#HProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#IProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#TProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#UProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ZProfile"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasFlangeThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasFlangeThickness">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#HProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#IProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#TProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#UProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ZProfile"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasFlangeWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasFlangeWidth">
+        <owl:equivalentProperty rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfileWidth"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#HProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#IProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#TProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#UProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ZProfile"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasLength">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://pi.pauwel.be/voc/buildingelement#BuildingElement"/>
+                    <rdf:Description rdf:about="https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasMaterialThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasMaterialThickness">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#HollowProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#LProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#SolidProfile"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasProfileDiameter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasProfileDiameter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasProfileHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasProfileHeight">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasProfileWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasProfileWidth">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+        <rdfs:domain rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasSteelGrade -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasSteelGrade">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasWebHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasWebHeight">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#HProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#IProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#TProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#UProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ZProfile"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasWebThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasWebThickness">
+        <owl:equivalentProperty rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasWebWidth"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#HProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#IProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#TProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#UProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ZProfile"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#hasWebWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasWebWidth">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#HProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#IProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#TProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#UProfile"/>
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ZProfile"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Materials#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#hasValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#ChemicalDamageCorrosion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#ChemicalDamageCorrosion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/damagemodels/cdo#ChemicalDamage"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/dot#hasCausation"/>
+                        <owl:hasValue rdf:resource="http://www.sero.org/SteelElementReuseOntology#CorrosiveExposure"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#Documentation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#Documentation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#MaterialHunter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#MaterialHunter">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="en">A Person gathering information on the built environment (among other tasks) to find building components and materials that have potential for reuse</rdfs:comment>
+        <rdfs:label xml:lang="en">Materialhunter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dot#ClassifiedDamage"/>
+        <rdfs:comment>Physical Damage means any tangible injury to a Property, whether caused by accident, natural occurrence, or any other reason, including damage caused by defects in construction, land subsidence, earth movement or slippage, fire, flood, earthquake, riot, vandalism or any Environmental Condition.</rdfs:comment>
+        <rdfs:label xml:lang="en">Physical Damage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamageAbrasion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamageAbrasion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamage"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/dot#hasCausation"/>
+                        <owl:hasValue rdf:resource="http://www.sero.org/SteelElementReuseOntology#Wear"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamageEmbrittlement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamageEmbrittlement">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamage"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/dot#hasCausation"/>
+                        <owl:hasValue rdf:resource="http://www.sero.org/SteelElementReuseOntology#CorrosiveExposure"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/dot#hasCausation"/>
+                        <owl:hasValue rdf:resource="http://www.sero.org/SteelElementReuseOntology#Radiation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamageFatigue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamageFatigue">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamage"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/dot#hasCausation"/>
+                        <owl:hasValue rdf:resource="http://www.sero.org/SteelElementReuseOntology#Fire"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/dot#hasCausation"/>
+                        <owl:hasValue rdf:resource="http://www.sero.org/SteelElementReuseOntology#Impact"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamagePlasticDeformation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamagePlasticDeformation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamage"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/dot#hasCausation"/>
+                        <owl:hasValue rdf:resource="http://www.sero.org/SteelElementReuseOntology#Earthquake"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/dot#hasCausation"/>
+                        <owl:hasValue rdf:resource="http://www.sero.org/SteelElementReuseOntology#Fire"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/dot#hasCausation"/>
+                        <owl:hasValue rdf:resource="http://www.sero.org/SteelElementReuseOntology#Impact"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#TechnicalDocumentation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#TechnicalDocumentation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#Documentation"/>
+        <rdfs:label xml:lang="en">Profile Documentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#Activity -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#Activity">
+        <rdfs:label xml:lang="en">Activity</rdfs:label>
+        <owl:sameAs rdf:resource="http://ontology.eil.utoronto.ca/icity/Activity/Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#AdequacyTestingDocumentation -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#AdequacyTestingDocumentation">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#TestingProtocolDocumentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#CEMarking -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#CEMarking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#Documentation"/>
+        <rdfs:comment xml:lang="en">The CE (Conformité Européenne) mark, is an authentication symbol for products that can be legally sold in Europe. The CE mark ostensibly means that the product manufacturer(s) take responsibility for each products’ compliance with European Directives.</rdfs:comment>
+        <rdfs:label>CE Marking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#CoatingDamage -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#CoatingDamage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dot#ClassifiedDamage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#HProfile -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#HProfile">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfileShape"/>
+                        <owl:allValuesFrom rdf:resource="http://www.sero.org/SteelElementReuseOntology#ProfileShapeH"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <terms:description xml:lang="en">Profiles whose cross-section resembles the letter H and whose flange width is greater than 0.66 times the nominal height or ≥ 300 mm. H profiles whose flange width is greater than 0.8 times the nominal height, are also called column sections [DIN EN:10079:2007]</terms:description>
+        <rdfs:label xml:lang="en">H Profile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#HollowProfile -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#HollowProfile">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#IProfile -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#IProfile">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+        <terms:description xml:lang="en">Profiles whose cross-section resembles the letters I and whose flange width is less than or equal to 0.66 times the nominal height of the profile and less than 300 mm [DIN EN 10079:2007]</terms:description>
+        <rdfs:label xml:lang="en">I Profile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#LProfile -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#LProfile">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#NewCEMarking -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#NewCEMarking">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#CEMarking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#NonReusable -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#NonReusable">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasReusePotential"/>
+                <owl:hasValue rdf:resource="http://www.sero.org/SteelElementReuseOntology#NonReusable"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReusePotential"/>
+        <owl:disjointWith rdf:resource="http://www.sero.org/SteelElementReuseOntology#Reusable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#NonReusableSteelBeam -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#NonReusableSteelBeam">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasReusePotential"/>
+                        <owl:hasValue rdf:resource="http://www.sero.org/SteelElementReuseOntology#NonReusable"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#OriginalCEMarking -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#OriginalCEMarking">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#CEMarking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#OriginalMaterialDocumentation -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#OriginalMaterialDocumentation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#OriginalTestCertificatesDocumentation -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#OriginalTestCertificatesDocumentation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#PhysicalDamageRadiation -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#PhysicalDamageRadiation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamage"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/dot#hasCausation"/>
+                        <owl:hasValue rdf:resource="http://www.sero.org/SteelElementReuseOntology#Radiation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ProfilePart -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfilePart">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#MaterialObjectStructure"/>
+        <rdfs:comment xml:lang="en">Part of a Profile - in this case either the Flange or Web (or Bar). The horizontal elements of the I or H are flanges, and the vertical element is the &quot;web&quot; (or bar)</rdfs:comment>
+        <rdfs:label xml:lang="en">Profile Part</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ProfilePartBar -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfilePartBar">
+        <owl:equivalentClass rdf:resource="http://www.sero.org/SteelElementReuseOntology#ProfilePartWeb"/>
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ProfilePart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ProfilePartFlange -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfilePartFlange">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ProfilePart"/>
+        <rdfs:comment xml:lang="en">A flange is a projecting ridge, rim, collar or ring on an object such as a column, beam, pipe and so on that provides additional strength or stiffness or additional surface area for the attachment of, or to, another object.
+
+Horizontal element of a beam, resisting most of the bending moment.</rdfs:comment>
+        <rdfs:label>Flange</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ProfilePartWeb -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfilePartWeb">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ProfilePart"/>
+        <rdfs:comment xml:lang="en">Vertical Element of a beam, resisting shear forces.</rdfs:comment>
+        <rdfs:label>Bar</rdfs:label>
+        <rdfs:label xml:lang="en">Web</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ProfileShape -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfileShape">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#MaterialObjectStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ProfileShapeH -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfileShapeH">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ProfileShape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ProfileShapeI -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfileShapeI">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ProfileShape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ProfileShapeL -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfileShapeL">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ProfileShape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ProfileShapeT -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfileShapeT">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ProfileShape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ProfileShapeU -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfileShapeU">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ProfileShape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ProfileShapeZ -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfileShapeZ">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ProfileShape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ReliabilityTestingDocumentation -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ReliabilityTestingDocumentation">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#TestingProtocolDocumentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#Reusable -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#Reusable">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReusePotential"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ReusableSteelBeam -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ReusableSteelBeam">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#NonReusableSteelBeam"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ReuseAudit -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseAudit">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Activity"/>
+        <rdfs:label xml:lang="en">Reuse Audit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ReuseClassA -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseClassA">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Reusable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ReuseClassASteelBeam -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseClassASteelBeam">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReusableSteelBeam"/>
+        <owl:disjointWith rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReuseClassBSteelBeam"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ReuseClassB -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseClassB">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Reusable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ReuseClassBSteelBeam -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseClassBSteelBeam">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReusableSteelBeam"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ReuseClassC -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseClassC">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Reusable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ReuseClassCSteelBeam -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseClassCSteelBeam">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReusableSteelBeam"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ReusePotential -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ReusePotential"/>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#SolidProfile -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#SolidProfile">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+        <rdfs:comment xml:lang="en">Hot-rolled products in bar form with open, usually smaller cross-section or of special cross-sectional shape, which are usually produced only in relatively small quantities and are not covered by either I or H Profile.
+
+This group includes in particular Z-sections, T-sections with unequal flanges,
+sharp-edged L, U and T profiles, profiles for caterpillar tracks, etc. [DIN EN 10079:2007]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#SteelBeam -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://pi.pauwel.be/voc/buildingelement#Beam-BEAM"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#Steel"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="en">Steel Beam</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#SteelDamageCausation -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelDamageCausation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dot#Causation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#TProfile -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#TProfile">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#TestingProtocolDocumentation -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#TestingProtocolDocumentation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#UProfile -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#UProfile">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ZProfile -->
+
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ZProfile">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#Profile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:comment xml:lang="en">The foaf:Person class represents people. Something is a foaf:Person if it is a person. We don&apos;t nitpic about whether they&apos;re alive, dead, real, or imaginary. The foaf:Person class is a sub-class of the foaf:Agent class, since all people are considered &apos;agents&apos; in FOAF.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/#term_Person"/>
+        <rdfs:label xml:lang="en">Person - A person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://pi.pauwel.be/voc/buildingelement#Beam-BEAM -->
+
+    <owl:Class rdf:about="https://pi.pauwel.be/voc/buildingelement#Beam-BEAM">
+        <rdfs:subClassOf rdf:resource="https://pi.pauwel.be/voc/buildingelement#BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://pi.pauwel.be/voc/buildingelement#BuildingElement -->
+
+    <owl:Class rdf:about="https://pi.pauwel.be/voc/buildingelement#BuildingElement">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Product"/>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Product -->
+
+    <owl:Class rdf:about="https://schema.org/Product"/>
+    
+
+
+    <!-- https://w3id.org/damagemodels/cdo#ChemicalDamage -->
+
+    <owl:Class rdf:about="https://w3id.org/damagemodels/cdo#ChemicalDamage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dot#ClassifiedDamage"/>
+        <rdfs:comment xml:lang="en">Damage that is caused by chemical reactions in the concrete material or the reinforcement.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/damagemodels/cdo#</rdfs:isDefinedBy>
+        <rdfs:label>Chemical Damage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Product"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Entities#MaterialEntity -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Entities#MaterialEntity"/>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Materials#Material -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#Material">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#MaterialEntity"/>
+        <terms:description>a homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). [ISO 16739]</terms:description>
+        <rdfs:label xml:lang="en">Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Materials#MaterialObjectStructure -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#MaterialObjectStructure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Materials#MetallicMaterial -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#MetallicMaterial">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#Material"/>
+        <rdfs:label>MetallicMaterial</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Materials#Profile -->
+
+    <owl:Class rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#Profile">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#MaterialObjectStructure"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfilePart"/>
+                        <owl:someValuesFrom rdf:resource="http://www.sero.org/SteelElementReuseOntology#ProfilePart"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <terms:description>Profile is a single and identifiable cross section of an element which is constructed of a number of profiles (one or more) (Source:IFC).</terms:description>
+        <rdfs:label xml:lang="en">Profile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dot#Causation -->
+
+    <owl:Class rdf:about="https://w3id.org/dot#Causation">
+        <rdfs:comment xml:lang="en">Represents the causation of a damage.
+Should be extended with domain-specific subclasses.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/dot#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Causation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dot#ClassifiedDamage -->
+
+    <owl:Class rdf:about="https://w3id.org/dot#ClassifiedDamage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dot#Damage"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/dot#UnclassifiedDamage"/>
+        <rdfs:comment xml:lang="en">A damage classification is used to denote the kind of damage. Subclasses of this class are defined in extensions 
+			  such as CDO (Concrete Damage Ontology), NSO (the Natural Stone Ontology), etc.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/dot#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Classified Damage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dot#Damage -->
+
+    <owl:Class rdf:about="https://w3id.org/dot#Damage"/>
+    
+
+
+    <!-- https://w3id.org/dot#DamageArea -->
+
+    <owl:Class rdf:about="https://w3id.org/dot#DamageArea">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dot#Damage"/>
+        <rdfs:comment xml:lang="en">Area in a component where damage is located. Holds collection of multiple DamageElements or DamagePatterns. Used to be attached with simplified geometry.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/dot#"/>
+        <rdfs:label xml:lang="en">Damage Area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dot#DamageDocumentation -->
+
+    <owl:Class rdf:about="https://w3id.org/dot#DamageDocumentation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dot#DamageElement -->
+
+    <owl:Class rdf:about="https://w3id.org/dot#DamageElement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dot#Damage"/>
+        <rdfs:comment xml:lang="en">Damage that is modeled on a very detailed level and belongs with other adjacent Damage Element instances to a broader damage area or damage pattern</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/dot#"/>
+        <rdfs:label xml:lang="en">Damage Element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dot#Defect -->
+
+    <owl:Class rdf:about="https://w3id.org/dot#Defect">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dot#Damage"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/dot#StructuralDamage"/>
+        <rdfs:comment xml:lang="en">Should be used on nodes that are already classified as dot:DamageArea or dot:DamageElement.
+Damage that does not impair the structural integrity of the structure, but can still have influence on the durability, usability and / or value.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/dot#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Defect</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dot#Description -->
+
+    <rdf:Description rdf:about="https://w3id.org/dot#Description">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dot#DamageDocumentation"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/dot#ExternalResource -->
+
+    <rdf:Description rdf:about="https://w3id.org/dot#ExternalResource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dot#DamageDocumentation"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/dot#Inspection -->
+
+    <owl:Class rdf:about="https://w3id.org/dot#Inspection">
+        <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dot#Inspector -->
+
+    <owl:Class rdf:about="https://w3id.org/dot#Inspector">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="en">A person who inspects constructions (for damages) or whose task it is to carry out inspections on constructions.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/dot#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Inspector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dot#StructuralDamage -->
+
+    <owl:Class rdf:about="https://w3id.org/dot#StructuralDamage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dot#Damage"/>
+        <rdfs:comment xml:lang="en">Should be used on nodes that are already classified as dot:DamageArea, dot:DamagePattern or dot:DamageElement.
+Damage that impairs the structural integrity of the structure.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/dot#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Structural Damage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dot#UnclassifiedDamage -->
+
+    <owl:Class rdf:about="https://w3id.org/dot#UnclassifiedDamage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dot#Damage"/>
+        <rdfs:comment xml:lang="en">A dot:Damage instance that is not further classified with domain-specific classes (subclasses of dot:ClassifiedDamage). 
+This class can be used in cases where the damage classification is unknown.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/dot#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Unclassified Damage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#Age -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#Age"/>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#AdequacyTestingDocumentation_SteelBeam02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#AdequacyTestingDocumentation_SteelBeam02"/>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#Aluminium -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#Aluminium">
+        <rdf:type rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#MetallicMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#CorrosiveExposure -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#CorrosiveExposure">
+        <rdf:type rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelDamageCausation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#Damage01_SteelBeam03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#Damage01_SteelBeam03"/>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#Damage01_SteelBeam04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#Damage01_SteelBeam04">
+        <owl:differentFrom rdf:resource="http://www.sero.org/SteelElementReuseOntology#Damage02_SteelBeam04"/>
+        <SteelElementReuseOntology1:coveredByReuseAudit rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReclamationAudit01"/>
+        <dot:coveredInDocumentation rdf:resource="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation_SteelBeam04"/>
+        <dot:hasCausation rdf:resource="http://www.sero.org/SteelElementReuseOntology#Radiation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#Damage01_SteelBeam06 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#Damage01_SteelBeam06">
+        <SteelElementReuseOntology1:coveredByReuseAudit rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReclamationAudit01"/>
+        <dot:hasCausation rdf:resource="http://www.sero.org/SteelElementReuseOntology#Fire"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#Damage01_SteelBeam07 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#Damage01_SteelBeam07">
+        <dot:hasCausation rdf:resource="http://www.sero.org/SteelElementReuseOntology#Radiation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#Damage02_SteelBeam04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#Damage02_SteelBeam04">
+        <SteelElementReuseOntology1:coveredByReuseAudit rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReclamationAudit01"/>
+        <dot:coveredInDocumentation rdf:resource="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation_SteelBeam04"/>
+        <dot:hasCausation rdf:resource="http://www.sero.org/SteelElementReuseOntology#CorrosiveExposure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#DamageDocumentation_SteelBeam01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation_SteelBeam01">
+        <rdf:type rdf:resource="https://w3id.org/dot#DamageDocumentation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#DamageDocumentation_SteelBeam02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation_SteelBeam02"/>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#DamageDocumentation_SteelBeam04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation_SteelBeam04"/>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#DamageDocumentation_SteelBeam06 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation_SteelBeam06"/>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#Earthquake -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#Earthquake">
+        <rdf:type rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelDamageCausation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#Fire -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#Fire">
+        <rdf:type rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelDamageCausation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#Impact -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#Impact">
+        <rdf:type rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelDamageCausation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#NewCEMarking_SteelBeam02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#NewCEMarking_SteelBeam02"/>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#NonReusable -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#NonReusable">
+        <rdf:type rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReusePotential"/>
+        <owl:differentFrom rdf:resource="http://www.sero.org/SteelElementReuseOntology#Reusable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#OriginalCEMarking_SteelBeam01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#OriginalCEMarking_SteelBeam01"/>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#OriginalMaterialDocumentation_SteelBeam01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#OriginalMaterialDocumentation_SteelBeam01">
+        <rdf:type rdf:resource="http://www.sero.org/SteelElementReuseOntology#OriginalMaterialDocumentation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#OriginalTestCertificatesDocumentation_SteelBeam01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#OriginalTestCertificatesDocumentation_SteelBeam01">
+        <rdf:type rdf:resource="http://www.sero.org/SteelElementReuseOntology#OriginalTestCertificatesDocumentation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#Radiation -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#Radiation">
+        <rdf:type rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelDamageCausation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ReclamationAudit01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#ReclamationAudit01">
+        <rdf:type rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReuseAudit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ReliabilityTestingDocumentation_SteelBeam02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#ReliabilityTestingDocumentation_SteelBeam02"/>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#Reusable -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#Reusable">
+        <rdf:type rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReusePotential"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ReuseClassA -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseClassA"/>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ReuseClassB -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseClassB"/>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#ReuseClassC -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseClassC"/>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#SteelBeam01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam01">
+        <SteelElementReuseOntology1:coveredByReuseAudit rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReclamationAudit01"/>
+        <SteelElementReuseOntology1:hasDamageDocumentation rdf:resource="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation_SteelBeam01"/>
+        <SteelElementReuseOntology1:hasOriginalCEMarking rdf:resource="http://www.sero.org/SteelElementReuseOntology#OriginalCEMarking_SteelBeam01"/>
+        <SteelElementReuseOntology1:hasOriginalMaterialDocumentation rdf:resource="http://www.sero.org/SteelElementReuseOntology#OriginalMaterialDocumentation_SteelBeam01"/>
+        <SteelElementReuseOntology1:hasOriginalTestCertificatesDocumentation rdf:resource="http://www.sero.org/SteelElementReuseOntology#OriginalTestCertificatesDocumentation_SteelBeam01"/>
+        <SteelElementReuseOntology1:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</SteelElementReuseOntology1:hasAge>
+        <SteelElementReuseOntology1:hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.0</SteelElementReuseOntology1:hasFlangeThickness>
+        <SteelElementReuseOntology1:hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120.0</SteelElementReuseOntology1:hasProfileHeight>
+        <SteelElementReuseOntology1:hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120.0</SteelElementReuseOntology1:hasProfileWidth>
+        <SteelElementReuseOntology1:hasSteelGrade>S235JR</SteelElementReuseOntology1:hasSteelGrade>
+        <SteelElementReuseOntology1:hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">107.0</SteelElementReuseOntology1:hasWebHeight>
+        <SteelElementReuseOntology1:hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.5</SteelElementReuseOntology1:hasWebThickness>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#SteelBeam02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam02">
+        <SteelElementReuseOntology1:hasAdequacyTestingDocumentation rdf:resource="http://www.sero.org/SteelElementReuseOntology#AdequacyTestingDocumentation_SteelBeam02"/>
+        <SteelElementReuseOntology1:hasDamageDocumentation rdf:resource="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation_SteelBeam02"/>
+        <SteelElementReuseOntology1:hasNewCEMarking rdf:resource="http://www.sero.org/SteelElementReuseOntology#NewCEMarking_SteelBeam02"/>
+        <SteelElementReuseOntology1:hasReliabilityTestingDocumentation rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReliabilityTestingDocumentation_SteelBeam02"/>
+        <SteelElementReuseOntology1:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</SteelElementReuseOntology1:hasAge>
+        <SteelElementReuseOntology1:hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.3</SteelElementReuseOntology1:hasFlangeThickness>
+        <SteelElementReuseOntology1:hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120.0</SteelElementReuseOntology1:hasProfileHeight>
+        <SteelElementReuseOntology1:hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#float">64.0</SteelElementReuseOntology1:hasProfileWidth>
+        <SteelElementReuseOntology1:hasSteelGrade>S235JR</SteelElementReuseOntology1:hasSteelGrade>
+        <SteelElementReuseOntology1:hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">98.0</SteelElementReuseOntology1:hasWebHeight>
+        <SteelElementReuseOntology1:hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.4</SteelElementReuseOntology1:hasWebThickness>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#SteelBeam03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam03">
+        <dot:hasDamage rdf:resource="http://www.sero.org/SteelElementReuseOntology#Damage01_SteelBeam03"/>
+        <SteelElementReuseOntology1:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34</SteelElementReuseOntology1:hasAge>
+        <SteelElementReuseOntology1:hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">21.0</SteelElementReuseOntology1:hasFlangeThickness>
+        <SteelElementReuseOntology1:hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">140.0</SteelElementReuseOntology1:hasProfileHeight>
+        <SteelElementReuseOntology1:hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#float">126.0</SteelElementReuseOntology1:hasProfileWidth>
+        <SteelElementReuseOntology1:hasSteelGrade>S235JR</SteelElementReuseOntology1:hasSteelGrade>
+        <SteelElementReuseOntology1:hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">98.0</SteelElementReuseOntology1:hasWebHeight>
+        <SteelElementReuseOntology1:hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.5</SteelElementReuseOntology1:hasWebThickness>
+        <Materials:hasMaterial>Steel</Materials:hasMaterial>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#SteelBeam04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam04">
+        <rdf:type rdf:resource="http://www.sero.org/SteelElementReuseOntology#UProfile"/>
+        <SteelElementReuseOntology1:coveredByReuseAudit rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReclamationAudit01"/>
+        <SteelElementReuseOntology1:hasDamageDocumentation rdf:resource="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation_SteelBeam04"/>
+        <dot:hasDamage rdf:resource="http://www.sero.org/SteelElementReuseOntology#Damage01_SteelBeam04"/>
+        <dot:hasDamage rdf:resource="http://www.sero.org/SteelElementReuseOntology#Damage02_SteelBeam04"/>
+        <SteelElementReuseOntology1:hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</SteelElementReuseOntology1:hasAge>
+        <SteelElementReuseOntology1:hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</SteelElementReuseOntology1:hasFlangeThickness>
+        <SteelElementReuseOntology1:hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.4</SteelElementReuseOntology1:hasLength>
+        <SteelElementReuseOntology1:hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120.0</SteelElementReuseOntology1:hasProfileHeight>
+        <SteelElementReuseOntology1:hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#float">60.0</SteelElementReuseOntology1:hasProfileWidth>
+        <SteelElementReuseOntology1:hasSteelGrade>S235JR</SteelElementReuseOntology1:hasSteelGrade>
+        <SteelElementReuseOntology1:hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</SteelElementReuseOntology1:hasWebThickness>
+        <Materials:hasMaterial>Steel</Materials:hasMaterial>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#SteelBeam05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam05">
+        <SteelElementReuseOntology1:hasBarHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">158.0</SteelElementReuseOntology1:hasBarHeight>
+        <SteelElementReuseOntology1:hasBarThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.5</SteelElementReuseOntology1:hasBarThickness>
+        <SteelElementReuseOntology1:hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.3</SteelElementReuseOntology1:hasFlangeThickness>
+        <SteelElementReuseOntology1:hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.5</SteelElementReuseOntology1:hasLength>
+        <SteelElementReuseOntology1:hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</SteelElementReuseOntology1:hasProfileHeight>
+        <SteelElementReuseOntology1:hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#float">90.0</SteelElementReuseOntology1:hasProfileWidth>
+        <SteelElementReuseOntology1:hasSteelGrade>S235RJ</SteelElementReuseOntology1:hasSteelGrade>
+        <Materials:hasMaterial>Steel</Materials:hasMaterial>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#SteelBeam06 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam06">
+        <SteelElementReuseOntology1:coveredByReuseAudit rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReclamationAudit01"/>
+        <SteelElementReuseOntology1:hasDamageDocumentation rdf:resource="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation_SteelBeam06"/>
+        <dot:hasDamage rdf:resource="http://www.sero.org/SteelElementReuseOntology#Damage01_SteelBeam06"/>
+        <SteelElementReuseOntology1:hasBarHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">142.0</SteelElementReuseOntology1:hasBarHeight>
+        <SteelElementReuseOntology1:hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.4</SteelElementReuseOntology1:hasFlangeThickness>
+        <SteelElementReuseOntology1:hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">180.0</SteelElementReuseOntology1:hasProfileHeight>
+        <SteelElementReuseOntology1:hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#float">82.0</SteelElementReuseOntology1:hasProfileWidth>
+        <SteelElementReuseOntology1:hasSteelGrade>S255RJ</SteelElementReuseOntology1:hasSteelGrade>
+        <SteelElementReuseOntology1:hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.9</SteelElementReuseOntology1:hasWebThickness>
+        <Materials:hasMaterial>Steel</Materials:hasMaterial>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#SteelBeam07 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam07">
+        <dot:hasDamage rdf:resource="http://www.sero.org/SteelElementReuseOntology#Damage01_SteelBeam07"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#TestingProtocolDocumentation_SteelBeam06 -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#TestingProtocolDocumentation_SteelBeam06"/>
+    
+
+
+    <!-- http://www.sero.org/SteelElementReuseOntology#Wear -->
+
+    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#Wear">
+        <rdf:type rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelDamageCausation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Materials#CastIron -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#CastIron">
+        <rdf:type rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#MetallicMaterial"/>
+        <rdfs:label>CastIron</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/digitalconstruction/0.5/Materials#Steel -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#Steel">
+        <rdf:type rdf:resource="https://w3id.org/digitalconstruction/0.5/Materials#MetallicMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#HProfile"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#HollowProfile"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#IProfile"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#LProfile"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#SolidProfile"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#TProfile"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#UProfile"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ZProfile"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfileShapeH"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfileShapeI"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfileShapeL"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfileShapeT"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfileShapeU"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ProfileShapeZ"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseClassA"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseClassB"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ReuseClassC"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#Aluminium"/>
+            <rdf:Description rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#CastIron"/>
+            <rdf:Description rdf:about="https://w3id.org/digitalconstruction/0.5/Materials#Steel"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#CorrosiveExposure"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#Earthquake"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#Fire"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#Impact"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#Radiation"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#Wear"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam01"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam02"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam03"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam04"/>
+            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam05"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/wh">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ph">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ip">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/dd">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/rtd">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/atd">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ncem">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ocem">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/omd">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/otcd">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Rule to detect to which Profile-Class SteelBeam-Individuals belong</rdfs:comment>
+        <rdfs:label>HProfile_02</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasWebHeight"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/wh"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfileHeight"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ph"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfileWidth"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#IProfile"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ip"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#booleanNot"/>
+                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ip"/>
+                                                                </swrl:arguments>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#HProfile"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#count"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Determine if a SteelBeam belongs to ReuseClassB</rdfs:comment>
+        <rdfs:label>ReuseClassBSteelBeam</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasDamageDocumentation"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/dd"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasReliabilityTestingDocumentation"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/rtd"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasAdequacyTestingDocumentation"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/atd"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasNewCEMarking"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ncem"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReuseClassBSteelBeam"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Determine if a SteelBeam belongs to ReuseClassA</rdfs:comment>
+        <rdfs:label>ReuseClassASteelBeam</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasDamageDocumentation"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/dd"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasOriginalCEMarking"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ocem"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasOriginalMaterialDocumentation"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/omd"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasOriginalTestCertificatesDocumentation"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/otcd"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReuseClassASteelBeam"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Rule to detect to which Profile-Class SteelBeam-Individuals belong</rdfs:comment>
+        <rdfs:label>HProfile</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasWebHeight"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/wh"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
+                                            <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/wh"/>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfileWidth"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#HProfile"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Rule to detect to which Profile-Class SteelBeam-Individuals belong</rdfs:comment>
+        <rdfs:label>IProfile</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasWebHeight"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/wh"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfileWidth"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                        <swrl:arguments rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
+                                                            <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/wh"/>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#IProfile"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Rule to detect to which Profile-Class SteelBeam-Individuals belong</rdfs:comment>
+        <rdfs:label>HProfile</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasWebHeight"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/wh"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfileWidth"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/wh"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.66</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#HProfile"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>HEB_Profile</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfileHeight"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ph"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                                <swrl:arguments rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ph"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfileWidth"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/x"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/x"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#HProfile"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Define a Damage as ChemicalDamageCorrosion</rdfs:comment>
+        <rdfs:label>Damage - Corrosion</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/dot#Damage"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/dot#hasCausation"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
+                                <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#CorrosiveExposure"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#ChemicalDamageCorrosion"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Classify a Damage caused by Fire</rdfs:comment>
+        <rdfs:label>Damage - Fire</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/dot#Damage"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/dot#hasCausation"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
+                                <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#Fire"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#PhysicalDamageFatigue"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Define a Damage as PhysicalDamageRadiation</rdfs:comment>
+        <rdfs:label>Damage - Radiation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="https://w3id.org/dot#Damage"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/dot#hasCausation"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
+                                <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#Radiation"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#PhysicalDamageRadiation"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Render an Element non reusable due to the Damage &quot;Radiation&quot;</rdfs:comment>
+        <rdfs:label>NonReusable - Radiation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="https://w3id.org/dot#hasDamage"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="https://w3id.org/dot#hasCausation"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/y"/>
+                                <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#Radiation"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasReusePotential"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/x"/>
+                        <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#NonReusable"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#NonReusable"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

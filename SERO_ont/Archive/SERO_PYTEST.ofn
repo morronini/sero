@@ -1,0 +1,1092 @@
+Prefix(:=<http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/>)
+Prefix(dc:=<http://purl.org/dc/elements/1.1/>)
+Prefix(ns:=<http://www.w3.org/2003/06/sw-vocab-status/ns#>)
+Prefix(dc1:=<http://purl.org/dc/>)
+Prefix(dot:=<https://w3id.org/dot#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(swrl:=<http://www.w3.org/2003/11/swrl#>)
+Prefix(vann:=<http://purl.org/vocab/vann/>)
+Prefix(swrla:=<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#>)
+Prefix(swrlb:=<http://www.w3.org/2003/11/swrlb#>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(schema:=<http://schema.org/#>)
+Prefix(SteelElementReuseOntology:=<http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology#>)
+Prefix(SteelElementReuseOntology1:=<http://www.sero.org/SteelElementReuseOntology#>)
+
+
+Ontology(<http://www.sero.org/SteelElementReuseOntology>
+<http://www.sero.org/SteelElementReuseOntology/1.0.0>
+Import(<https://pi.pauwel.be/voc/buildingelement>)
+Import(<https://w3id.org/digitalconstruction/0.5/Materials>)
+Import(<https://w3id.org/dot/0.8>)
+Annotation(terms:contributor "Leonhard Schönfelder")
+Annotation(terms:title "SERO - Steel Element Reuse Ontology")
+Annotation(rdfs:comment "Ontology about the Reuse domain, focusing on Reuse of structural steel elements")
+
+Declaration(Class(SteelElementReuseOntology:ChemicalDamageCorrosion))
+Declaration(Class(SteelElementReuseOntology:Documentation))
+Declaration(Class(SteelElementReuseOntology:MaterialHunter))
+Declaration(Class(SteelElementReuseOntology:PhysicalDamage))
+Declaration(Class(SteelElementReuseOntology:PhysicalDamageAbrasion))
+Declaration(Class(SteelElementReuseOntology:PhysicalDamageEmbrittlement))
+Declaration(Class(SteelElementReuseOntology:PhysicalDamageFatigue))
+Declaration(Class(SteelElementReuseOntology:PhysicalDamagePlasticDeformation))
+Declaration(Class(SteelElementReuseOntology:TechnicalDocumentation))
+Declaration(Class(SteelElementReuseOntology1:Activity))
+Declaration(Class(SteelElementReuseOntology1:AdequacyTestingDocumentation))
+Declaration(Class(SteelElementReuseOntology1:CEMarking))
+Declaration(Class(SteelElementReuseOntology1:CoatingDamage))
+Declaration(Class(SteelElementReuseOntology1:HProfile))
+Declaration(Class(SteelElementReuseOntology1:HollowProfile))
+Declaration(Class(SteelElementReuseOntology1:IProfile))
+Declaration(Class(SteelElementReuseOntology1:LProfile))
+Declaration(Class(SteelElementReuseOntology1:NewCEMarking))
+Declaration(Class(SteelElementReuseOntology1:NonReusable))
+Declaration(Class(SteelElementReuseOntology1:NonReusableSteelBeam))
+Declaration(Class(SteelElementReuseOntology1:OriginalCEMarking))
+Declaration(Class(SteelElementReuseOntology1:OriginalMaterialDocumentation))
+Declaration(Class(SteelElementReuseOntology1:OriginalTestCertificatesDocumentation))
+Declaration(Class(SteelElementReuseOntology1:PhysicalDamageRadiation))
+Declaration(Class(SteelElementReuseOntology1:ProfilePart))
+Declaration(Class(SteelElementReuseOntology1:ProfilePartBar))
+Declaration(Class(SteelElementReuseOntology1:ProfilePartFlange))
+Declaration(Class(SteelElementReuseOntology1:ProfilePartWeb))
+Declaration(Class(SteelElementReuseOntology1:ProfileShape))
+Declaration(Class(SteelElementReuseOntology1:ProfileShapeH))
+Declaration(Class(SteelElementReuseOntology1:ProfileShapeI))
+Declaration(Class(SteelElementReuseOntology1:ProfileShapeL))
+Declaration(Class(SteelElementReuseOntology1:ProfileShapeT))
+Declaration(Class(SteelElementReuseOntology1:ProfileShapeU))
+Declaration(Class(SteelElementReuseOntology1:ProfileShapeZ))
+Declaration(Class(SteelElementReuseOntology1:ReliabilityTestingDocumentation))
+Declaration(Class(SteelElementReuseOntology1:Reusable))
+Declaration(Class(SteelElementReuseOntology1:ReusableSteelBeam))
+Declaration(Class(SteelElementReuseOntology1:ReuseAudit))
+Declaration(Class(SteelElementReuseOntology1:ReuseClassA))
+Declaration(Class(SteelElementReuseOntology1:ReuseClassASteelBeam))
+Declaration(Class(SteelElementReuseOntology1:ReuseClassB))
+Declaration(Class(SteelElementReuseOntology1:ReuseClassBSteelBeam))
+Declaration(Class(SteelElementReuseOntology1:ReuseClassC))
+Declaration(Class(SteelElementReuseOntology1:ReuseClassCSteelBeam))
+Declaration(Class(SteelElementReuseOntology1:ReusePotential))
+Declaration(Class(SteelElementReuseOntology1:SolidProfile))
+Declaration(Class(SteelElementReuseOntology1:SteelBeam))
+Declaration(Class(SteelElementReuseOntology1:SteelDamageCausation))
+Declaration(Class(SteelElementReuseOntology1:TProfile))
+Declaration(Class(SteelElementReuseOntology1:TestingProtocolDocumentation))
+Declaration(Class(SteelElementReuseOntology1:UProfile))
+Declaration(Class(SteelElementReuseOntology1:ZProfile))
+Declaration(Class(foaf:Person))
+Declaration(Class(<https://pi.pauwel.be/voc/buildingelement#Beam-BEAM>))
+Declaration(Class(<https://pi.pauwel.be/voc/buildingelement#BuildingElement>))
+Declaration(Class(<https://schema.org/Product>))
+Declaration(Class(<https://w3id.org/damagemodels/cdo#ChemicalDamage>))
+Declaration(Class(<https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject>))
+Declaration(Class(<https://w3id.org/digitalconstruction/0.5/Entities#MaterialEntity>))
+Declaration(Class(<https://w3id.org/digitalconstruction/0.5/Materials#Material>))
+Declaration(Class(<https://w3id.org/digitalconstruction/0.5/Materials#MaterialObjectStructure>))
+Declaration(Class(<https://w3id.org/digitalconstruction/0.5/Materials#MetallicMaterial>))
+Declaration(Class(<https://w3id.org/digitalconstruction/0.5/Materials#Profile>))
+Declaration(Class(dot:Causation))
+Declaration(Class(dot:ClassifiedDamage))
+Declaration(Class(dot:Damage))
+Declaration(Class(dot:DamageArea))
+Declaration(Class(dot:DamageDocumentation))
+Declaration(Class(dot:DamageElement))
+Declaration(Class(dot:Defect))
+Declaration(Class(dot:Inspection))
+Declaration(Class(dot:Inspector))
+Declaration(Class(dot:StructuralDamage))
+Declaration(Class(dot:UnclassifiedDamage))
+Declaration(ObjectProperty(SteelElementReuseOntology1:coveredByReuseAudit))
+Declaration(ObjectProperty(SteelElementReuseOntology1:documentationFromReuseAudit))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasAdequacyTestingDocumentation))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasCEMarking))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasCausationCorrosiveExposure))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasCausationFire))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasCausationRadiation))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasDamageDocumentation))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasMaterialHunter))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasNewCEMarking))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasOriginalCEMarking))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasOriginalMaterialDocumentation))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasOriginalTestCertificatesDocumentation))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasProfilePart))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasProfileShape))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasReliabilityTestingDocumentation))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasReuseClassA))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasReuseClassB))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasReuseClassC))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasReusePotential))
+Declaration(ObjectProperty(SteelElementReuseOntology1:hasTestingProtocolDocumentation))
+Declaration(ObjectProperty(SteelElementReuseOntology1:isCausationOf))
+Declaration(ObjectProperty(SteelElementReuseOntology1:isDamageOf))
+Declaration(ObjectProperty(SteelElementReuseOntology1:isNonReusable))
+Declaration(ObjectProperty(SteelElementReuseOntology1:isProfileShapeOf))
+Declaration(ObjectProperty(SteelElementReuseOntology1:isReusable))
+Declaration(ObjectProperty(<https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial>))
+Declaration(ObjectProperty(<https://w3id.org/digitalconstruction/0.5/Materials#hasProfile>))
+Declaration(DataProperty(<Https://w3id.org/digitalconstruction/0.5/Materials#hasDefinedValue>))
+Declaration(DataProperty(<Https://w3id.org/digitalconstruction/0.5/Materials#hasEstimatedValue>))
+Declaration(DataProperty(<Https://w3id.org/digitalconstruction/0.5/Materials#hasMeasuredValue>))
+Declaration(DataProperty(SteelElementReuseOntology1:hasAge))
+Declaration(DataProperty(SteelElementReuseOntology1:hasBarHeight))
+Declaration(DataProperty(SteelElementReuseOntology1:hasBarThickness))
+Declaration(DataProperty(SteelElementReuseOntology1:hasBarWidth))
+Declaration(DataProperty(SteelElementReuseOntology1:hasFlangeHeight))
+Declaration(DataProperty(SteelElementReuseOntology1:hasFlangeThickness))
+Declaration(DataProperty(SteelElementReuseOntology1:hasFlangeWidth))
+Declaration(DataProperty(SteelElementReuseOntology1:hasLength))
+Declaration(DataProperty(SteelElementReuseOntology1:hasMaterialThickness))
+Declaration(DataProperty(SteelElementReuseOntology1:hasProfileDiameter))
+Declaration(DataProperty(SteelElementReuseOntology1:hasProfileHeight))
+Declaration(DataProperty(SteelElementReuseOntology1:hasProfileWidth))
+Declaration(DataProperty(SteelElementReuseOntology1:hasSteelGrade))
+Declaration(DataProperty(SteelElementReuseOntology1:hasWebHeight))
+Declaration(DataProperty(SteelElementReuseOntology1:hasWebThickness))
+Declaration(DataProperty(SteelElementReuseOntology1:hasWebWidth))
+Declaration(DataProperty(<https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial>))
+Declaration(DataProperty(<https://w3id.org/digitalconstruction/0.5/Materials#hasValue>))
+Declaration(NamedIndividual(SteelElementReuseOntology:Age))
+Declaration(NamedIndividual(SteelElementReuseOntology1:AdequacyTestingDocumentation_SteelBeam02))
+Declaration(NamedIndividual(SteelElementReuseOntology1:Aluminium))
+Declaration(NamedIndividual(SteelElementReuseOntology1:CorrosiveExposure))
+Declaration(NamedIndividual(SteelElementReuseOntology1:Damage01_SteelBeam03))
+Declaration(NamedIndividual(SteelElementReuseOntology1:Damage01_SteelBeam04))
+Declaration(NamedIndividual(SteelElementReuseOntology1:Damage01_SteelBeam06))
+Declaration(NamedIndividual(SteelElementReuseOntology1:Damage01_SteelBeam07))
+Declaration(NamedIndividual(SteelElementReuseOntology1:Damage02_SteelBeam04))
+Declaration(NamedIndividual(SteelElementReuseOntology1:DamageDocumentation_SteelBeam01))
+Declaration(NamedIndividual(SteelElementReuseOntology1:DamageDocumentation_SteelBeam02))
+Declaration(NamedIndividual(SteelElementReuseOntology1:DamageDocumentation_SteelBeam04))
+Declaration(NamedIndividual(SteelElementReuseOntology1:DamageDocumentation_SteelBeam06))
+Declaration(NamedIndividual(SteelElementReuseOntology1:Earthquake))
+Declaration(NamedIndividual(SteelElementReuseOntology1:Fire))
+Declaration(NamedIndividual(SteelElementReuseOntology1:Impact))
+Declaration(NamedIndividual(SteelElementReuseOntology1:NewCEMarking_SteelBeam02))
+Declaration(NamedIndividual(SteelElementReuseOntology1:NonReusable))
+Declaration(NamedIndividual(SteelElementReuseOntology1:OriginalCEMarking_SteelBeam01))
+Declaration(NamedIndividual(SteelElementReuseOntology1:OriginalMaterialDocumentation_SteelBeam01))
+Declaration(NamedIndividual(SteelElementReuseOntology1:OriginalTestCertificatesDocumentation_SteelBeam01))
+Declaration(NamedIndividual(SteelElementReuseOntology1:Radiation))
+Declaration(NamedIndividual(SteelElementReuseOntology1:ReclamationAudit01))
+Declaration(NamedIndividual(SteelElementReuseOntology1:ReliabilityTestingDocumentation_SteelBeam02))
+Declaration(NamedIndividual(SteelElementReuseOntology1:Reusable))
+Declaration(NamedIndividual(SteelElementReuseOntology1:ReuseClassA))
+Declaration(NamedIndividual(SteelElementReuseOntology1:ReuseClassB))
+Declaration(NamedIndividual(SteelElementReuseOntology1:ReuseClassC))
+Declaration(NamedIndividual(SteelElementReuseOntology1:SteelBeam01))
+Declaration(NamedIndividual(SteelElementReuseOntology1:SteelBeam02))
+Declaration(NamedIndividual(SteelElementReuseOntology1:SteelBeam03))
+Declaration(NamedIndividual(SteelElementReuseOntology1:SteelBeam04))
+Declaration(NamedIndividual(SteelElementReuseOntology1:SteelBeam05))
+Declaration(NamedIndividual(SteelElementReuseOntology1:SteelBeam06))
+Declaration(NamedIndividual(SteelElementReuseOntology1:SteelBeam07))
+Declaration(NamedIndividual(SteelElementReuseOntology1:TestingProtocolDocumentation_SteelBeam06))
+Declaration(NamedIndividual(SteelElementReuseOntology1:Wear))
+Declaration(NamedIndividual(<https://w3id.org/digitalconstruction/0.5/Materials#CastIron>))
+Declaration(NamedIndividual(<https://w3id.org/digitalconstruction/0.5/Materials#Steel>))
+Declaration(AnnotationProperty(terms:description))
+Declaration(AnnotationProperty(swrla:isRuleEnabled))
+Declaration(AnnotationProperty(owl:sameAs))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: owl:sameAs ("sameAs")
+
+AnnotationAssertion(rdfs:comment owl:sameAs "\"The property that determines that two given individuals are equal.\"")
+AnnotationAssertion(rdfs:isDefinedBy owl:sameAs "<http://www.w3.org/2002/07/owl#>")
+AnnotationAssertion(rdfs:label owl:sameAs "\"sameAs\"")
+AnnotationPropertyRange(owl:sameAs owl:Thing)
+AnnotationPropertyDomain(owl:sameAs owl:Thing)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: SteelElementReuseOntology1:coveredByReuseAudit (SteelElementReuseOntology1:coveredByReuseAudit)
+
+ObjectPropertyRange(SteelElementReuseOntology1:coveredByReuseAudit SteelElementReuseOntology1:ReuseAudit)
+
+# Object Property: SteelElementReuseOntology1:documentationFromReuseAudit (SteelElementReuseOntology1:documentationFromReuseAudit)
+
+InverseObjectProperties(SteelElementReuseOntology1:documentationFromReuseAudit dot:hasDocumentation)
+
+# Object Property: SteelElementReuseOntology1:hasAdequacyTestingDocumentation (SteelElementReuseOntology1:hasAdequacyTestingDocumentation)
+
+SubObjectPropertyOf(SteelElementReuseOntology1:hasAdequacyTestingDocumentation SteelElementReuseOntology1:hasTestingProtocolDocumentation)
+ObjectPropertyRange(SteelElementReuseOntology1:hasAdequacyTestingDocumentation SteelElementReuseOntology1:AdequacyTestingDocumentation)
+
+# Object Property: SteelElementReuseOntology1:hasCEMarking (SteelElementReuseOntology1:hasCEMarking)
+
+SubObjectPropertyOf(SteelElementReuseOntology1:hasCEMarking dot:hasDocumentation)
+
+# Object Property: SteelElementReuseOntology1:hasCausationCorrosiveExposure (SteelElementReuseOntology1:hasCausationCorrosiveExposure)
+
+SubObjectPropertyOf(SteelElementReuseOntology1:hasCausationCorrosiveExposure dot:hasCausation)
+ObjectPropertyDomain(SteelElementReuseOntology1:hasCausationCorrosiveExposure SteelElementReuseOntology:ChemicalDamageCorrosion)
+ObjectPropertyDomain(SteelElementReuseOntology1:hasCausationCorrosiveExposure SteelElementReuseOntology:PhysicalDamageEmbrittlement)
+
+# Object Property: SteelElementReuseOntology1:hasCausationFire (SteelElementReuseOntology1:hasCausationFire)
+
+SubObjectPropertyOf(SteelElementReuseOntology1:hasCausationFire dot:hasCausation)
+ObjectPropertyDomain(SteelElementReuseOntology1:hasCausationFire SteelElementReuseOntology:PhysicalDamageFatigue)
+ObjectPropertyDomain(SteelElementReuseOntology1:hasCausationFire SteelElementReuseOntology:PhysicalDamagePlasticDeformation)
+
+# Object Property: SteelElementReuseOntology1:hasCausationRadiation (SteelElementReuseOntology1:hasCausationRadiation)
+
+SubObjectPropertyOf(SteelElementReuseOntology1:hasCausationRadiation dot:hasCausation)
+ObjectPropertyDomain(SteelElementReuseOntology1:hasCausationRadiation SteelElementReuseOntology1:PhysicalDamageRadiation)
+
+# Object Property: SteelElementReuseOntology1:hasDamageDocumentation (SteelElementReuseOntology1:hasDamageDocumentation)
+
+SubObjectPropertyOf(SteelElementReuseOntology1:hasDamageDocumentation dot:hasDocumentation)
+ObjectPropertyRange(SteelElementReuseOntology1:hasDamageDocumentation dot:DamageDocumentation)
+
+# Object Property: SteelElementReuseOntology1:hasMaterialHunter (SteelElementReuseOntology1:hasMaterialHunter)
+
+SubObjectPropertyOf(SteelElementReuseOntology1:hasMaterialHunter owl:topObjectProperty)
+ObjectPropertyDomain(SteelElementReuseOntology1:hasMaterialHunter SteelElementReuseOntology1:ReuseAudit)
+ObjectPropertyRange(SteelElementReuseOntology1:hasMaterialHunter SteelElementReuseOntology:MaterialHunter)
+ObjectPropertyRange(SteelElementReuseOntology1:hasMaterialHunter foaf:Person)
+
+# Object Property: SteelElementReuseOntology1:hasNewCEMarking (SteelElementReuseOntology1:hasNewCEMarking)
+
+SubObjectPropertyOf(SteelElementReuseOntology1:hasNewCEMarking SteelElementReuseOntology1:hasCEMarking)
+ObjectPropertyRange(SteelElementReuseOntology1:hasNewCEMarking SteelElementReuseOntology1:NewCEMarking)
+
+# Object Property: SteelElementReuseOntology1:hasOriginalCEMarking (SteelElementReuseOntology1:hasOriginalCEMarking)
+
+SubObjectPropertyOf(SteelElementReuseOntology1:hasOriginalCEMarking SteelElementReuseOntology1:hasCEMarking)
+ObjectPropertyRange(SteelElementReuseOntology1:hasOriginalCEMarking SteelElementReuseOntology1:OriginalCEMarking)
+
+# Object Property: SteelElementReuseOntology1:hasOriginalMaterialDocumentation (SteelElementReuseOntology1:hasOriginalMaterialDocumentation)
+
+SubObjectPropertyOf(SteelElementReuseOntology1:hasOriginalMaterialDocumentation dot:hasDocumentation)
+ObjectPropertyRange(SteelElementReuseOntology1:hasOriginalMaterialDocumentation SteelElementReuseOntology1:OriginalMaterialDocumentation)
+
+# Object Property: SteelElementReuseOntology1:hasOriginalTestCertificatesDocumentation (SteelElementReuseOntology1:hasOriginalTestCertificatesDocumentation)
+
+SubObjectPropertyOf(SteelElementReuseOntology1:hasOriginalTestCertificatesDocumentation dot:hasDocumentation)
+ObjectPropertyRange(SteelElementReuseOntology1:hasOriginalTestCertificatesDocumentation SteelElementReuseOntology1:OriginalTestCertificatesDocumentation)
+
+# Object Property: SteelElementReuseOntology1:hasProfilePart (SteelElementReuseOntology1:hasProfilePart)
+
+ObjectPropertyDomain(SteelElementReuseOntology1:hasProfilePart <https://w3id.org/digitalconstruction/0.5/Materials#Profile>)
+ObjectPropertyRange(SteelElementReuseOntology1:hasProfilePart SteelElementReuseOntology1:ProfilePart)
+
+# Object Property: SteelElementReuseOntology1:hasProfileShape (SteelElementReuseOntology1:hasProfileShape)
+
+InverseObjectProperties(SteelElementReuseOntology1:hasProfileShape SteelElementReuseOntology1:isProfileShapeOf)
+ObjectPropertyDomain(SteelElementReuseOntology1:hasProfileShape <https://w3id.org/digitalconstruction/0.5/Materials#Profile>)
+ObjectPropertyRange(SteelElementReuseOntology1:hasProfileShape SteelElementReuseOntology1:ProfileShape)
+
+# Object Property: SteelElementReuseOntology1:hasReliabilityTestingDocumentation (SteelElementReuseOntology1:hasReliabilityTestingDocumentation)
+
+SubObjectPropertyOf(SteelElementReuseOntology1:hasReliabilityTestingDocumentation SteelElementReuseOntology1:hasTestingProtocolDocumentation)
+ObjectPropertyRange(SteelElementReuseOntology1:hasReliabilityTestingDocumentation SteelElementReuseOntology1:ReliabilityTestingDocumentation)
+
+# Object Property: SteelElementReuseOntology1:hasReuseClassA (SteelElementReuseOntology1:hasReuseClassA)
+
+SubObjectPropertyOf(SteelElementReuseOntology1:hasReuseClassA SteelElementReuseOntology1:isReusable)
+ObjectPropertyDomain(SteelElementReuseOntology1:hasReuseClassA SteelElementReuseOntology1:SteelBeam)
+ObjectPropertyRange(SteelElementReuseOntology1:hasReuseClassA SteelElementReuseOntology1:ReuseClassA)
+
+# Object Property: SteelElementReuseOntology1:hasReuseClassB (SteelElementReuseOntology1:hasReuseClassB)
+
+SubObjectPropertyOf(SteelElementReuseOntology1:hasReuseClassB SteelElementReuseOntology1:isReusable)
+ObjectPropertyDomain(SteelElementReuseOntology1:hasReuseClassB SteelElementReuseOntology1:SteelBeam)
+ObjectPropertyRange(SteelElementReuseOntology1:hasReuseClassB SteelElementReuseOntology1:ReuseClassB)
+
+# Object Property: SteelElementReuseOntology1:hasReuseClassC (SteelElementReuseOntology1:hasReuseClassC)
+
+SubObjectPropertyOf(SteelElementReuseOntology1:hasReuseClassC SteelElementReuseOntology1:isReusable)
+ObjectPropertyDomain(SteelElementReuseOntology1:hasReuseClassC SteelElementReuseOntology1:SteelBeam)
+ObjectPropertyRange(SteelElementReuseOntology1:hasReuseClassC SteelElementReuseOntology1:ReuseClassC)
+
+# Object Property: SteelElementReuseOntology1:hasReusePotential (SteelElementReuseOntology1:hasReusePotential)
+
+ObjectPropertyRange(SteelElementReuseOntology1:hasReusePotential SteelElementReuseOntology1:ReusePotential)
+
+# Object Property: SteelElementReuseOntology1:hasTestingProtocolDocumentation (SteelElementReuseOntology1:hasTestingProtocolDocumentation)
+
+SubObjectPropertyOf(SteelElementReuseOntology1:hasTestingProtocolDocumentation dot:hasDocumentation)
+ObjectPropertyRange(SteelElementReuseOntology1:hasTestingProtocolDocumentation SteelElementReuseOntology1:TestingProtocolDocumentation)
+
+# Object Property: SteelElementReuseOntology1:isCausationOf (SteelElementReuseOntology1:isCausationOf)
+
+InverseObjectProperties(SteelElementReuseOntology1:isCausationOf dot:hasCausation)
+ObjectPropertyDomain(SteelElementReuseOntology1:isCausationOf dot:Causation)
+ObjectPropertyRange(SteelElementReuseOntology1:isCausationOf dot:Damage)
+
+# Object Property: SteelElementReuseOntology1:isDamageOf (SteelElementReuseOntology1:isDamageOf)
+
+InverseObjectProperties(SteelElementReuseOntology1:isDamageOf dot:hasDamage)
+ObjectPropertyDomain(SteelElementReuseOntology1:isDamageOf dot:Damage)
+ObjectPropertyRange(SteelElementReuseOntology1:isDamageOf <https://schema.org/Product>)
+
+# Object Property: SteelElementReuseOntology1:isNonReusable (SteelElementReuseOntology1:isNonReusable)
+
+SubObjectPropertyOf(SteelElementReuseOntology1:isNonReusable SteelElementReuseOntology1:hasReusePotential)
+InverseObjectProperties(SteelElementReuseOntology1:isNonReusable SteelElementReuseOntology1:isReusable)
+
+# Object Property: SteelElementReuseOntology1:isProfileShapeOf (SteelElementReuseOntology1:isProfileShapeOf)
+
+ObjectPropertyDomain(SteelElementReuseOntology1:isProfileShapeOf SteelElementReuseOntology1:ProfileShape)
+ObjectPropertyRange(SteelElementReuseOntology1:isProfileShapeOf <https://w3id.org/digitalconstruction/0.5/Materials#Profile>)
+
+# Object Property: SteelElementReuseOntology1:isReusable (SteelElementReuseOntology1:isReusable)
+
+SubObjectPropertyOf(SteelElementReuseOntology1:isReusable SteelElementReuseOntology1:hasReusePotential)
+ObjectPropertyRange(SteelElementReuseOntology1:isReusable SteelElementReuseOntology1:Reusable)
+
+# Object Property: <https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial> (<https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial>)
+
+ObjectPropertyRange(<https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial> <https://w3id.org/digitalconstruction/0.5/Materials#Material>)
+
+# Object Property: <https://w3id.org/digitalconstruction/0.5/Materials#hasProfile> (hasProfile)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/digitalconstruction/0.5/Materials#hasProfile> "hasProfile")
+FunctionalObjectProperty(<https://w3id.org/digitalconstruction/0.5/Materials#hasProfile>)
+ObjectPropertyRange(<https://w3id.org/digitalconstruction/0.5/Materials#hasProfile> <https://w3id.org/digitalconstruction/0.5/Materials#Profile>)
+
+# Object Property: dot:adjacentDamageElement (tilstødende Skadeselement)
+
+ObjectPropertyDomain(dot:adjacentDamageElement dot:DamageElement)
+ObjectPropertyRange(dot:adjacentDamageElement dot:DamageElement)
+
+# Object Property: dot:aggregatesDamageElement (aggregerer Skadeselement)
+
+ObjectPropertyDomain(dot:aggregatesDamageElement dot:DamageArea)
+ObjectPropertyRange(dot:aggregatesDamageElement dot:DamageElement)
+
+# Object Property: dot:coveredByInspection (omfattet af inspektion)
+
+ObjectPropertyRange(dot:coveredByInspection dot:Inspection)
+
+# Object Property: dot:coveredInDocumentation (omfattet af dokumentation)
+
+ObjectPropertyRange(dot:coveredInDocumentation SteelElementReuseOntology:Documentation)
+
+# Object Property: dot:hasCausation (has Causation)
+
+ObjectPropertyDomain(dot:hasCausation dot:Damage)
+ObjectPropertyRange(dot:hasCausation dot:Causation)
+
+# Object Property: dot:hasDamage (has Damage)
+
+ObjectPropertyDomain(dot:hasDamage <https://schema.org/Product>)
+ObjectPropertyRange(dot:hasDamage dot:Damage)
+
+# Object Property: dot:hasDocumentation (has documentation)
+
+ObjectPropertyDomain(dot:hasDocumentation SteelElementReuseOntology1:ReuseAudit)
+ObjectPropertyDomain(dot:hasDocumentation dot:Inspection)
+ObjectPropertyRange(dot:hasDocumentation SteelElementReuseOntology:Documentation)
+
+# Object Property: dot:hasInspector (has Inspector)
+
+ObjectPropertyDomain(dot:hasInspector dot:Inspection)
+ObjectPropertyRange(dot:hasInspector SteelElementReuseOntology:MaterialHunter)
+ObjectPropertyRange(dot:hasInspector dot:Inspector)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <Https://w3id.org/digitalconstruction/0.5/Materials#hasDefinedValue> (<Https://w3id.org/digitalconstruction/0.5/Materials#hasDefinedValue>)
+
+SubDataPropertyOf(<Https://w3id.org/digitalconstruction/0.5/Materials#hasDefinedValue> <https://w3id.org/digitalconstruction/0.5/Materials#hasValue>)
+
+# Data Property: <Https://w3id.org/digitalconstruction/0.5/Materials#hasEstimatedValue> (<Https://w3id.org/digitalconstruction/0.5/Materials#hasEstimatedValue>)
+
+SubDataPropertyOf(<Https://w3id.org/digitalconstruction/0.5/Materials#hasEstimatedValue> <https://w3id.org/digitalconstruction/0.5/Materials#hasValue>)
+
+# Data Property: <Https://w3id.org/digitalconstruction/0.5/Materials#hasMeasuredValue> (<Https://w3id.org/digitalconstruction/0.5/Materials#hasMeasuredValue>)
+
+SubDataPropertyOf(<Https://w3id.org/digitalconstruction/0.5/Materials#hasMeasuredValue> <https://w3id.org/digitalconstruction/0.5/Materials#hasValue>)
+DataPropertyRange(<Https://w3id.org/digitalconstruction/0.5/Materials#hasMeasuredValue> xsd:float)
+
+# Data Property: SteelElementReuseOntology1:hasAge (SteelElementReuseOntology1:hasAge)
+
+SubDataPropertyOf(SteelElementReuseOntology1:hasAge owl:topDataProperty)
+FunctionalDataProperty(SteelElementReuseOntology1:hasAge)
+DataPropertyRange(SteelElementReuseOntology1:hasAge xsd:integer)
+
+# Data Property: SteelElementReuseOntology1:hasBarHeight (SteelElementReuseOntology1:hasBarHeight)
+
+EquivalentDataProperties(SteelElementReuseOntology1:hasBarHeight SteelElementReuseOntology1:hasWebHeight)
+SubDataPropertyOf(SteelElementReuseOntology1:hasBarHeight owl:topDataProperty)
+DataPropertyDomain(SteelElementReuseOntology1:hasBarHeight SteelElementReuseOntology1:SteelBeam)
+DataPropertyDomain(SteelElementReuseOntology1:hasBarHeight ObjectUnionOf(SteelElementReuseOntology1:HProfile SteelElementReuseOntology1:IProfile SteelElementReuseOntology1:TProfile SteelElementReuseOntology1:UProfile SteelElementReuseOntology1:ZProfile))
+DataPropertyRange(SteelElementReuseOntology1:hasBarHeight xsd:float)
+
+# Data Property: SteelElementReuseOntology1:hasBarThickness (SteelElementReuseOntology1:hasBarThickness)
+
+EquivalentDataProperties(SteelElementReuseOntology1:hasBarThickness SteelElementReuseOntology1:hasWebThickness)
+SubDataPropertyOf(SteelElementReuseOntology1:hasBarThickness owl:topDataProperty)
+DataPropertyDomain(SteelElementReuseOntology1:hasBarThickness SteelElementReuseOntology1:SteelBeam)
+DataPropertyDomain(SteelElementReuseOntology1:hasBarThickness ObjectUnionOf(SteelElementReuseOntology1:HProfile SteelElementReuseOntology1:IProfile SteelElementReuseOntology1:TProfile SteelElementReuseOntology1:UProfile SteelElementReuseOntology1:ZProfile))
+DataPropertyRange(SteelElementReuseOntology1:hasBarThickness xsd:float)
+
+# Data Property: SteelElementReuseOntology1:hasBarWidth (SteelElementReuseOntology1:hasBarWidth)
+
+EquivalentDataProperties(SteelElementReuseOntology1:hasBarWidth SteelElementReuseOntology1:hasWebThickness)
+SubDataPropertyOf(SteelElementReuseOntology1:hasBarWidth owl:topDataProperty)
+DataPropertyDomain(SteelElementReuseOntology1:hasBarWidth SteelElementReuseOntology1:SteelBeam)
+DataPropertyDomain(SteelElementReuseOntology1:hasBarWidth ObjectUnionOf(SteelElementReuseOntology1:HProfile SteelElementReuseOntology1:IProfile SteelElementReuseOntology1:TProfile SteelElementReuseOntology1:UProfile SteelElementReuseOntology1:ZProfile))
+DataPropertyRange(SteelElementReuseOntology1:hasBarWidth xsd:float)
+
+# Data Property: SteelElementReuseOntology1:hasFlangeHeight (SteelElementReuseOntology1:hasFlangeHeight)
+
+EquivalentDataProperties(SteelElementReuseOntology1:hasFlangeHeight SteelElementReuseOntology1:hasFlangeThickness)
+SubDataPropertyOf(SteelElementReuseOntology1:hasFlangeHeight owl:topDataProperty)
+DataPropertyDomain(SteelElementReuseOntology1:hasFlangeHeight SteelElementReuseOntology1:SteelBeam)
+DataPropertyDomain(SteelElementReuseOntology1:hasFlangeHeight ObjectUnionOf(SteelElementReuseOntology1:HProfile SteelElementReuseOntology1:IProfile SteelElementReuseOntology1:TProfile SteelElementReuseOntology1:UProfile SteelElementReuseOntology1:ZProfile))
+DataPropertyRange(SteelElementReuseOntology1:hasFlangeHeight xsd:float)
+
+# Data Property: SteelElementReuseOntology1:hasFlangeThickness (SteelElementReuseOntology1:hasFlangeThickness)
+
+SubDataPropertyOf(SteelElementReuseOntology1:hasFlangeThickness owl:topDataProperty)
+DataPropertyDomain(SteelElementReuseOntology1:hasFlangeThickness SteelElementReuseOntology1:SteelBeam)
+DataPropertyDomain(SteelElementReuseOntology1:hasFlangeThickness ObjectUnionOf(SteelElementReuseOntology1:HProfile SteelElementReuseOntology1:IProfile SteelElementReuseOntology1:TProfile SteelElementReuseOntology1:UProfile SteelElementReuseOntology1:ZProfile))
+DataPropertyRange(SteelElementReuseOntology1:hasFlangeThickness xsd:float)
+
+# Data Property: SteelElementReuseOntology1:hasFlangeWidth (SteelElementReuseOntology1:hasFlangeWidth)
+
+EquivalentDataProperties(SteelElementReuseOntology1:hasFlangeWidth SteelElementReuseOntology1:hasProfileWidth)
+SubDataPropertyOf(SteelElementReuseOntology1:hasFlangeWidth owl:topDataProperty)
+DataPropertyDomain(SteelElementReuseOntology1:hasFlangeWidth SteelElementReuseOntology1:SteelBeam)
+DataPropertyDomain(SteelElementReuseOntology1:hasFlangeWidth ObjectUnionOf(SteelElementReuseOntology1:HProfile SteelElementReuseOntology1:IProfile SteelElementReuseOntology1:TProfile SteelElementReuseOntology1:UProfile SteelElementReuseOntology1:ZProfile))
+DataPropertyRange(SteelElementReuseOntology1:hasFlangeWidth xsd:float)
+
+# Data Property: SteelElementReuseOntology1:hasLength (SteelElementReuseOntology1:hasLength)
+
+SubDataPropertyOf(SteelElementReuseOntology1:hasLength owl:topDataProperty)
+DataPropertyDomain(SteelElementReuseOntology1:hasLength ObjectUnionOf(<https://pi.pauwel.be/voc/buildingelement#BuildingElement> <https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject>))
+DataPropertyRange(SteelElementReuseOntology1:hasLength xsd:float)
+
+# Data Property: SteelElementReuseOntology1:hasMaterialThickness (SteelElementReuseOntology1:hasMaterialThickness)
+
+SubDataPropertyOf(SteelElementReuseOntology1:hasMaterialThickness owl:topDataProperty)
+DataPropertyDomain(SteelElementReuseOntology1:hasMaterialThickness SteelElementReuseOntology1:SteelBeam)
+DataPropertyDomain(SteelElementReuseOntology1:hasMaterialThickness ObjectUnionOf(SteelElementReuseOntology1:HollowProfile SteelElementReuseOntology1:LProfile SteelElementReuseOntology1:SolidProfile))
+DataPropertyRange(SteelElementReuseOntology1:hasMaterialThickness xsd:float)
+
+# Data Property: SteelElementReuseOntology1:hasProfileDiameter (SteelElementReuseOntology1:hasProfileDiameter)
+
+SubDataPropertyOf(SteelElementReuseOntology1:hasProfileDiameter owl:topDataProperty)
+
+# Data Property: SteelElementReuseOntology1:hasProfileHeight (SteelElementReuseOntology1:hasProfileHeight)
+
+SubDataPropertyOf(SteelElementReuseOntology1:hasProfileHeight owl:topDataProperty)
+DataPropertyDomain(SteelElementReuseOntology1:hasProfileHeight SteelElementReuseOntology1:SteelBeam)
+DataPropertyDomain(SteelElementReuseOntology1:hasProfileHeight <https://w3id.org/digitalconstruction/0.5/Materials#Profile>)
+DataPropertyRange(SteelElementReuseOntology1:hasProfileHeight xsd:float)
+
+# Data Property: SteelElementReuseOntology1:hasProfileWidth (SteelElementReuseOntology1:hasProfileWidth)
+
+SubDataPropertyOf(SteelElementReuseOntology1:hasProfileWidth owl:topDataProperty)
+DataPropertyDomain(SteelElementReuseOntology1:hasProfileWidth SteelElementReuseOntology1:SteelBeam)
+DataPropertyDomain(SteelElementReuseOntology1:hasProfileWidth <https://w3id.org/digitalconstruction/0.5/Materials#Profile>)
+DataPropertyRange(SteelElementReuseOntology1:hasProfileWidth xsd:float)
+
+# Data Property: SteelElementReuseOntology1:hasSteelGrade (SteelElementReuseOntology1:hasSteelGrade)
+
+DataPropertyRange(SteelElementReuseOntology1:hasSteelGrade xsd:string)
+
+# Data Property: SteelElementReuseOntology1:hasWebHeight (SteelElementReuseOntology1:hasWebHeight)
+
+SubDataPropertyOf(SteelElementReuseOntology1:hasWebHeight owl:topDataProperty)
+DataPropertyDomain(SteelElementReuseOntology1:hasWebHeight SteelElementReuseOntology1:SteelBeam)
+DataPropertyDomain(SteelElementReuseOntology1:hasWebHeight ObjectUnionOf(SteelElementReuseOntology1:HProfile SteelElementReuseOntology1:IProfile SteelElementReuseOntology1:TProfile SteelElementReuseOntology1:UProfile SteelElementReuseOntology1:ZProfile))
+DataPropertyRange(SteelElementReuseOntology1:hasWebHeight xsd:float)
+
+# Data Property: SteelElementReuseOntology1:hasWebThickness (SteelElementReuseOntology1:hasWebThickness)
+
+EquivalentDataProperties(SteelElementReuseOntology1:hasWebThickness SteelElementReuseOntology1:hasWebWidth)
+SubDataPropertyOf(SteelElementReuseOntology1:hasWebThickness owl:topDataProperty)
+DataPropertyDomain(SteelElementReuseOntology1:hasWebThickness SteelElementReuseOntology1:SteelBeam)
+DataPropertyDomain(SteelElementReuseOntology1:hasWebThickness ObjectUnionOf(SteelElementReuseOntology1:HProfile SteelElementReuseOntology1:IProfile SteelElementReuseOntology1:TProfile SteelElementReuseOntology1:UProfile SteelElementReuseOntology1:ZProfile))
+DataPropertyRange(SteelElementReuseOntology1:hasWebThickness xsd:float)
+
+# Data Property: SteelElementReuseOntology1:hasWebWidth (SteelElementReuseOntology1:hasWebWidth)
+
+SubDataPropertyOf(SteelElementReuseOntology1:hasWebWidth owl:topDataProperty)
+DataPropertyDomain(SteelElementReuseOntology1:hasWebWidth SteelElementReuseOntology1:SteelBeam)
+DataPropertyDomain(SteelElementReuseOntology1:hasWebWidth ObjectUnionOf(SteelElementReuseOntology1:HProfile SteelElementReuseOntology1:IProfile SteelElementReuseOntology1:TProfile SteelElementReuseOntology1:UProfile SteelElementReuseOntology1:ZProfile))
+DataPropertyRange(SteelElementReuseOntology1:hasWebWidth xsd:float)
+
+# Data Property: <https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial> (<https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial>)
+
+DataPropertyRange(<https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial> xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: SteelElementReuseOntology:ChemicalDamageCorrosion (SteelElementReuseOntology:ChemicalDamageCorrosion)
+
+EquivalentClasses(SteelElementReuseOntology:ChemicalDamageCorrosion ObjectIntersectionOf(<https://w3id.org/damagemodels/cdo#ChemicalDamage> ObjectHasValue(dot:hasCausation SteelElementReuseOntology1:CorrosiveExposure)))
+
+# Class: SteelElementReuseOntology:MaterialHunter (Materialhunter)
+
+AnnotationAssertion(rdfs:comment SteelElementReuseOntology:MaterialHunter "A Person gathering information on the built environment (among other tasks) to find building components and materials that have potential for reuse"@en)
+AnnotationAssertion(rdfs:label SteelElementReuseOntology:MaterialHunter "Materialhunter"@en)
+SubClassOf(SteelElementReuseOntology:MaterialHunter foaf:Person)
+
+# Class: SteelElementReuseOntology:PhysicalDamage (Physical Damage)
+
+AnnotationAssertion(rdfs:comment SteelElementReuseOntology:PhysicalDamage "Physical Damage means any tangible injury to a Property, whether caused by accident, natural occurrence, or any other reason, including damage caused by defects in construction, land subsidence, earth movement or slippage, fire, flood, earthquake, riot, vandalism or any Environmental Condition.")
+AnnotationAssertion(rdfs:label SteelElementReuseOntology:PhysicalDamage "Physical Damage"@en)
+SubClassOf(SteelElementReuseOntology:PhysicalDamage dot:ClassifiedDamage)
+
+# Class: SteelElementReuseOntology:PhysicalDamageAbrasion (SteelElementReuseOntology:PhysicalDamageAbrasion)
+
+EquivalentClasses(SteelElementReuseOntology:PhysicalDamageAbrasion ObjectIntersectionOf(SteelElementReuseOntology:PhysicalDamage ObjectHasValue(dot:hasCausation SteelElementReuseOntology1:Wear)))
+
+# Class: SteelElementReuseOntology:PhysicalDamageEmbrittlement (SteelElementReuseOntology:PhysicalDamageEmbrittlement)
+
+EquivalentClasses(SteelElementReuseOntology:PhysicalDamageEmbrittlement ObjectIntersectionOf(SteelElementReuseOntology:PhysicalDamage ObjectHasValue(dot:hasCausation SteelElementReuseOntology1:CorrosiveExposure) ObjectHasValue(dot:hasCausation SteelElementReuseOntology1:Radiation)))
+
+# Class: SteelElementReuseOntology:PhysicalDamageFatigue (SteelElementReuseOntology:PhysicalDamageFatigue)
+
+EquivalentClasses(SteelElementReuseOntology:PhysicalDamageFatigue ObjectIntersectionOf(SteelElementReuseOntology:PhysicalDamage ObjectHasValue(dot:hasCausation SteelElementReuseOntology1:Fire) ObjectHasValue(dot:hasCausation SteelElementReuseOntology1:Impact)))
+
+# Class: SteelElementReuseOntology:PhysicalDamagePlasticDeformation (SteelElementReuseOntology:PhysicalDamagePlasticDeformation)
+
+EquivalentClasses(SteelElementReuseOntology:PhysicalDamagePlasticDeformation ObjectIntersectionOf(SteelElementReuseOntology:PhysicalDamage ObjectHasValue(dot:hasCausation SteelElementReuseOntology1:Earthquake) ObjectHasValue(dot:hasCausation SteelElementReuseOntology1:Fire) ObjectHasValue(dot:hasCausation SteelElementReuseOntology1:Impact)))
+
+# Class: SteelElementReuseOntology:TechnicalDocumentation (Profile Documentation)
+
+AnnotationAssertion(rdfs:label SteelElementReuseOntology:TechnicalDocumentation "Profile Documentation"@en)
+SubClassOf(SteelElementReuseOntology:TechnicalDocumentation SteelElementReuseOntology:Documentation)
+
+# Class: SteelElementReuseOntology1:Activity (Activity)
+
+AnnotationAssertion(rdfs:label SteelElementReuseOntology1:Activity "Activity"@en)
+AnnotationAssertion(owl:sameAs SteelElementReuseOntology1:Activity <http://ontology.eil.utoronto.ca/icity/Activity/Activity>)
+
+# Class: SteelElementReuseOntology1:AdequacyTestingDocumentation (SteelElementReuseOntology1:AdequacyTestingDocumentation)
+
+SubClassOf(SteelElementReuseOntology1:AdequacyTestingDocumentation SteelElementReuseOntology1:TestingProtocolDocumentation)
+
+# Class: SteelElementReuseOntology1:CEMarking (CE Marking)
+
+AnnotationAssertion(rdfs:comment SteelElementReuseOntology1:CEMarking "The CE (Conformité Européenne) mark, is an authentication symbol for products that can be legally sold in Europe. The CE mark ostensibly means that the product manufacturer(s) take responsibility for each products’ compliance with European Directives."@en)
+AnnotationAssertion(rdfs:label SteelElementReuseOntology1:CEMarking "CE Marking")
+SubClassOf(SteelElementReuseOntology1:CEMarking SteelElementReuseOntology:Documentation)
+
+# Class: SteelElementReuseOntology1:CoatingDamage (SteelElementReuseOntology1:CoatingDamage)
+
+SubClassOf(SteelElementReuseOntology1:CoatingDamage dot:ClassifiedDamage)
+
+# Class: SteelElementReuseOntology1:HProfile (H Profile)
+
+AnnotationAssertion(terms:description SteelElementReuseOntology1:HProfile "Profiles whose cross-section resembles the letter H and whose flange width is greater than 0.66 times the nominal height or ≥ 300 mm. H profiles whose flange width is greater than 0.8 times the nominal height, are also called column sections [DIN EN:10079:2007]"@en)
+AnnotationAssertion(rdfs:label SteelElementReuseOntology1:HProfile "H Profile"@en)
+EquivalentClasses(SteelElementReuseOntology1:HProfile ObjectIntersectionOf(<https://w3id.org/digitalconstruction/0.5/Materials#Profile> ObjectAllValuesFrom(SteelElementReuseOntology1:hasProfileShape SteelElementReuseOntology1:ProfileShapeH)))
+
+# Class: SteelElementReuseOntology1:HollowProfile (SteelElementReuseOntology1:HollowProfile)
+
+SubClassOf(SteelElementReuseOntology1:HollowProfile <https://w3id.org/digitalconstruction/0.5/Materials#Profile>)
+
+# Class: SteelElementReuseOntology1:IProfile (I Profile)
+
+AnnotationAssertion(terms:description SteelElementReuseOntology1:IProfile "Profiles whose cross-section resembles the letters I and whose flange width is less than or equal to 0.66 times the nominal height of the profile and less than 300 mm [DIN EN 10079:2007]"@en)
+AnnotationAssertion(rdfs:label SteelElementReuseOntology1:IProfile "I Profile"@en)
+SubClassOf(SteelElementReuseOntology1:IProfile <https://w3id.org/digitalconstruction/0.5/Materials#Profile>)
+
+# Class: SteelElementReuseOntology1:LProfile (SteelElementReuseOntology1:LProfile)
+
+SubClassOf(SteelElementReuseOntology1:LProfile <https://w3id.org/digitalconstruction/0.5/Materials#Profile>)
+
+# Class: SteelElementReuseOntology1:NewCEMarking (SteelElementReuseOntology1:NewCEMarking)
+
+SubClassOf(SteelElementReuseOntology1:NewCEMarking SteelElementReuseOntology1:CEMarking)
+
+# Class: SteelElementReuseOntology1:NonReusable (SteelElementReuseOntology1:NonReusable)
+
+EquivalentClasses(SteelElementReuseOntology1:NonReusable ObjectHasValue(SteelElementReuseOntology1:hasReusePotential SteelElementReuseOntology1:NonReusable))
+SubClassOf(SteelElementReuseOntology1:NonReusable SteelElementReuseOntology1:ReusePotential)
+DisjointClasses(SteelElementReuseOntology1:NonReusable SteelElementReuseOntology1:Reusable)
+
+# Class: SteelElementReuseOntology1:NonReusableSteelBeam (SteelElementReuseOntology1:NonReusableSteelBeam)
+
+EquivalentClasses(SteelElementReuseOntology1:NonReusableSteelBeam ObjectIntersectionOf(SteelElementReuseOntology1:SteelBeam ObjectHasValue(SteelElementReuseOntology1:hasReusePotential SteelElementReuseOntology1:NonReusable)))
+
+# Class: SteelElementReuseOntology1:OriginalCEMarking (SteelElementReuseOntology1:OriginalCEMarking)
+
+SubClassOf(SteelElementReuseOntology1:OriginalCEMarking SteelElementReuseOntology1:CEMarking)
+
+# Class: SteelElementReuseOntology1:OriginalMaterialDocumentation (SteelElementReuseOntology1:OriginalMaterialDocumentation)
+
+SubClassOf(SteelElementReuseOntology1:OriginalMaterialDocumentation SteelElementReuseOntology:Documentation)
+
+# Class: SteelElementReuseOntology1:OriginalTestCertificatesDocumentation (SteelElementReuseOntology1:OriginalTestCertificatesDocumentation)
+
+SubClassOf(SteelElementReuseOntology1:OriginalTestCertificatesDocumentation SteelElementReuseOntology:Documentation)
+
+# Class: SteelElementReuseOntology1:PhysicalDamageRadiation (SteelElementReuseOntology1:PhysicalDamageRadiation)
+
+EquivalentClasses(SteelElementReuseOntology1:PhysicalDamageRadiation ObjectIntersectionOf(SteelElementReuseOntology:PhysicalDamage ObjectHasValue(dot:hasCausation SteelElementReuseOntology1:Radiation)))
+
+# Class: SteelElementReuseOntology1:ProfilePart (Profile Part)
+
+AnnotationAssertion(rdfs:comment SteelElementReuseOntology1:ProfilePart "Part of a Profile - in this case either the Flange or Web (or Bar). The horizontal elements of the I or H are flanges, and the vertical element is the \"web\" (or bar)"@en)
+AnnotationAssertion(rdfs:label SteelElementReuseOntology1:ProfilePart "Profile Part"@en)
+SubClassOf(SteelElementReuseOntology1:ProfilePart <https://w3id.org/digitalconstruction/0.5/Materials#MaterialObjectStructure>)
+
+# Class: SteelElementReuseOntology1:ProfilePartBar (SteelElementReuseOntology1:ProfilePartBar)
+
+EquivalentClasses(SteelElementReuseOntology1:ProfilePartBar SteelElementReuseOntology1:ProfilePartWeb)
+SubClassOf(SteelElementReuseOntology1:ProfilePartBar SteelElementReuseOntology1:ProfilePart)
+
+# Class: SteelElementReuseOntology1:ProfilePartFlange (Flange)
+
+AnnotationAssertion(rdfs:comment SteelElementReuseOntology1:ProfilePartFlange "A flange is a projecting ridge, rim, collar or ring on an object such as a column, beam, pipe and so on that provides additional strength or stiffness or additional surface area for the attachment of, or to, another object.
+
+Horizontal element of a beam, resisting most of the bending moment."@en)
+AnnotationAssertion(rdfs:label SteelElementReuseOntology1:ProfilePartFlange "Flange")
+SubClassOf(SteelElementReuseOntology1:ProfilePartFlange SteelElementReuseOntology1:ProfilePart)
+
+# Class: SteelElementReuseOntology1:ProfilePartWeb (Web)
+
+AnnotationAssertion(rdfs:comment SteelElementReuseOntology1:ProfilePartWeb "Vertical Element of a beam, resisting shear forces."@en)
+AnnotationAssertion(rdfs:label SteelElementReuseOntology1:ProfilePartWeb "Bar")
+AnnotationAssertion(rdfs:label SteelElementReuseOntology1:ProfilePartWeb "Web"@en)
+SubClassOf(SteelElementReuseOntology1:ProfilePartWeb SteelElementReuseOntology1:ProfilePart)
+
+# Class: SteelElementReuseOntology1:ProfileShape (SteelElementReuseOntology1:ProfileShape)
+
+SubClassOf(SteelElementReuseOntology1:ProfileShape <https://w3id.org/digitalconstruction/0.5/Materials#MaterialObjectStructure>)
+
+# Class: SteelElementReuseOntology1:ProfileShapeH (SteelElementReuseOntology1:ProfileShapeH)
+
+SubClassOf(SteelElementReuseOntology1:ProfileShapeH SteelElementReuseOntology1:ProfileShape)
+
+# Class: SteelElementReuseOntology1:ProfileShapeI (SteelElementReuseOntology1:ProfileShapeI)
+
+SubClassOf(SteelElementReuseOntology1:ProfileShapeI SteelElementReuseOntology1:ProfileShape)
+
+# Class: SteelElementReuseOntology1:ProfileShapeL (SteelElementReuseOntology1:ProfileShapeL)
+
+SubClassOf(SteelElementReuseOntology1:ProfileShapeL SteelElementReuseOntology1:ProfileShape)
+
+# Class: SteelElementReuseOntology1:ProfileShapeT (SteelElementReuseOntology1:ProfileShapeT)
+
+SubClassOf(SteelElementReuseOntology1:ProfileShapeT SteelElementReuseOntology1:ProfileShape)
+
+# Class: SteelElementReuseOntology1:ProfileShapeU (SteelElementReuseOntology1:ProfileShapeU)
+
+SubClassOf(SteelElementReuseOntology1:ProfileShapeU SteelElementReuseOntology1:ProfileShape)
+
+# Class: SteelElementReuseOntology1:ProfileShapeZ (SteelElementReuseOntology1:ProfileShapeZ)
+
+SubClassOf(SteelElementReuseOntology1:ProfileShapeZ SteelElementReuseOntology1:ProfileShape)
+
+# Class: SteelElementReuseOntology1:ReliabilityTestingDocumentation (SteelElementReuseOntology1:ReliabilityTestingDocumentation)
+
+SubClassOf(SteelElementReuseOntology1:ReliabilityTestingDocumentation SteelElementReuseOntology1:TestingProtocolDocumentation)
+
+# Class: SteelElementReuseOntology1:Reusable (SteelElementReuseOntology1:Reusable)
+
+SubClassOf(SteelElementReuseOntology1:Reusable SteelElementReuseOntology1:ReusePotential)
+
+# Class: SteelElementReuseOntology1:ReusableSteelBeam (SteelElementReuseOntology1:ReusableSteelBeam)
+
+EquivalentClasses(SteelElementReuseOntology1:ReusableSteelBeam ObjectIntersectionOf(SteelElementReuseOntology1:SteelBeam ObjectComplementOf(SteelElementReuseOntology1:NonReusableSteelBeam)))
+
+# Class: SteelElementReuseOntology1:ReuseAudit (Reuse Audit)
+
+AnnotationAssertion(rdfs:label SteelElementReuseOntology1:ReuseAudit "Reuse Audit"@en)
+SubClassOf(SteelElementReuseOntology1:ReuseAudit SteelElementReuseOntology1:Activity)
+
+# Class: SteelElementReuseOntology1:ReuseClassA (SteelElementReuseOntology1:ReuseClassA)
+
+SubClassOf(SteelElementReuseOntology1:ReuseClassA SteelElementReuseOntology1:Reusable)
+
+# Class: SteelElementReuseOntology1:ReuseClassASteelBeam (SteelElementReuseOntology1:ReuseClassASteelBeam)
+
+SubClassOf(SteelElementReuseOntology1:ReuseClassASteelBeam SteelElementReuseOntology1:ReusableSteelBeam)
+DisjointClasses(SteelElementReuseOntology1:ReuseClassASteelBeam SteelElementReuseOntology1:ReuseClassBSteelBeam)
+
+# Class: SteelElementReuseOntology1:ReuseClassB (SteelElementReuseOntology1:ReuseClassB)
+
+SubClassOf(SteelElementReuseOntology1:ReuseClassB SteelElementReuseOntology1:Reusable)
+
+# Class: SteelElementReuseOntology1:ReuseClassBSteelBeam (SteelElementReuseOntology1:ReuseClassBSteelBeam)
+
+SubClassOf(SteelElementReuseOntology1:ReuseClassBSteelBeam SteelElementReuseOntology1:ReusableSteelBeam)
+
+# Class: SteelElementReuseOntology1:ReuseClassC (SteelElementReuseOntology1:ReuseClassC)
+
+SubClassOf(SteelElementReuseOntology1:ReuseClassC SteelElementReuseOntology1:Reusable)
+
+# Class: SteelElementReuseOntology1:ReuseClassCSteelBeam (SteelElementReuseOntology1:ReuseClassCSteelBeam)
+
+SubClassOf(SteelElementReuseOntology1:ReuseClassCSteelBeam SteelElementReuseOntology1:ReusableSteelBeam)
+
+# Class: SteelElementReuseOntology1:SolidProfile (SteelElementReuseOntology1:SolidProfile)
+
+AnnotationAssertion(rdfs:comment SteelElementReuseOntology1:SolidProfile "Hot-rolled products in bar form with open, usually smaller cross-section or of special cross-sectional shape, which are usually produced only in relatively small quantities and are not covered by either I or H Profile.
+
+This group includes in particular Z-sections, T-sections with unequal flanges,
+sharp-edged L, U and T profiles, profiles for caterpillar tracks, etc. [DIN EN 10079:2007]"@en)
+SubClassOf(SteelElementReuseOntology1:SolidProfile <https://w3id.org/digitalconstruction/0.5/Materials#Profile>)
+
+# Class: SteelElementReuseOntology1:SteelBeam (Steel Beam)
+
+AnnotationAssertion(rdfs:label SteelElementReuseOntology1:SteelBeam "Steel Beam"@en)
+EquivalentClasses(SteelElementReuseOntology1:SteelBeam ObjectIntersectionOf(<https://pi.pauwel.be/voc/buildingelement#Beam-BEAM> ObjectHasValue(<https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial> <https://w3id.org/digitalconstruction/0.5/Materials#Steel>)))
+
+# Class: SteelElementReuseOntology1:SteelDamageCausation (SteelElementReuseOntology1:SteelDamageCausation)
+
+SubClassOf(SteelElementReuseOntology1:SteelDamageCausation dot:Causation)
+
+# Class: SteelElementReuseOntology1:TProfile (SteelElementReuseOntology1:TProfile)
+
+SubClassOf(SteelElementReuseOntology1:TProfile <https://w3id.org/digitalconstruction/0.5/Materials#Profile>)
+
+# Class: SteelElementReuseOntology1:TestingProtocolDocumentation (SteelElementReuseOntology1:TestingProtocolDocumentation)
+
+SubClassOf(SteelElementReuseOntology1:TestingProtocolDocumentation SteelElementReuseOntology:Documentation)
+
+# Class: SteelElementReuseOntology1:UProfile (SteelElementReuseOntology1:UProfile)
+
+SubClassOf(SteelElementReuseOntology1:UProfile <https://w3id.org/digitalconstruction/0.5/Materials#Profile>)
+
+# Class: SteelElementReuseOntology1:ZProfile (SteelElementReuseOntology1:ZProfile)
+
+SubClassOf(SteelElementReuseOntology1:ZProfile <https://w3id.org/digitalconstruction/0.5/Materials#Profile>)
+
+# Class: foaf:Person (Person - A person)
+
+AnnotationAssertion(rdfs:comment foaf:Person "The foaf:Person class represents people. Something is a foaf:Person if it is a person. We don't nitpic about whether they're alive, dead, real, or imaginary. The foaf:Person class is a sub-class of the foaf:Agent class, since all people are considered 'agents' in FOAF."@en)
+AnnotationAssertion(rdfs:isDefinedBy foaf:Person <http://xmlns.com/foaf/0.1/#term_Person>)
+AnnotationAssertion(rdfs:label foaf:Person "Person - A person"@en)
+
+# Class: <https://pi.pauwel.be/voc/buildingelement#Beam-BEAM> (<https://pi.pauwel.be/voc/buildingelement#Beam-BEAM>)
+
+SubClassOf(<https://pi.pauwel.be/voc/buildingelement#Beam-BEAM> <https://pi.pauwel.be/voc/buildingelement#BuildingElement>)
+
+# Class: <https://pi.pauwel.be/voc/buildingelement#BuildingElement> (<https://pi.pauwel.be/voc/buildingelement#BuildingElement>)
+
+SubClassOf(<https://pi.pauwel.be/voc/buildingelement#BuildingElement> <https://schema.org/Product>)
+
+# Class: <https://w3id.org/damagemodels/cdo#ChemicalDamage> (Chemical Damage)
+
+AnnotationAssertion(rdfs:comment <https://w3id.org/damagemodels/cdo#ChemicalDamage> "Damage that is caused by chemical reactions in the concrete material or the reinforcement."@en)
+AnnotationAssertion(rdfs:isDefinedBy <https://w3id.org/damagemodels/cdo#ChemicalDamage> "https://w3id.org/damagemodels/cdo#")
+AnnotationAssertion(rdfs:label <https://w3id.org/damagemodels/cdo#ChemicalDamage> "Chemical Damage")
+SubClassOf(<https://w3id.org/damagemodels/cdo#ChemicalDamage> dot:ClassifiedDamage)
+
+# Class: <https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject> (<https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject>)
+
+SubClassOf(<https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject> <https://schema.org/Product>)
+
+# Class: <https://w3id.org/digitalconstruction/0.5/Materials#Material> (Material)
+
+AnnotationAssertion(terms:description <https://w3id.org/digitalconstruction/0.5/Materials#Material> "a homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). [ISO 16739]")
+AnnotationAssertion(rdfs:label <https://w3id.org/digitalconstruction/0.5/Materials#Material> "Material"@en)
+SubClassOf(<https://w3id.org/digitalconstruction/0.5/Materials#Material> <https://w3id.org/digitalconstruction/0.5/Entities#MaterialEntity>)
+
+# Class: <https://w3id.org/digitalconstruction/0.5/Materials#MaterialObjectStructure> (<https://w3id.org/digitalconstruction/0.5/Materials#MaterialObjectStructure>)
+
+SubClassOf(<https://w3id.org/digitalconstruction/0.5/Materials#MaterialObjectStructure> <https://w3id.org/digitalconstruction/0.5/Entities#BuildingObject>)
+
+# Class: <https://w3id.org/digitalconstruction/0.5/Materials#MetallicMaterial> (MetallicMaterial)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/digitalconstruction/0.5/Materials#MetallicMaterial> "MetallicMaterial")
+SubClassOf(<https://w3id.org/digitalconstruction/0.5/Materials#MetallicMaterial> <https://w3id.org/digitalconstruction/0.5/Materials#Material>)
+
+# Class: <https://w3id.org/digitalconstruction/0.5/Materials#Profile> (Profile)
+
+AnnotationAssertion(terms:description <https://w3id.org/digitalconstruction/0.5/Materials#Profile> "Profile is a single and identifiable cross section of an element which is constructed of a number of profiles (one or more) (Source:IFC).")
+AnnotationAssertion(rdfs:label <https://w3id.org/digitalconstruction/0.5/Materials#Profile> "Profile"@en)
+EquivalentClasses(<https://w3id.org/digitalconstruction/0.5/Materials#Profile> ObjectIntersectionOf(<https://w3id.org/digitalconstruction/0.5/Materials#MaterialObjectStructure> ObjectSomeValuesFrom(SteelElementReuseOntology1:hasProfilePart SteelElementReuseOntology1:ProfilePart)))
+
+# Class: dot:Causation (Causation)
+
+AnnotationAssertion(rdfs:comment dot:Causation "Represents the causation of a damage.
+Should be extended with domain-specific subclasses."@en)
+AnnotationAssertion(rdfs:isDefinedBy dot:Causation "https://w3id.org/dot#")
+AnnotationAssertion(rdfs:label dot:Causation "Causation"@en)
+
+# Class: dot:ClassifiedDamage (Classified Damage)
+
+AnnotationAssertion(rdfs:comment dot:ClassifiedDamage "A damage classification is used to denote the kind of damage. Subclasses of this class are defined in extensions 
+			  such as CDO (Concrete Damage Ontology), NSO (the Natural Stone Ontology), etc."@en)
+AnnotationAssertion(rdfs:isDefinedBy dot:ClassifiedDamage "https://w3id.org/dot#")
+AnnotationAssertion(rdfs:label dot:ClassifiedDamage "Classified Damage"@en)
+SubClassOf(dot:ClassifiedDamage dot:Damage)
+DisjointClasses(dot:ClassifiedDamage dot:UnclassifiedDamage)
+
+# Class: dot:DamageArea (Damage Area)
+
+AnnotationAssertion(rdfs:comment dot:DamageArea "Area in a component where damage is located. Holds collection of multiple DamageElements or DamagePatterns. Used to be attached with simplified geometry."@en)
+AnnotationAssertion(rdfs:isDefinedBy dot:DamageArea <https://w3id.org/dot#>)
+AnnotationAssertion(rdfs:label dot:DamageArea "Damage Area"@en)
+SubClassOf(dot:DamageArea dot:Damage)
+
+# Class: dot:DamageDocumentation (Skadesdokumentation)
+
+SubClassOf(dot:DamageDocumentation SteelElementReuseOntology:Documentation)
+
+# Class: dot:DamageElement (Damage Element)
+
+AnnotationAssertion(rdfs:comment dot:DamageElement "Damage that is modeled on a very detailed level and belongs with other adjacent Damage Element instances to a broader damage area or damage pattern"@en)
+AnnotationAssertion(rdfs:isDefinedBy dot:DamageElement <https://w3id.org/dot#>)
+AnnotationAssertion(rdfs:label dot:DamageElement "Damage Element"@en)
+SubClassOf(dot:DamageElement dot:Damage)
+
+# Class: dot:Defect (Defect)
+
+AnnotationAssertion(rdfs:comment dot:Defect "Should be used on nodes that are already classified as dot:DamageArea or dot:DamageElement.
+Damage that does not impair the structural integrity of the structure, but can still have influence on the durability, usability and / or value."@en)
+AnnotationAssertion(rdfs:isDefinedBy dot:Defect "https://w3id.org/dot#")
+AnnotationAssertion(rdfs:label dot:Defect "Defect"@en)
+SubClassOf(dot:Defect dot:Damage)
+DisjointClasses(dot:Defect dot:StructuralDamage)
+
+# Class: dot:Description (Beskrivelse)
+
+SubClassOf(dot:Description dot:DamageDocumentation)
+
+# Class: dot:ExternalResource (External Resource)
+
+SubClassOf(dot:ExternalResource dot:DamageDocumentation)
+
+# Class: dot:Inspection (Inspektion)
+
+SubClassOf(dot:Inspection SteelElementReuseOntology1:Activity)
+
+# Class: dot:Inspector (Inspektør)
+
+AnnotationAssertion(rdfs:comment dot:Inspector "A person who inspects constructions (for damages) or whose task it is to carry out inspections on constructions."@en)
+AnnotationAssertion(rdfs:isDefinedBy dot:Inspector "https://w3id.org/dot#")
+AnnotationAssertion(rdfs:label dot:Inspector "Inspector"@en)
+SubClassOf(dot:Inspector foaf:Person)
+
+# Class: dot:StructuralDamage (Structural Damage)
+
+AnnotationAssertion(rdfs:comment dot:StructuralDamage "Should be used on nodes that are already classified as dot:DamageArea, dot:DamagePattern or dot:DamageElement.
+Damage that impairs the structural integrity of the structure."@en)
+AnnotationAssertion(rdfs:isDefinedBy dot:StructuralDamage "https://w3id.org/dot#")
+AnnotationAssertion(rdfs:label dot:StructuralDamage "Structural Damage"@en)
+SubClassOf(dot:StructuralDamage dot:Damage)
+
+# Class: dot:UnclassifiedDamage (Unclassified Damage)
+
+AnnotationAssertion(rdfs:comment dot:UnclassifiedDamage "A dot:Damage instance that is not further classified with domain-specific classes (subclasses of dot:ClassifiedDamage). 
+This class can be used in cases where the damage classification is unknown."@en)
+AnnotationAssertion(rdfs:isDefinedBy dot:UnclassifiedDamage "https://w3id.org/dot#")
+AnnotationAssertion(rdfs:label dot:UnclassifiedDamage "Unclassified Damage"@en)
+SubClassOf(dot:UnclassifiedDamage dot:Damage)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: SteelElementReuseOntology1:Aluminium (SteelElementReuseOntology1:Aluminium)
+
+ClassAssertion(<https://w3id.org/digitalconstruction/0.5/Materials#MetallicMaterial> SteelElementReuseOntology1:Aluminium)
+
+# Individual: SteelElementReuseOntology1:CorrosiveExposure (SteelElementReuseOntology1:CorrosiveExposure)
+
+ClassAssertion(SteelElementReuseOntology1:SteelDamageCausation SteelElementReuseOntology1:CorrosiveExposure)
+
+# Individual: SteelElementReuseOntology1:Damage01_SteelBeam04 (SteelElementReuseOntology1:Damage01_SteelBeam04)
+
+ObjectPropertyAssertion(SteelElementReuseOntology1:coveredByReuseAudit SteelElementReuseOntology1:Damage01_SteelBeam04 SteelElementReuseOntology1:ReclamationAudit01)
+ObjectPropertyAssertion(dot:coveredInDocumentation SteelElementReuseOntology1:Damage01_SteelBeam04 SteelElementReuseOntology1:DamageDocumentation_SteelBeam04)
+ObjectPropertyAssertion(dot:hasCausation SteelElementReuseOntology1:Damage01_SteelBeam04 SteelElementReuseOntology1:Radiation)
+
+# Individual: SteelElementReuseOntology1:Damage01_SteelBeam06 (SteelElementReuseOntology1:Damage01_SteelBeam06)
+
+ObjectPropertyAssertion(SteelElementReuseOntology1:coveredByReuseAudit SteelElementReuseOntology1:Damage01_SteelBeam06 SteelElementReuseOntology1:ReclamationAudit01)
+ObjectPropertyAssertion(dot:hasCausation SteelElementReuseOntology1:Damage01_SteelBeam06 SteelElementReuseOntology1:Fire)
+
+# Individual: SteelElementReuseOntology1:Damage01_SteelBeam07 (SteelElementReuseOntology1:Damage01_SteelBeam07)
+
+ObjectPropertyAssertion(dot:hasCausation SteelElementReuseOntology1:Damage01_SteelBeam07 SteelElementReuseOntology1:Radiation)
+
+# Individual: SteelElementReuseOntology1:Damage02_SteelBeam04 (SteelElementReuseOntology1:Damage02_SteelBeam04)
+
+ObjectPropertyAssertion(SteelElementReuseOntology1:coveredByReuseAudit SteelElementReuseOntology1:Damage02_SteelBeam04 SteelElementReuseOntology1:ReclamationAudit01)
+ObjectPropertyAssertion(dot:coveredInDocumentation SteelElementReuseOntology1:Damage02_SteelBeam04 SteelElementReuseOntology1:DamageDocumentation_SteelBeam04)
+ObjectPropertyAssertion(dot:hasCausation SteelElementReuseOntology1:Damage02_SteelBeam04 SteelElementReuseOntology1:CorrosiveExposure)
+
+# Individual: SteelElementReuseOntology1:DamageDocumentation_SteelBeam01 (SteelElementReuseOntology1:DamageDocumentation_SteelBeam01)
+
+ClassAssertion(dot:DamageDocumentation SteelElementReuseOntology1:DamageDocumentation_SteelBeam01)
+
+# Individual: SteelElementReuseOntology1:Earthquake (SteelElementReuseOntology1:Earthquake)
+
+ClassAssertion(SteelElementReuseOntology1:SteelDamageCausation SteelElementReuseOntology1:Earthquake)
+
+# Individual: SteelElementReuseOntology1:Fire (SteelElementReuseOntology1:Fire)
+
+ClassAssertion(SteelElementReuseOntology1:SteelDamageCausation SteelElementReuseOntology1:Fire)
+
+# Individual: SteelElementReuseOntology1:Impact (SteelElementReuseOntology1:Impact)
+
+ClassAssertion(SteelElementReuseOntology1:SteelDamageCausation SteelElementReuseOntology1:Impact)
+
+# Individual: SteelElementReuseOntology1:NonReusable (SteelElementReuseOntology1:NonReusable)
+
+ClassAssertion(SteelElementReuseOntology1:ReusePotential SteelElementReuseOntology1:NonReusable)
+
+# Individual: SteelElementReuseOntology1:OriginalMaterialDocumentation_SteelBeam01 (SteelElementReuseOntology1:OriginalMaterialDocumentation_SteelBeam01)
+
+ClassAssertion(SteelElementReuseOntology1:OriginalMaterialDocumentation SteelElementReuseOntology1:OriginalMaterialDocumentation_SteelBeam01)
+
+# Individual: SteelElementReuseOntology1:OriginalTestCertificatesDocumentation_SteelBeam01 (SteelElementReuseOntology1:OriginalTestCertificatesDocumentation_SteelBeam01)
+
+ClassAssertion(SteelElementReuseOntology1:OriginalTestCertificatesDocumentation SteelElementReuseOntology1:OriginalTestCertificatesDocumentation_SteelBeam01)
+
+# Individual: SteelElementReuseOntology1:Radiation (SteelElementReuseOntology1:Radiation)
+
+ClassAssertion(SteelElementReuseOntology1:SteelDamageCausation SteelElementReuseOntology1:Radiation)
+
+# Individual: SteelElementReuseOntology1:ReclamationAudit01 (SteelElementReuseOntology1:ReclamationAudit01)
+
+ClassAssertion(SteelElementReuseOntology1:ReuseAudit SteelElementReuseOntology1:ReclamationAudit01)
+
+# Individual: SteelElementReuseOntology1:Reusable (SteelElementReuseOntology1:Reusable)
+
+ClassAssertion(SteelElementReuseOntology1:ReusePotential SteelElementReuseOntology1:Reusable)
+
+# Individual: SteelElementReuseOntology1:SteelBeam01 (SteelElementReuseOntology1:SteelBeam01)
+
+ObjectPropertyAssertion(SteelElementReuseOntology1:coveredByReuseAudit SteelElementReuseOntology1:SteelBeam01 SteelElementReuseOntology1:ReclamationAudit01)
+ObjectPropertyAssertion(SteelElementReuseOntology1:hasDamageDocumentation SteelElementReuseOntology1:SteelBeam01 SteelElementReuseOntology1:DamageDocumentation_SteelBeam01)
+ObjectPropertyAssertion(SteelElementReuseOntology1:hasOriginalCEMarking SteelElementReuseOntology1:SteelBeam01 SteelElementReuseOntology1:OriginalCEMarking_SteelBeam01)
+ObjectPropertyAssertion(SteelElementReuseOntology1:hasOriginalMaterialDocumentation SteelElementReuseOntology1:SteelBeam01 SteelElementReuseOntology1:OriginalMaterialDocumentation_SteelBeam01)
+ObjectPropertyAssertion(SteelElementReuseOntology1:hasOriginalTestCertificatesDocumentation SteelElementReuseOntology1:SteelBeam01 SteelElementReuseOntology1:OriginalTestCertificatesDocumentation_SteelBeam01)
+DataPropertyAssertion(SteelElementReuseOntology1:hasAge SteelElementReuseOntology1:SteelBeam01 "70"^^xsd:integer)
+DataPropertyAssertion(SteelElementReuseOntology1:hasFlangeThickness SteelElementReuseOntology1:SteelBeam01 "11.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasProfileHeight SteelElementReuseOntology1:SteelBeam01 "120.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasProfileWidth SteelElementReuseOntology1:SteelBeam01 "120.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasSteelGrade SteelElementReuseOntology1:SteelBeam01 "S235JR")
+DataPropertyAssertion(SteelElementReuseOntology1:hasWebHeight SteelElementReuseOntology1:SteelBeam01 "107.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasWebThickness SteelElementReuseOntology1:SteelBeam01 "6.5"^^xsd:float)
+
+# Individual: SteelElementReuseOntology1:SteelBeam02 (SteelElementReuseOntology1:SteelBeam02)
+
+ObjectPropertyAssertion(SteelElementReuseOntology1:hasAdequacyTestingDocumentation SteelElementReuseOntology1:SteelBeam02 SteelElementReuseOntology1:AdequacyTestingDocumentation_SteelBeam02)
+ObjectPropertyAssertion(SteelElementReuseOntology1:hasDamageDocumentation SteelElementReuseOntology1:SteelBeam02 SteelElementReuseOntology1:DamageDocumentation_SteelBeam02)
+ObjectPropertyAssertion(SteelElementReuseOntology1:hasNewCEMarking SteelElementReuseOntology1:SteelBeam02 SteelElementReuseOntology1:NewCEMarking_SteelBeam02)
+ObjectPropertyAssertion(SteelElementReuseOntology1:hasReliabilityTestingDocumentation SteelElementReuseOntology1:SteelBeam02 SteelElementReuseOntology1:ReliabilityTestingDocumentation_SteelBeam02)
+DataPropertyAssertion(SteelElementReuseOntology1:hasAge SteelElementReuseOntology1:SteelBeam02 "13"^^xsd:integer)
+DataPropertyAssertion(SteelElementReuseOntology1:hasFlangeThickness SteelElementReuseOntology1:SteelBeam02 "6.3"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasProfileHeight SteelElementReuseOntology1:SteelBeam02 "120.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasProfileWidth SteelElementReuseOntology1:SteelBeam02 "64.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasSteelGrade SteelElementReuseOntology1:SteelBeam02 "S235JR")
+DataPropertyAssertion(SteelElementReuseOntology1:hasWebHeight SteelElementReuseOntology1:SteelBeam02 "98.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasWebThickness SteelElementReuseOntology1:SteelBeam02 "4.4"^^xsd:float)
+
+# Individual: SteelElementReuseOntology1:SteelBeam03 (SteelElementReuseOntology1:SteelBeam03)
+
+ObjectPropertyAssertion(dot:hasDamage SteelElementReuseOntology1:SteelBeam03 SteelElementReuseOntology1:Damage01_SteelBeam03)
+DataPropertyAssertion(SteelElementReuseOntology1:hasAge SteelElementReuseOntology1:SteelBeam03 "34"^^xsd:decimal)
+DataPropertyAssertion(SteelElementReuseOntology1:hasFlangeThickness SteelElementReuseOntology1:SteelBeam03 "21.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasProfileHeight SteelElementReuseOntology1:SteelBeam03 "140.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasProfileWidth SteelElementReuseOntology1:SteelBeam03 "126.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasSteelGrade SteelElementReuseOntology1:SteelBeam03 "S235JR")
+DataPropertyAssertion(SteelElementReuseOntology1:hasWebHeight SteelElementReuseOntology1:SteelBeam03 "98.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasWebThickness SteelElementReuseOntology1:SteelBeam03 "12.5"^^xsd:float)
+DataPropertyAssertion(<https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial> SteelElementReuseOntology1:SteelBeam03 "Steel")
+
+# Individual: SteelElementReuseOntology1:SteelBeam04 (SteelElementReuseOntology1:SteelBeam04)
+
+ClassAssertion(SteelElementReuseOntology1:UProfile SteelElementReuseOntology1:SteelBeam04)
+ObjectPropertyAssertion(SteelElementReuseOntology1:coveredByReuseAudit SteelElementReuseOntology1:SteelBeam04 SteelElementReuseOntology1:ReclamationAudit01)
+ObjectPropertyAssertion(SteelElementReuseOntology1:hasDamageDocumentation SteelElementReuseOntology1:SteelBeam04 SteelElementReuseOntology1:DamageDocumentation_SteelBeam04)
+ObjectPropertyAssertion(dot:hasDamage SteelElementReuseOntology1:SteelBeam04 SteelElementReuseOntology1:Damage01_SteelBeam04)
+ObjectPropertyAssertion(dot:hasDamage SteelElementReuseOntology1:SteelBeam04 SteelElementReuseOntology1:Damage02_SteelBeam04)
+DataPropertyAssertion(SteelElementReuseOntology1:hasAge SteelElementReuseOntology1:SteelBeam04 "5"^^xsd:integer)
+DataPropertyAssertion(SteelElementReuseOntology1:hasFlangeThickness SteelElementReuseOntology1:SteelBeam04 "8.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasLength SteelElementReuseOntology1:SteelBeam04 "12.4"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasProfileHeight SteelElementReuseOntology1:SteelBeam04 "120.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasProfileWidth SteelElementReuseOntology1:SteelBeam04 "60.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasSteelGrade SteelElementReuseOntology1:SteelBeam04 "S235JR")
+DataPropertyAssertion(SteelElementReuseOntology1:hasWebThickness SteelElementReuseOntology1:SteelBeam04 "5.0"^^xsd:float)
+DataPropertyAssertion(<https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial> SteelElementReuseOntology1:SteelBeam04 "Steel")
+
+# Individual: SteelElementReuseOntology1:SteelBeam05 (SteelElementReuseOntology1:SteelBeam05)
+
+DataPropertyAssertion(SteelElementReuseOntology1:hasBarHeight SteelElementReuseOntology1:SteelBeam05 "158.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasBarThickness SteelElementReuseOntology1:SteelBeam05 "7.5"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasFlangeThickness SteelElementReuseOntology1:SteelBeam05 "11.3"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasLength SteelElementReuseOntology1:SteelBeam05 "5.5"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasProfileHeight SteelElementReuseOntology1:SteelBeam05 "200.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasProfileWidth SteelElementReuseOntology1:SteelBeam05 "90.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasSteelGrade SteelElementReuseOntology1:SteelBeam05 "S235RJ")
+DataPropertyAssertion(<https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial> SteelElementReuseOntology1:SteelBeam05 "Steel")
+
+# Individual: SteelElementReuseOntology1:SteelBeam06 (SteelElementReuseOntology1:SteelBeam06)
+
+ObjectPropertyAssertion(SteelElementReuseOntology1:coveredByReuseAudit SteelElementReuseOntology1:SteelBeam06 SteelElementReuseOntology1:ReclamationAudit01)
+ObjectPropertyAssertion(SteelElementReuseOntology1:hasDamageDocumentation SteelElementReuseOntology1:SteelBeam06 SteelElementReuseOntology1:DamageDocumentation_SteelBeam06)
+ObjectPropertyAssertion(dot:hasDamage SteelElementReuseOntology1:SteelBeam06 SteelElementReuseOntology1:Damage01_SteelBeam06)
+DataPropertyAssertion(SteelElementReuseOntology1:hasBarHeight SteelElementReuseOntology1:SteelBeam06 "142.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasFlangeThickness SteelElementReuseOntology1:SteelBeam06 "10.4"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasProfileHeight SteelElementReuseOntology1:SteelBeam06 "180.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasProfileWidth SteelElementReuseOntology1:SteelBeam06 "82.0"^^xsd:float)
+DataPropertyAssertion(SteelElementReuseOntology1:hasSteelGrade SteelElementReuseOntology1:SteelBeam06 "S255RJ")
+DataPropertyAssertion(SteelElementReuseOntology1:hasWebThickness SteelElementReuseOntology1:SteelBeam06 "6.9"^^xsd:float)
+DataPropertyAssertion(<https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial> SteelElementReuseOntology1:SteelBeam06 "Steel")
+
+# Individual: SteelElementReuseOntology1:SteelBeam07 (SteelElementReuseOntology1:SteelBeam07)
+
+ObjectPropertyAssertion(dot:hasDamage SteelElementReuseOntology1:SteelBeam07 SteelElementReuseOntology1:Damage01_SteelBeam07)
+
+# Individual: SteelElementReuseOntology1:Wear (SteelElementReuseOntology1:Wear)
+
+ClassAssertion(SteelElementReuseOntology1:SteelDamageCausation SteelElementReuseOntology1:Wear)
+
+# Individual: <https://w3id.org/digitalconstruction/0.5/Materials#CastIron> (CastIron)
+
+AnnotationAssertion(rdfs:label <https://w3id.org/digitalconstruction/0.5/Materials#CastIron> "CastIron")
+ClassAssertion(<https://w3id.org/digitalconstruction/0.5/Materials#MetallicMaterial> <https://w3id.org/digitalconstruction/0.5/Materials#CastIron>)
+
+# Individual: <https://w3id.org/digitalconstruction/0.5/Materials#Steel> (<https://w3id.org/digitalconstruction/0.5/Materials#Steel>)
+
+ClassAssertion(<https://w3id.org/digitalconstruction/0.5/Materials#MetallicMaterial> <https://w3id.org/digitalconstruction/0.5/Materials#Steel>)
+
+
+DisjointClasses(SteelElementReuseOntology1:HProfile SteelElementReuseOntology1:HollowProfile SteelElementReuseOntology1:IProfile SteelElementReuseOntology1:LProfile SteelElementReuseOntology1:SolidProfile SteelElementReuseOntology1:TProfile SteelElementReuseOntology1:UProfile SteelElementReuseOntology1:ZProfile)
+DisjointClasses(SteelElementReuseOntology1:ProfileShapeH SteelElementReuseOntology1:ProfileShapeI SteelElementReuseOntology1:ProfileShapeL SteelElementReuseOntology1:ProfileShapeT SteelElementReuseOntology1:ProfileShapeU SteelElementReuseOntology1:ProfileShapeZ)
+DisjointClasses(SteelElementReuseOntology1:ReuseClassA SteelElementReuseOntology1:ReuseClassB SteelElementReuseOntology1:ReuseClassC)
+DifferentIndividuals(SteelElementReuseOntology1:Aluminium <https://w3id.org/digitalconstruction/0.5/Materials#CastIron> <https://w3id.org/digitalconstruction/0.5/Materials#Steel>)
+DifferentIndividuals(SteelElementReuseOntology1:CorrosiveExposure SteelElementReuseOntology1:Earthquake SteelElementReuseOntology1:Fire SteelElementReuseOntology1:Impact SteelElementReuseOntology1:Radiation SteelElementReuseOntology1:Wear)
+DifferentIndividuals(SteelElementReuseOntology1:Damage01_SteelBeam04 SteelElementReuseOntology1:Damage02_SteelBeam04)
+DifferentIndividuals(SteelElementReuseOntology1:NonReusable SteelElementReuseOntology1:Reusable)
+DifferentIndividuals(SteelElementReuseOntology1:SteelBeam01 SteelElementReuseOntology1:SteelBeam02 SteelElementReuseOntology1:SteelBeam03 SteelElementReuseOntology1:SteelBeam04 SteelElementReuseOntology1:SteelBeam05)
+SubObjectPropertyOf(ObjectPropertyChain(<https://w3id.org/digitalconstruction/0.5/Materials#hasProfile> <https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial>) <https://w3id.org/digitalconstruction/0.5/Materials#hasMaterial>)
+SubObjectPropertyOf(ObjectPropertyChain(dot:aggregatesDamageElement dot:adjacentDamageElement) dot:aggregatesDamageElement)
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Rule to detect to which Profile-Class SteelBeam-Individuals belong") Annotation(rdfs:label "HProfile_02") Body(ClassAtom(SteelElementReuseOntology1:SteelBeam Variable(:sb)) DataPropertyAtom(SteelElementReuseOntology1:hasWebHeight Variable(:sb) Variable(:wh)) DataPropertyAtom(SteelElementReuseOntology1:hasProfileHeight Variable(:sb) Variable(:ph)) DataPropertyAtom(SteelElementReuseOntology1:hasProfileWidth Variable(:sb) Variable(:pw)) ClassAtom(SteelElementReuseOntology1:IProfile Variable(:ip)) BuiltInAtom(swrlb:booleanNot Variable(:sb) Variable(:ip)))Head(ClassAtom(SteelElementReuseOntology1:HProfile Variable(:sb))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "") Annotation(rdfs:label "S1") Body(ClassAtom(SteelElementReuseOntology1:SteelBeam Variable(:sb)))Head(BuiltInAtom(<http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#count> Variable(:sb))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Determine if a SteelBeam belongs to ReuseClassB") Annotation(rdfs:label "ReuseClassBSteelBeam") Body(ClassAtom(SteelElementReuseOntology1:SteelBeam Variable(:sb)) ObjectPropertyAtom(SteelElementReuseOntology1:hasDamageDocumentation Variable(:sb) Variable(:dd)) ObjectPropertyAtom(SteelElementReuseOntology1:hasReliabilityTestingDocumentation Variable(:sb) Variable(:rtd)) ObjectPropertyAtom(SteelElementReuseOntology1:hasAdequacyTestingDocumentation Variable(:sb) Variable(:atd)) ObjectPropertyAtom(SteelElementReuseOntology1:hasNewCEMarking Variable(:sb) Variable(:ncem)))Head(ClassAtom(SteelElementReuseOntology1:ReuseClassBSteelBeam Variable(:sb))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Determine if a SteelBeam belongs to ReuseClassA") Annotation(rdfs:label "ReuseClassASteelBeam") Body(ClassAtom(SteelElementReuseOntology1:SteelBeam Variable(:sb)) ObjectPropertyAtom(SteelElementReuseOntology1:hasDamageDocumentation Variable(:sb) Variable(:dd)) ObjectPropertyAtom(SteelElementReuseOntology1:hasOriginalCEMarking Variable(:sb) Variable(:ocem)) ObjectPropertyAtom(SteelElementReuseOntology1:hasOriginalMaterialDocumentation Variable(:sb) Variable(:omd)) ObjectPropertyAtom(SteelElementReuseOntology1:hasOriginalTestCertificatesDocumentation Variable(:sb) Variable(:otcd)))Head(ClassAtom(SteelElementReuseOntology1:ReuseClassASteelBeam Variable(:sb))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Rule to detect to which Profile-Class SteelBeam-Individuals belong") Annotation(rdfs:label "HProfile") Body(ClassAtom(SteelElementReuseOntology1:SteelBeam Variable(:sb)) DataPropertyAtom(SteelElementReuseOntology1:hasWebHeight Variable(:sb) Variable(:wh)) BuiltInAtom(swrlb:greaterThanOrEqual Variable(:pw) Variable(:wh)) DataPropertyAtom(SteelElementReuseOntology1:hasProfileWidth Variable(:sb) Variable(:pw)))Head(ClassAtom(SteelElementReuseOntology1:HProfile Variable(:sb))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Rule to detect to which Profile-Class SteelBeam-Individuals belong") Annotation(rdfs:label "IProfile") Body(ClassAtom(SteelElementReuseOntology1:SteelBeam Variable(:sb)) DataPropertyAtom(SteelElementReuseOntology1:hasWebHeight Variable(:sb) Variable(:wh)) BuiltInAtom(swrlb:lessThan Variable(:pw) "300"^^xsd:integer) DataPropertyAtom(SteelElementReuseOntology1:hasProfileWidth Variable(:sb) Variable(:pw)) BuiltInAtom(swrlb:lessThanOrEqual Variable(:pw) Variable(:wh)))Head(ClassAtom(SteelElementReuseOntology1:IProfile Variable(:sb))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Rule to detect to which Profile-Class SteelBeam-Individuals belong") Annotation(rdfs:label "HProfile") Body(ClassAtom(SteelElementReuseOntology1:SteelBeam Variable(:sb)) DataPropertyAtom(SteelElementReuseOntology1:hasWebHeight Variable(:sb) Variable(:wh)) DataPropertyAtom(SteelElementReuseOntology1:hasProfileWidth Variable(:sb) Variable(:pw)) BuiltInAtom(swrlb:multiply Variable(:wh) Variable(:pw) "0.66"^^xsd:decimal))Head(ClassAtom(SteelElementReuseOntology1:HProfile Variable(:sb))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "") Annotation(rdfs:label "HEB_Profile") Body(DataPropertyAtom(SteelElementReuseOntology1:hasProfileHeight Variable(:x) Variable(:ph)) BuiltInAtom(swrlb:equal Variable(:ph) Variable(:pw)) DataPropertyAtom(SteelElementReuseOntology1:hasProfileWidth Variable(:x) Variable(:pw)) ClassAtom(SteelElementReuseOntology1:SteelBeam Variable(:x)))Head(ClassAtom(SteelElementReuseOntology1:HProfile Variable(:x))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Define a Damage as ChemicalDamageCorrosion") Annotation(rdfs:label "Damage - Corrosion") Body(ObjectPropertyAtom(dot:hasCausation Variable(:d) SteelElementReuseOntology1:CorrosiveExposure) ClassAtom(dot:Damage Variable(:d)))Head(ClassAtom(SteelElementReuseOntology:ChemicalDamageCorrosion Variable(:d))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Classify a Damage caused by Fire") Annotation(rdfs:label "Damage - Fire") Body(ObjectPropertyAtom(dot:hasCausation Variable(:d) SteelElementReuseOntology1:Fire) ClassAtom(dot:Damage Variable(:d)))Head(ClassAtom(SteelElementReuseOntology:PhysicalDamageFatigue Variable(:d))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Define a Damage as PhysicalDamageRadiation") Annotation(rdfs:label "Damage - Radiation") Body(ObjectPropertyAtom(dot:hasCausation Variable(:d) SteelElementReuseOntology1:Radiation) ClassAtom(dot:Damage Variable(:d)))Head(ClassAtom(SteelElementReuseOntology1:PhysicalDamageRadiation Variable(:d))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Render an Element non reusable due to the Damage \"Radiation\"") Annotation(rdfs:label "NonReusable - Radiation") Body(ObjectPropertyAtom(dot:hasCausation Variable(:y) SteelElementReuseOntology1:Radiation) ObjectPropertyAtom(dot:hasDamage Variable(:x) Variable(:y)))Head(ClassAtom(SteelElementReuseOntology1:NonReusable Variable(:x)) ObjectPropertyAtom(SteelElementReuseOntology1:hasReusePotential Variable(:x) SteelElementReuseOntology1:NonReusable)))
+)

@@ -54,18 +54,6 @@
     
 
 
-    <!-- http://www.w3.org/2002/07/owl#sameAs -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs">
-        <rdfs:comment>&quot;The property that determines that two given individuals are equal.&quot;</rdfs:comment>
-        <rdfs:isDefinedBy>&lt;http://www.w3.org/2002/07/owl#&gt;</rdfs:isDefinedBy>
-        <rdfs:label>&quot;sameAs&quot;</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -89,7 +77,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#coveredInDocumentation">
         <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#Documentation"/>
-        <owl:sameAs>dot</owl:sameAs>
     </owl:ObjectProperty>
     
 
@@ -164,7 +151,6 @@
         <owl:inverseOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#isDamageOf"/>
         <rdfs:domain rdf:resource="https://schema.org/Product"/>
         <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#Damage"/>
-        <owl:sameAs>dot</owl:sameAs>
     </owl:ObjectProperty>
     
 
@@ -184,7 +170,6 @@
         <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#Inspection"/>
         <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReuseAudit"/>
         <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#Documentation"/>
-        <owl:sameAs>dot</owl:sameAs>
     </owl:ObjectProperty>
     
 
@@ -254,7 +239,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.sero.org/SteelElementReuseOntology#Profile"/>
         <rdfs:label>hasProfile</rdfs:label>
-        <owl:sameAs>dicm</owl:sameAs>
     </owl:ObjectProperty>
     
 
@@ -417,7 +401,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -439,7 +423,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -461,7 +445,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -483,7 +467,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -504,7 +488,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -526,7 +510,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -543,7 +527,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -552,7 +536,6 @@
 
     <owl:DatatypeProperty rdf:about="http://www.sero.org/SteelElementReuseOntology#hasMaterialDefined">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <owl:sameAs>DICM</owl:sameAs>
     </owl:DatatypeProperty>
     
 
@@ -571,7 +554,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -590,7 +573,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#Profile"/>
         <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -601,7 +584,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#Profile"/>
         <rdfs:domain rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -630,7 +613,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -652,7 +635,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -673,7 +656,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -725,7 +708,6 @@
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#BuildingObject">
         <rdfs:subClassOf rdf:resource="https://schema.org/Product"/>
-        <owl:sameAs>dicm - entities</owl:sameAs>
     </owl:Class>
     
 
@@ -745,7 +727,6 @@
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#Causation">
         <rdfs:comment xml:lang="en">Represents the causation of a damage.
 Should be extended with domain-specific subclasses.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/dot#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Causation</rdfs:label>
     </owl:Class>
     
@@ -788,7 +769,6 @@ Should be extended with domain-specific subclasses.</rdfs:comment>
         <owl:disjointWith rdf:resource="http://www.sero.org/SteelElementReuseOntology#UnclassifiedDamage"/>
         <rdfs:comment xml:lang="en">A damage classification is used to denote the kind of damage. Subclasses of this class are defined in extensions 
 			  such as CDO (Concrete Damage Ontology), NSO (the Natural Stone Ontology), etc.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/dot#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Classified Damage</rdfs:label>
     </owl:Class>
     
@@ -812,7 +792,6 @@ Should be extended with domain-specific subclasses.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Documentation"/>
-        <owl:sameAs>dot</owl:sameAs>
     </owl:Class>
     
 
@@ -824,9 +803,7 @@ Should be extended with domain-specific subclasses.</rdfs:comment>
         <owl:disjointWith rdf:resource="http://www.sero.org/SteelElementReuseOntology#StructuralDamage"/>
         <rdfs:comment xml:lang="en">Should be used on nodes that are already classified as dot:DamageArea or dot:DamageElement.
 Damage that does not impair the structural integrity of the structure, but can still have influence on the durability, usability and / or value.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/dot#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Defect</rdfs:label>
-        <owl:sameAs>dot</owl:sameAs>
     </owl:Class>
     
 
@@ -835,7 +812,6 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#Description">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation"/>
-        <owl:sameAs>dot</owl:sameAs>
     </owl:Class>
     
 
@@ -850,7 +826,6 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#ExternalResource">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation"/>
-        <owl:sameAs>dot</owl:sameAs>
     </owl:Class>
     
 
@@ -897,7 +872,6 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#Inspection">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Activity"/>
-        <owl:sameAs>dot</owl:sameAs>
     </owl:Class>
     
 
@@ -908,7 +882,6 @@ Damage that does not impair the structural integrity of the structure, but can s
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Person"/>
         <rdfs:comment xml:lang="en">A person who inspects constructions (for damages) or whose task it is to carry out inspections on constructions.</rdfs:comment>
         <rdfs:label xml:lang="en">Inspector</rdfs:label>
-        <owl:sameAs>dot</owl:sameAs>
     </owl:Class>
     
 
@@ -927,16 +900,13 @@ Damage that does not impair the structural integrity of the structure, but can s
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#MaterialEntity"/>
         <term:description>a homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). [ISO 16739]</term:description>
         <rdfs:label xml:lang="en">Material</rdfs:label>
-        <owl:sameAs>dicm</owl:sameAs>
     </owl:Class>
     
 
 
     <!-- http://www.sero.org/SteelElementReuseOntology#MaterialEntity -->
 
-    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#MaterialEntity">
-        <owl:sameAs>dicm</owl:sameAs>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#MaterialEntity"/>
     
 
 
@@ -954,7 +924,6 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#MaterialObjectStructure">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#BuildingObject"/>
-        <owl:sameAs>dicm</owl:sameAs>
     </owl:Class>
     
 
@@ -1037,9 +1006,7 @@ Damage that does not impair the structural integrity of the structure, but can s
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#Person">
         <rdfs:comment xml:lang="en">The foaf:Person class represents people. Something is a foaf:Person if it is a person. We don&apos;t nitpic about whether they&apos;re alive, dead, real, or imaginary. The foaf:Person class is a sub-class of the foaf:Agent class, since all people are considered &apos;agents&apos; in FOAF.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/#term_Person"/>
         <rdfs:label xml:lang="en">Person - A person</rdfs:label>
-        <owl:sameAs>foaf</owl:sameAs>
     </owl:Class>
     
 
@@ -1176,7 +1143,6 @@ Damage that does not impair the structural integrity of the structure, but can s
         </owl:equivalentClass>
         <term:description>Profile is a single and identifiable cross section of an element which is constructed of a number of profiles (one or more) (Source:IFC).</term:description>
         <rdfs:label xml:lang="en">Profile</rdfs:label>
-        <owl:sameAs>dicm</owl:sameAs>
     </owl:Class>
     
 
@@ -1421,9 +1387,7 @@ sharp-edged L, U and T profiles, profiles for caterpillar tracks, etc. [DIN EN 1
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Damage"/>
         <rdfs:comment xml:lang="en">Should be used on nodes that are already classified as dot:DamageArea, dot:DamagePattern or dot:DamageElement.
 Damage that impairs the structural integrity of the structure.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/dot#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Structural Damage</rdfs:label>
-        <owl:sameAs>dot</owl:sameAs>
     </owl:Class>
     
 
@@ -1467,9 +1431,7 @@ Damage that impairs the structural integrity of the structure.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#Damage"/>
         <rdfs:comment xml:lang="en">A dot:Damage instance that is not further classified with domain-specific classes (subclasses of dot:ClassifiedDamage). 
 This class can be used in cases where the damage classification is unknown.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/dot#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Unclassified Damage</rdfs:label>
-        <owl:sameAs>dot</owl:sameAs>
     </owl:Class>
     
 
@@ -1524,7 +1486,6 @@ This class can be used in cases where the damage classification is unknown.</rdf
     <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#CastIron">
         <rdf:type rdf:resource="http://www.sero.org/SteelElementReuseOntology#MetallicMaterial"/>
         <rdfs:label>CastIron</rdfs:label>
-        <owl:sameAs>dicm</owl:sameAs>
     </owl:NamedIndividual>
     
 
@@ -1720,120 +1681,6 @@ This class can be used in cases where the damage classification is unknown.</rdf
 
     <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#Steel">
         <rdf:type rdf:resource="http://www.sero.org/SteelElementReuseOntology#MetallicMaterial"/>
-        <owl:sameAs>dicm</owl:sameAs>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.sero.org/SteelElementReuseOntology#SteelBeam01 -->
-
-    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam01">
-        <coveredByReuseAudit rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReclamationAudit01"/>
-        <hasDamageDocumentation rdf:resource="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation_SteelBeam01"/>
-        <hasOriginalCEMarking rdf:resource="http://www.sero.org/SteelElementReuseOntology#OriginalCEMarking_SteelBeam01"/>
-        <hasOriginalMaterialDocumentation rdf:resource="http://www.sero.org/SteelElementReuseOntology#OriginalMaterialDocumentation_SteelBeam01"/>
-        <hasOriginalTestCertificatesDocumentation rdf:resource="http://www.sero.org/SteelElementReuseOntology#OriginalTestCertificatesDocumentation_SteelBeam01"/>
-        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</hasAge>
-        <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.0</hasFlangeThickness>
-        <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120.0</hasProfileHeight>
-        <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120.0</hasProfileWidth>
-        <hasSteelGrade>S235JR</hasSteelGrade>
-        <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">107.0</hasWebHeight>
-        <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.5</hasWebThickness>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.sero.org/SteelElementReuseOntology#SteelBeam02 -->
-
-    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam02">
-        <hasAdequacyTestingDocumentation rdf:resource="http://www.sero.org/SteelElementReuseOntology#AdequacyTestingDocumentation_SteelBeam02"/>
-        <hasDamageDocumentation rdf:resource="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation_SteelBeam02"/>
-        <hasNewCEMarking rdf:resource="http://www.sero.org/SteelElementReuseOntology#NewCEMarking_SteelBeam02"/>
-        <hasReliabilityTestingDocumentation rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReliabilityTestingDocumentation_SteelBeam02"/>
-        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</hasAge>
-        <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.3</hasFlangeThickness>
-        <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120.0</hasProfileHeight>
-        <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#float">64.0</hasProfileWidth>
-        <hasSteelGrade>S235JR</hasSteelGrade>
-        <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">98.0</hasWebHeight>
-        <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.4</hasWebThickness>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.sero.org/SteelElementReuseOntology#SteelBeam03 -->
-
-    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam03">
-        <hasDamage rdf:resource="http://www.sero.org/SteelElementReuseOntology#Damage01_SteelBeam03"/>
-        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34.0</hasAge>
-        <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">21.0</hasFlangeThickness>
-        <hasMaterialDefined>Steel</hasMaterialDefined>
-        <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">140.0</hasProfileHeight>
-        <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#float">126.0</hasProfileWidth>
-        <hasSteelGrade>S235JR</hasSteelGrade>
-        <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">98.0</hasWebHeight>
-        <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.5</hasWebThickness>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.sero.org/SteelElementReuseOntology#SteelBeam04 -->
-
-    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam04">
-        <rdf:type rdf:resource="http://www.sero.org/SteelElementReuseOntology#UProfile"/>
-        <coveredByReuseAudit rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReclamationAudit01"/>
-        <hasDamage rdf:resource="http://www.sero.org/SteelElementReuseOntology#Damage01_SteelBeam04"/>
-        <hasDamage rdf:resource="http://www.sero.org/SteelElementReuseOntology#Damage02_SteelBeam04"/>
-        <hasDamageDocumentation rdf:resource="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation_SteelBeam04"/>
-        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasAge>
-        <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</hasFlangeThickness>
-        <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.4</hasLength>
-        <hasMaterialDefined>Steel</hasMaterialDefined>
-        <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120.0</hasProfileHeight>
-        <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#float">60.0</hasProfileWidth>
-        <hasSteelGrade>S235JR</hasSteelGrade>
-        <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</hasWebThickness>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.sero.org/SteelElementReuseOntology#SteelBeam05 -->
-
-    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam05">
-        <hasBarHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">158.0</hasBarHeight>
-        <hasBarThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.5</hasBarThickness>
-        <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.3</hasFlangeThickness>
-        <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.5</hasLength>
-        <hasMaterialDefined>Steel</hasMaterialDefined>
-        <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">200.0</hasProfileHeight>
-        <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#float">90.0</hasProfileWidth>
-        <hasSteelGrade>S235RJ</hasSteelGrade>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.sero.org/SteelElementReuseOntology#SteelBeam06 -->
-
-    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam06">
-        <coveredByReuseAudit rdf:resource="http://www.sero.org/SteelElementReuseOntology#ReclamationAudit01"/>
-        <hasDamage rdf:resource="http://www.sero.org/SteelElementReuseOntology#Damage01_SteelBeam06"/>
-        <hasDamageDocumentation rdf:resource="http://www.sero.org/SteelElementReuseOntology#DamageDocumentation_SteelBeam06"/>
-        <hasBarHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">142.0</hasBarHeight>
-        <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.4</hasFlangeThickness>
-        <hasMaterialDefined>Steel</hasMaterialDefined>
-        <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#float">180.0</hasProfileHeight>
-        <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#float">82.0</hasProfileWidth>
-        <hasSteelGrade>S255RJ</hasSteelGrade>
-        <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.9</hasWebThickness>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.sero.org/SteelElementReuseOntology#SteelBeam07 -->
-
-    <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam07">
-        <hasDamage rdf:resource="http://www.sero.org/SteelElementReuseOntology#Damage01_SteelBeam07"/>
     </owl:NamedIndividual>
     
 
@@ -1849,20 +1696,6 @@ This class can be used in cases where the damage classification is unknown.</rdf
     <owl:NamedIndividual rdf:about="http://www.sero.org/SteelElementReuseOntology#Wear">
         <rdf:type rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelDamageCausation"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#filePath">
-        <rdfs:comment>dot</rdfs:comment>
-    </rdf:Description>
     
 
 
@@ -1925,16 +1758,6 @@ This class can be used in cases where the damage classification is unknown.</rdf
             <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#Wear"/>
         </owl:distinctMembers>
     </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam01"/>
-            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam02"/>
-            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam03"/>
-            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam04"/>
-            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#SteelBeam05"/>
-        </owl:distinctMembers>
-    </rdf:Description>
     
 
 
@@ -1949,19 +1772,22 @@ This class can be used in cases where the damage classification is unknown.</rdf
     <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
+    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#sb">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#wh">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ph">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#pw">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ip">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/wh">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ph">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ip">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/dd">
@@ -1985,101 +1811,11 @@ This class can be used in cases where the damage classification is unknown.</rdf
     <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/otcd">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/x">
+    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#y">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/y">
+    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#x">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description>
-        <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
-        <rdfs:comment>Define a Damage as ChemicalDamageCorrosion</rdfs:comment>
-        <rdfs:label>Damage - Corrosion</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasCausation"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
-                        <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#CorrosiveExposure"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#Damage"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#ChemicalDamageCorrosion"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
-        <rdfs:comment>Classify a Damage caused by Fire</rdfs:comment>
-        <rdfs:label>Damage - Fire</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasCausation"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
-                        <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#Fire"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#Damage"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#PhysicalDamageFatigue"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
@@ -2129,7 +1865,7 @@ This class can be used in cases where the damage classification is unknown.</rdf
     <rdf:Description>
         <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
         <rdfs:comment>Rule to detect to which Profile-Class SteelBeam-Individuals belong</rdfs:comment>
-        <rdfs:label>HProfile_02</rdfs:label>
+        <rdfs:label>H-Profile_02</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -2138,7 +1874,7 @@ This class can be used in cases where the damage classification is unknown.</rdf
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                        <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#sb"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -2148,8 +1884,8 @@ This class can be used in cases where the damage classification is unknown.</rdf
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasWebHeight"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/wh"/>
+                                <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#sb"/>
+                                <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#wh"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -2159,8 +1895,8 @@ This class can be used in cases where the damage classification is unknown.</rdf
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                         <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfileHeight"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ph"/>
+                                        <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#sb"/>
+                                        <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#ph"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -2170,8 +1906,8 @@ This class can be used in cases where the damage classification is unknown.</rdf
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                                 <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfileWidth"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
+                                                <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#sb"/>
+                                                <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#pw"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -2181,7 +1917,7 @@ This class can be used in cases where the damage classification is unknown.</rdf
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                                         <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#IProfile"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ip"/>
+                                                        <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#ip"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest>
@@ -2192,8 +1928,8 @@ This class can be used in cases where the damage classification is unknown.</rdf
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                                                 <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#booleanNot"/>
                                                                 <swrl:arguments rdf:parseType="Collection">
-                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ip"/>
+                                                                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#sb"/>
+                                                                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#ip"/>
                                                                 </swrl:arguments>
                                                             </rdf:Description>
                                                         </rdf:first>
@@ -2217,41 +1953,7 @@ This class can be used in cases where the damage classification is unknown.</rdf
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#HProfile"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
-        <rdfs:comment></rdfs:comment>
-        <rdfs:label>S1</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#count"/>
-                        <swrl:arguments rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                        </swrl:arguments>
+                        <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#sb"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -2429,7 +2131,7 @@ This class can be used in cases where the damage classification is unknown.</rdf
     <rdf:Description>
         <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
         <rdfs:comment>Rule to detect to which Profile-Class SteelBeam-Individuals belong</rdfs:comment>
-        <rdfs:label>HProfile</rdfs:label>
+        <rdfs:label>H-Profile_01</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -2438,7 +2140,7 @@ This class can be used in cases where the damage classification is unknown.</rdf
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                        <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#sb"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -2448,8 +2150,8 @@ This class can be used in cases where the damage classification is unknown.</rdf
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasWebHeight"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/wh"/>
+                                <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#sb"/>
+                                <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#wh"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -2457,12 +2159,10 @@ This class can be used in cases where the damage classification is unknown.</rdf
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
-                                        <swrl:arguments rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
-                                            <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/wh"/>
-                                        </swrl:arguments>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfileWidth"/>
+                                        <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#sb"/>
+                                        <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#pw"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -2470,10 +2170,12 @@ This class can be used in cases where the damage classification is unknown.</rdf
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                         <rdf:first>
                                             <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfileWidth"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                <swrl:arguments rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#pw"/>
+                                                    <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#wh"/>
+                                                </swrl:arguments>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -2492,7 +2194,7 @@ This class can be used in cases where the damage classification is unknown.</rdf
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#HProfile"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                        <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#sb"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -2502,7 +2204,7 @@ This class can be used in cases where the damage classification is unknown.</rdf
     <rdf:Description>
         <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
         <rdfs:comment>Rule to detect to which Profile-Class SteelBeam-Individuals belong</rdfs:comment>
-        <rdfs:label>IProfile</rdfs:label>
+        <rdfs:label>H-Profile_03</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -2511,7 +2213,7 @@ This class can be used in cases where the damage classification is unknown.</rdf
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                        <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#sb"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -2521,105 +2223,8 @@ This class can be used in cases where the damage classification is unknown.</rdf
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasWebHeight"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/wh"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
-                                        <swrl:arguments>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </swrl:arguments>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfileWidth"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
-                                                        <swrl:arguments rdf:parseType="Collection">
-                                                            <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
-                                                            <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/wh"/>
-                                                        </swrl:arguments>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#IProfile"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
-        <rdfs:comment>Rule to detect to which Profile-Class SteelBeam-Individuals belong</rdfs:comment>
-        <rdfs:label>HProfile</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasWebHeight"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/wh"/>
+                                <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#sb"/>
+                                <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#wh"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -2629,8 +2234,8 @@ This class can be used in cases where the damage classification is unknown.</rdf
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
                                         <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfileWidth"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
+                                        <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#sb"/>
+                                        <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#pw"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -2639,22 +2244,16 @@ This class can be used in cases where the damage classification is unknown.</rdf
                                         <rdf:first>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#multiply"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
                                                 <swrl:arguments>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/wh"/>
+                                                        <rdf:first rdf:resource="http://www.sero.org/SteelElementReuseOntology#pw"/>
                                                         <rdf:rest>
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                <rdf:first rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.66</rdf:first>
-                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                                             </rdf:Description>
                                                         </rdf:rest>
                                                     </rdf:Description>
@@ -2677,7 +2276,7 @@ This class can be used in cases where the damage classification is unknown.</rdf
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#HProfile"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+                        <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#sb"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -2686,18 +2285,17 @@ This class can be used in cases where the damage classification is unknown.</rdf
     </rdf:Description>
     <rdf:Description>
         <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
-        <rdfs:comment></rdfs:comment>
-        <rdfs:label>HEB_Profile</rdfs:label>
+        <rdfs:comment>Rule to detect to which Profile-Class SteelBeam-Individuals belong</rdfs:comment>
+        <rdfs:label>I-Profile</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfileHeight"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/x"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ph"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
+                        <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#sb"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -2705,12 +2303,10 @@ This class can be used in cases where the damage classification is unknown.</rdf
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
-                                <swrl:arguments rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ph"/>
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
-                                </swrl:arguments>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasWebHeight"/>
+                                <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#sb"/>
+                                <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#wh"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -2718,10 +2314,21 @@ This class can be used in cases where the damage classification is unknown.</rdf
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                 <rdf:first>
                                     <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfileWidth"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/x"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/pw"/>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.sero.org/SteelElementReuseOntology#pw"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -2729,12 +2336,28 @@ This class can be used in cases where the damage classification is unknown.</rdf
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                         <rdf:first>
                                             <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#SteelBeam"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/x"/>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasProfileWidth"/>
+                                                <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#sb"/>
+                                                <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#pw"/>
                                             </rdf:Description>
                                         </rdf:first>
-                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                        <swrl:arguments rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#pw"/>
+                                                            <rdf:Description rdf:about="http://www.sero.org/SteelElementReuseOntology#wh"/>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
                                     </rdf:Description>
                                 </rdf:rest>
                             </rdf:Description>
@@ -2749,8 +2372,8 @@ This class can be used in cases where the damage classification is unknown.</rdf
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#HProfile"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/x"/>
+                        <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#IProfile"/>
+                        <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#sb"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -2769,7 +2392,7 @@ This class can be used in cases where the damage classification is unknown.</rdf
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasCausation"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/y"/>
+                        <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#y"/>
                         <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#Radiation"/>
                     </rdf:Description>
                 </rdf:first>
@@ -2780,8 +2403,8 @@ This class can be used in cases where the damage classification is unknown.</rdf
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasDamage"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/x"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/y"/>
+                                <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#x"/>
+                                <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#y"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -2796,7 +2419,7 @@ This class can be used in cases where the damage classification is unknown.</rdf
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#hasReusePotential"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/x"/>
+                        <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#x"/>
                         <swrl:argument2 rdf:resource="http://www.sero.org/SteelElementReuseOntology#NonReusable"/>
                     </rdf:Description>
                 </rdf:first>
@@ -2807,7 +2430,7 @@ This class can be used in cases where the damage classification is unknown.</rdf
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                 <swrl:classPredicate rdf:resource="http://www.sero.org/SteelElementReuseOntology#NonReusable"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/x"/>
+                                <swrl:argument1 rdf:resource="http://www.sero.org/SteelElementReuseOntology#x"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>

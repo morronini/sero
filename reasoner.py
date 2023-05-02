@@ -8,7 +8,7 @@ from os.path import realpath, dirname, join
 ## Setup Path, Filename, load file
 folder_path = dirname(realpath(__file__))
 path_dir = join(folder_path, "SERO_ont")
-owlready2.JAVA_EXE = join(dirname(dirname(dirname(folder_path))), "usr", "bin", "java")
+owlready2.JAVA_EXE = r'/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java' #join(dirname(dirname(dirname(folder_path))), "usr", "bin", "java")
 
 ## Creation of new Indvidual
 def new_ind(class_name,individual_name):
@@ -61,8 +61,6 @@ def run_reasoner(args):
 
     # Object property relation CQ1
     # Data Properties CQ1
-    # if there is no entry, no creation of a dataProperty !
-    # --> intersting: dataproperties have to be functional to say dataproperty_of_individual = float(5)
 
     new_steelbeam.hasProfileHeight.append(float(args["ProfileHeight_mm"]))
     new_steelbeam.hasProfileWidth.append(float(args["ProfileWidth_mm"]))
@@ -89,7 +87,7 @@ def run_reasoner(args):
 
     # Data Properties CQ2
     if is_given(args, "ElementAge_YY"):
-        new_steelbeam.hasAge = float(args["ElementAge_YY"])
+        new_steelbeam.hasAge = int(args["ElementAge_YY"])
 
     # Damage
     # only if a damage is selected, a new damage should be created
@@ -138,24 +136,25 @@ def run_reasoner(args):
         if args["AdequacyTesting"] == "Yes.":
             new_AdequacyTestingDocumentation = onto.AdequacyTestingDocumentation('AdequacyTestingDocumentation_'+name_new_steelbeam)
             new_steelbeam.hasAdequacyTestingDocumentation.append(new_AdequacyTestingDocumentation)
+
     print(new_steelbeam)
     print(vars(new_steelbeam))
+
     with onto:
-        sync_reasoner_pellet()
+        sync_reasoner_pellet(debug = 2)
+        #print(list(default_world.inconsistent_classes()))
+
     print(vars(new_steelbeam))
 
-    print("The steel Beam is a :", new_steelbeam.__class__)
-    l = []
-    for i in onto.SteelBeam.instances():
-        l.append(i)
-    print(l)
-    #onto.save()
+
+    #print("The steel Beam is a :", new_steelbeam.__class__)
+
     onto.save(file = path_dir + name_onto, format= "rdfxml")
 
     # use the individual to get displayed results
-    results = {
+    """"results = {
         "type_of_profile": new_steelbeam.cq, # TODO Leo
         "reusable_or_non_reusable": new_steelbeam.cq, # TODO Leo
         "reuse_class": new_steelbeam.cq, # TODO Leo
-    }
+    }"""
     return results

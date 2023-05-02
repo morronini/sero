@@ -19,17 +19,22 @@ def userinput():
 
 def rename(data):
     rename_map = {
-        'q11_heightOf11': 'profile_height_mm',
-        ##'q12_widthOf12': '',
-        #'q13_thicknessOf': '',
-        #'q15_thicknessOf15': '',
-        #'q16_widthOf16': '',
-        #'q17_areThere': 'No.',
-        #'q22_ageOf22': '',
-        #'q23_lengthOf': '',
-        #'q31_doesThe': 'Yes.',
-        #'q41_doesThe41': 'Yes.',
-        #'q42_doesThe42': 'Yes.',
+        'q11_heightOf11': 'ProfileHeight_mm',
+        'q12_widthOf12': 'ProfileWidth_mm',
+        'q13_thicknessOf': 'FlangeThickness_mm',
+        'q15_thicknessOf15': 'WebThickness_mm',
+        'q16_widthOf16': 'WebHeight_mm',
+        'q50_whatIs50' : 'ProfileType_str',
+        'q17_areThere': 'Damages_IO',
+        'q19_whichDamages':'DamageType',
+        'q22_ageOf22': 'ElementAge_YY',
+        'q23_lengthOf': 'ElementLength_cm',
+        'q31_doesThe': 'OriginalCE',
+        'q41_doesThe41': 'OriginalMaterialDoc',
+        'q42_doesThe42': 'OriginalTestCertificatesDoc',
+        'q32_hasThe':'NewCE',
+        'q43_hasThe43':'ReliabilityTesting',
+        'q44_hasThe44':'AdequacyTesting'
         }
     renamed_data = {}
     for key, val in data.items():

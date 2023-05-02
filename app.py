@@ -11,9 +11,8 @@ def userinput():
     if request.method == 'POST':
         form_data = request.form.to_dict()
         form_data = rename(form_data)
-        reusable_or_non_reusable = perform_calcs(form_data)
-        replacements = {"reusable_or_non_reusable": reusable_or_non_reusable}
-        return render_template('result.html', **replacements) #'result.html'
+        results_di = perform_calcs(form_data)
+        return render_template('result.html', **results_di) #'result.html'
     else:
         return render_template('userinput_custom_06.html') #'userinput_custom.html'
 
@@ -49,14 +48,7 @@ def perform_calcs(form_data):
     print("These are the inputs")
     pprint(form_data)
     reasoner_results = run_reasoner(form_data)
-
-    return "MORE INFORMATION NEEDED"
-    if form_data["is_reusable"] == "Yes":
-        return "REUSABLE"
-    elif form_data["is_reusable"] == "No":
-        return "NOT REUSABLE"
-    else:
-        return "MORE INFORMATION NEEDED"
+    return reasoner_results
 
 def parseArguments():
     parser = argparse.ArgumentParser()

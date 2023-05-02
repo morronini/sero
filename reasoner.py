@@ -138,17 +138,24 @@ def run_reasoner(args):
         if args["AdequacyTesting"] == "Yes.":
             new_AdequacyTestingDocumentation = onto.AdequacyTestingDocumentation('AdequacyTestingDocumentation_'+name_new_steelbeam)
             new_steelbeam.hasAdequacyTestingDocumentation.append(new_AdequacyTestingDocumentation)
-
+    print(new_steelbeam)
+    print(vars(new_steelbeam))
     with onto:
         sync_reasoner_pellet()
+    print(vars(new_steelbeam))
 
     print("The steel Beam is a :", new_steelbeam.__class__)
-
     l = []
     for i in onto.SteelBeam.instances():
         l.append(i)
-
     print(l)
-
     #onto.save()
     onto.save(file = path_dir + name_onto, format= "rdfxml")
+
+    # use the individual to get displayed results
+    results = {
+        "type_of_profile": new_steelbeam.cq, # TODO Leo
+        "reusable_or_non_reusable": new_steelbeam.cq, # TODO Leo
+        "reuse_class": new_steelbeam.cq, # TODO Leo
+    }
+    return results

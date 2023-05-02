@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import argparse
 import uuid
-from reasoner import run
+from reasoner import run_reasoner
 from pprint import pprint
 
 app = Flask(__name__)
@@ -15,7 +15,7 @@ def userinput():
         replacements = {"reusable_or_non_reusable": reusable_or_non_reusable}
         return render_template('result.html', **replacements) #'result.html'
     else:
-        return render_template('userinput_custom_05.html') #'userinput_custom.html'
+        return render_template('userinput_custom_06.html') #'userinput_custom.html'
 
 def rename(data):
     rename_map = {
@@ -26,7 +26,7 @@ def rename(data):
         'q16_widthOf16': 'WebHeight_mm',
         'q50_whatIs50' : 'ProfileType_str',
         'q17_areThere': 'Damages_IO',
-        'q19_whichDamages':'DamageType',
+        'q19_whichDamages[]':'DamageType',
         'q22_ageOf22': 'ElementAge_YY',
         'q23_lengthOf': 'ElementLength_cm',
         'q31_doesThe': 'OriginalCE',
@@ -46,7 +46,10 @@ def rename(data):
 
 
 def perform_calcs(form_data):
+    print("These are the inputs")
     pprint(form_data)
+    reasoner_results = run_reasoner(form_data)
+
     return "MORE INFORMATION NEEDED"
     if form_data["is_reusable"] == "Yes":
         return "REUSABLE"

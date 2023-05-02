@@ -709,7 +709,6 @@
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#Beam-BEAM">
         <rdfs:subClassOf rdf:resource="http://www.sero.org/SteelElementReuseOntology#BuildingElement"/>
-        <owl:sameAs>beo</owl:sameAs>
     </owl:Class>
     
 
@@ -718,7 +717,6 @@
 
     <owl:Class rdf:about="http://www.sero.org/SteelElementReuseOntology#BuildingElement">
         <rdfs:subClassOf rdf:resource="https://schema.org/Product"/>
-        <owl:sameAs>beo</owl:sameAs>
     </owl:Class>
     
 

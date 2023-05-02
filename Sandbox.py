@@ -3,10 +3,12 @@ import uuid
 import owlready2
 from owlready2 import *
 import sqlite3
+from os.path import realpath, dirname
 
 ## Setup Path, Filename, load file
-path_dir = r"/Users/leonhardschonfelder/Downloads/02_Code/ReuseAuditApp/SERO_ont/"
-owlready2.JAVA_EXE = r'/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java'
+folder_path = dirname(realpath(__file__))
+path_dir = folder_path+"SERO_ont/"
+owlready2.JAVA_EXE = 'C:/Program Files/Java/jre1.8.0_351/bin/java'
 
 name_onto =  "SERO_Scenario1.rdf"
 onto = get_ontology(path_dir+name_onto).load()

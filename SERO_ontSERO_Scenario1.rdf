@@ -1073,51 +1073,30 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
 
 <swrl:Variable rdf:about="#x"/>
 
-<ReuseAudit rdf:about="#Audit_0d8ab02e-6dc8-4ede-8cb0-bf215e739b6d">
+<ReuseAudit rdf:about="#Audit_b219a876-8c12-484d-babf-413bab4da8cc">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </ReuseAudit>
 
-<SteelBeam rdf:about="#SteelBeam_4c4410c8-157c-4ba4-9b58-2397fc3a668b">
+<SteelBeam rdf:about="#SteelBeam_30176096-d0cd-4b34-b248-020da0782b73">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <coveredByReuseAudit rdf:resource="#Audit_0d8ab02e-6dc8-4ede-8cb0-bf215e739b6d"/>
-  <hasDamage rdf:resource="#Damage_SteelBeam_4c4410c8-157c-4ba4-9b58-2397fc3a668b"/>
-  <hasOriginalCEMarking rdf:resource="#OriginalCEMarking_SteelBeam_4c4410c8-157c-4ba4-9b58-2397fc3a668b"/>
-  <hasOriginalMaterialDocumentation rdf:resource="#OriginalMaterialDocumentation_SteelBeam_4c4410c8-157c-4ba4-9b58-2397fc3a668b"/>
-  <hasOriginalTestCertificatesDocumentation rdf:resource="#OriginalTestCertificatesDocumentation_SteelBeam_4c4410c8-157c-4ba4-9b58-2397fc3a668b"/>
-  <rdf:type rdf:resource="#Inspection"/>
-  <rdf:type rdf:resource="#ReuseAudit"/>
-  <rdf:type rdf:resource="#NonReusableSteelBeam"/>
+  <coveredByReuseAudit rdf:resource="#Audit_b219a876-8c12-484d-babf-413bab4da8cc"/>
   <rdf:type rdf:resource="#IProfile"/>
   <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileHeight>
-  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</hasProfileWidth>
+  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.0</hasProfileWidth>
   <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasFlangeThickness>
-  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasWebThickness>
+  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</hasWebThickness>
   <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110.0</hasWebHeight>
-  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50.0</hasLength>
-  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</hasAge>
+  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500.0</hasLength>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</hasAge>
 </SteelBeam>
 
-<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_4c4410c8-157c-4ba4-9b58-2397fc3a668b">
+<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_30176096-d0cd-4b34-b248-020da0782b73">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </DamageDocumentation>
 
-<Damage rdf:about="#Damage_SteelBeam_4c4410c8-157c-4ba4-9b58-2397fc3a668b">
+<Damage rdf:about="#Damage_SteelBeam_30176096-d0cd-4b34-b248-020da0782b73">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasCausation rdf:resource="#Radiation"/>
-  <rdf:type rdf:resource="#PhysicalDamageRadiation"/>
 </Damage>
-
-<OriginalCEMarking rdf:about="#OriginalCEMarking_SteelBeam_4c4410c8-157c-4ba4-9b58-2397fc3a668b">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</OriginalCEMarking>
-
-<OriginalMaterialDocumentation rdf:about="#OriginalMaterialDocumentation_SteelBeam_4c4410c8-157c-4ba4-9b58-2397fc3a668b">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</OriginalMaterialDocumentation>
-
-<OriginalTestCertificatesDocumentation rdf:about="#OriginalTestCertificatesDocumentation_SteelBeam_4c4410c8-157c-4ba4-9b58-2397fc3a668b">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</OriginalTestCertificatesDocumentation>
 
 <swrl:Imp>
   <swrl:body>

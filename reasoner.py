@@ -141,10 +141,34 @@ def run_reasoner(args):
     print(vars(new_steelbeam))
 
     with onto:
-        sync_reasoner_pellet(debug = 2)
-        #print(list(default_world.inconsistent_classes()))
+        sync_reasoner_pellet()
 
     print(vars(new_steelbeam))
+    print(vars(new_damage))
+
+    results_dic = {
+        "Name_of_SteelBeam": new_steelbeam.name, #
+        "Type_of_Profile": '',# TODO Leo
+        "Reusability": '',
+        "Cause": '',
+        "Reuse_Class": ''# TODO Leo
+    }
+    # assign Type of Profile
+    if 'SERO_Scenario1.IProfile' in new_steelbeam.is_a:
+        results_dic["Type_of_Profile"] = 'This beam is an I-Profile steel beam'
+    elif "HProfile" in new_steelbeam.is_a:
+        results_dic["Type_of_Profile"] = 'This beam is an H-Profile steel beam'
+    else:
+        results_dic["Type_of_Profile"] = 'This beams Profile cannot be determined.'
+
+    # assign Reusability
+    if "NonReusable" in new_steelbeam.is_a:
+        results_dic["Reusability"] = 'This beam is NOT reusable'
+        #results["Cause"] = new_damage.
+    else:
+        results_dic["Reusability"] = 'This steel beam should be reusable.'
+
+    # assign Reuse_Class
 
 
     #print("The steel Beam is a :", new_steelbeam.__class__)
@@ -152,9 +176,5 @@ def run_reasoner(args):
     onto.save(file = path_dir + name_onto, format= "rdfxml")
 
     # use the individual to get displayed results
-    """"results = {
-        "type_of_profile": new_steelbeam.cq, # TODO Leo
-        "reusable_or_non_reusable": new_steelbeam.cq, # TODO Leo
-        "reuse_class": new_steelbeam.cq, # TODO Leo
-    }"""
-    return results
+
+    return results_dic

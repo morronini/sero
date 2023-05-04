@@ -12,7 +12,7 @@ def userinput():
         form_data = request.form.to_dict()
         form_data = rename(form_data)
         results_di = perform_calcs(form_data)
-        return render_template('result.html', **results_di) #'result.html'
+        return render_template('Reuse_Website/Seite-1.html', **results_di) #'result.html'
     else:
         return render_template('userinput_custom_06.html') #'userinput_custom.html'
 

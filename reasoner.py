@@ -8,6 +8,7 @@ from os.path import realpath, dirname, join
 ## Setup Path, Filename, load file
 folder_path = dirname(realpath(__file__))
 path_dir = join(folder_path, "SERO_ont")
+#IMPORTANT --> to run the reasoner, please provide the path of you java.exe, or, on windows, uncomment #join(...)
 owlready2.JAVA_EXE = r'/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java' #join(dirname(dirname(dirname(folder_path))), "usr", "bin", "java")
 
 ## Creation of new Indvidual
@@ -58,6 +59,7 @@ def run_reasoner(args):
     new_steelbeam = onto.SteelBeam(name_new_steelbeam)
     new_steelbeam.coveredByReuseAudit.append(new_RecAudit)
     new_DamageDocumentation = onto.DamageDocumentation('DamageDocumentation_'+name_new_steelbeam)
+    new_steelbeam.hasDamageDocumentation.append(new_DamageDocumentation)
 
     # Object property relation CQ1
     # Data Properties CQ1
@@ -89,18 +91,19 @@ def run_reasoner(args):
     if is_given(args, "ElementAge_YY"):
         new_steelbeam.hasAge = int(args["ElementAge_YY"])
 
-    # Damage
+    # DAMAGE - CQ2
     # only if a damage is selected, a new damage should be created
     if is_given(args, "Damages_IO"):
         if args["Damages_IO"] == "Yes.":
             new_damage = onto.Damage("Damage_"+name_new_steelbeam)
+            new_steelbeam.hasDamage.append(new_damage)
             if "DamageType" in args.keys():
+                # insert here new_damage.hasCausation.append(CAUSATION OF DAMAGE) --> needed: dictionary where damage and causation are linked
                 if args["DamageType"] == "Radioactivity":
                     cause_radio = onto.search_one(iri = 'http://www.sero.org/SteelElementReuseOntology#Radiation')
                     new_damage.hasCausation.append(cause_radio)
-                    new_steelbeam.hasDamage.append(new_damage)
 
-    # Creation of new INDIVIDUAL
+    # REUSE CLASS - CQ3
     # if selected in Browser OriginalCEMarking; OriginalMaterialDocumentation; OriginalTestCertificatesDocumentation
     if is_given(args, "OriginalCE"):
         if args["OriginalCE"] == "Yes.":
@@ -152,29 +155,52 @@ def run_reasoner(args):
         "Type_of_Profile": '',
         "Reusability": '',
         "Cause": '',
-        "Reuse_Class": ''
+        "Reuse_Class": '',
+        "ProfileHeight_mm":new_steelbeam.hasProfileHeight[0],
+        "ProfileWidth_mm":new_steelbeam.hasProfileWidth[0],
+        "WebHeight_mm": new_steelbeam.hasWebHeight[0],
+        "WebThickness_mm":new_steelbeam.hasWebThickness[0],
+        "FlangeThickness_mm" : new_steelbeam.hasFlangeThickness[0],
+        "ElementLength_cm": new_steelbeam.hasLength[0],
+        "ElementAge_YY": new_steelbeam.hasAge
     }
+
     # assign Type of Profile
-    if 'SERO_Scenario1.IProfile' in new_steelbeam.is_a:
-        results_dic["Type_of_Profile"] = 'This beam is an I-Profile steel beam'
-    elif "HProfile" in new_steelbeam.is_a:
-        results_dic["Type_of_Profile"] = 'This beam is an H-Profile steel beam'
+    profiles = prof_map
+    inverted_profiles = {v: k for k, v in profiles.items()}
+
+    for i in list(profiles.values()):
+        cls = getattr(onto, i, None)
+        if cls and cls in new_steelbeam.is_a:
+            profile_name = inverted_profiles[i]
+            results_dic["Type_of_Profile"] = f'This beam is an {profile_name} steel beam'
+            break
     else:
-        results_dic["Type_of_Profile"] = 'This beams Profile cannot be determined.'
+        results_dic["Type_of_Profile"] = 'This beam\'s profile cannot be determined'
 
     # assign Reusability
-    if "NonReusable" in new_steelbeam.is_a:
-        results_dic["Reusability"] = 'This beam is NOT reusable'
-        #results["Cause"] = new_damage.
+    # future to do: create dictionary with damages and causations
+
+    if onto.NonReusableSteelBeam in new_steelbeam.is_a:
+        results_dic["Reusability"] = f'This beam is not reusable! Due to: {args["DamageType"]}'
+    elif args["Damages_IO"] == "Yes.":
+        if "DamageType" in args.keys():
+            results_dic["Reusability"] = f'This beam is reusable! Though it has damages: {args["DamageType"]}'
+        else:
+            results_dic["Reusability"] = f'This beam is reusable! Though it has unidentified damages.'
     else:
-        results_dic["Reusability"] = 'This steel beam should be reusable.'
+        results_dic["Reusability"] = f'This beam should be reusable!'
 
-    # assign Reuse_Class
+    # assing Reuse_Class
+    if onto.ReuseClassASteelBeam in new_steelbeam.is_a:
+        results_dic["Reuse_Class"] = f'This beam is a Reuse Class A steel beam'
+    elif onto.ReuseClassBSteelBeam in new_steelbeam.is_a:
+        results_dic["Reuse_Class"] = f'This beam is a Reuse Class B steel beam'
+    else:
+        results_dic["Reuse_Class"] = f'This beams Reuse Class cannot be determined. Nevertheless, this beam should be reusable, consider it Reuse Class C ;)!'
 
-
-    #print("The steel Beam is a :", new_steelbeam.__class__)
-
-    onto.save(file = path_dir + name_onto, format= "rdfxml")
+    # save ontology
+    onto.save(file = join(path_dir,name_onto), format= "rdfxml")
 
     # use the individual to get displayed results
 

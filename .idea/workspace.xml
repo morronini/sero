@@ -5,26 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a382026-8899-491a-9921-82acbf4fbdfc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sero.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sero.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/HEA-Profil.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reuse_Website.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reuse_02.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SERO.py" beforeDir="false" afterPath="$PROJECT_DIR$/SERO.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SERO_ont/SERO_Scenario1.rdf" beforeDir="false" afterPath="$PROJECT_DIR$/SERO_ont/SERO_Scenario1.rdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SERO_ontSERO_Scenario1.rdf" beforeDir="false" afterPath="$PROJECT_DIR$/SERO_ontSERO_Scenario1.rdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sandbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sandbox.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reasoner.py" beforeDir="false" afterPath="$PROJECT_DIR$/reasoner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Reuse_Website/Seite-1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Reuse_Website/Seite-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Reuse_Website/images/811e7d7887c5a94c9c910f0e53e3bf7e8c6b1ed9ad96b2eb2cd50593baff3ad9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Reuse_Website/images/cea.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Reuse_Website/images/default-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Reuse_Website/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Reuse_Website/intlTelInput/intlTelInput.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Reuse_Website/intlTelInput/intlTelInput.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Reuse_Website/intlTelInput/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Reuse_Website/jquery-1.9.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Reuse_Website/nicepage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Reuse_Website/nicepage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/userinput_custom_06.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/userinput_custom_06.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/Images/811e7d7887c5a94c9c910f0e53e3bf7e8c6b1ed9ad96b2eb2cd50593baff3ad9.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/Seite-1.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/Seite-1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/nicepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/nicepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Seite-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Seite-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,11 +63,30 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.sero">
+  <component name="RunManager" selected="Python.SERO">
     <configuration name="Seite-1.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sero/templates/Seite-1.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="Seite-1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sero/templates/Reuse_Website/Seite-1.html" useBuiltInWebServerPort="true">
+    <configuration name="SERO" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sero" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SERO.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Sandbox" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -123,10 +134,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="reasoner" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="sero" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/reasoner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="sero" type="PythonConfigurationType" factoryName="Python">
       <module name="sero" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -174,10 +210,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.SERO" />
+        <item itemvalue="Python.Sandbox" />
+        <item itemvalue="Python.reasoner" />
         <item itemvalue="Flask server.Flask (app.py)" />
         <item itemvalue="JavaScript Debug.Seite-1.html (1)" />
-        <item itemvalue="JavaScript Debug.Seite-1.html" />
-        <item itemvalue="Python.Sandbox" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +229,9 @@
       <workItem from="1683025838991" duration="8761000" />
       <workItem from="1683222440917" duration="5166000" />
       <workItem from="1683267783938" duration="1297000" />
-      <workItem from="1683269283706" duration="2344000" />
+      <workItem from="1683269283706" duration="2548000" />
+      <workItem from="1683312909376" duration="12600000" />
+      <workItem from="1683326189107" duration="14000" />
     </task>
     <servers />
   </component>
@@ -209,17 +248,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Sandbox.py</url>
-          <line>2</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/sero$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1683268860969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

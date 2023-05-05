@@ -1073,119 +1073,79 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
 
 <swrl:Variable rdf:about="#x"/>
 
-<ReuseAudit rdf:about="#Audit_f86d39da-2349-4d22-9094-20fadfb7139f">
+<ReuseAudit rdf:about="#Audit_452fbc57-7afd-4830-bee6-aa66d1d94604">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </ReuseAudit>
 
-<SteelBeam rdf:about="#SteelBeam_e508f6c3-d1e7-4352-9e22-e97189571e8f">
+<SteelBeam rdf:about="#SteelBeam_5e93d945-b7ed-446a-93c9-ce6e20858e5b">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <coveredByReuseAudit rdf:resource="#Audit_f86d39da-2349-4d22-9094-20fadfb7139f"/>
-  <hasOriginalCEMarking rdf:resource="#OriginalCEMarking_SteelBeam_e508f6c3-d1e7-4352-9e22-e97189571e8f"/>
-  <hasOriginalMaterialDocumentation rdf:resource="#OriginalMaterialDocumentation_SteelBeam_e508f6c3-d1e7-4352-9e22-e97189571e8f"/>
-  <hasOriginalTestCertificatesDocumentation rdf:resource="#OriginalTestCertificatesDocumentation_SteelBeam_e508f6c3-d1e7-4352-9e22-e97189571e8f"/>
+  <coveredByReuseAudit rdf:resource="#Audit_452fbc57-7afd-4830-bee6-aa66d1d94604"/>
+  <hasDamageDocumentation rdf:resource="#DamageDocumentation_SteelBeam_5e93d945-b7ed-446a-93c9-ce6e20858e5b"/>
+  <hasDamage rdf:resource="#Damage_SteelBeam_5e93d945-b7ed-446a-93c9-ce6e20858e5b"/>
+  <hasOriginalCEMarking rdf:resource="#OriginalCEMarking_SteelBeam_5e93d945-b7ed-446a-93c9-ce6e20858e5b"/>
+  <hasOriginalMaterialDocumentation rdf:resource="#OriginalMaterialDocumentation_SteelBeam_5e93d945-b7ed-446a-93c9-ce6e20858e5b"/>
+  <hasOriginalTestCertificatesDocumentation rdf:resource="#OriginalTestCertificatesDocumentation_SteelBeam_5e93d945-b7ed-446a-93c9-ce6e20858e5b"/>
   <rdf:type rdf:resource="#Inspection"/>
   <rdf:type rdf:resource="#ReuseAudit"/>
-  <rdf:type rdf:resource="#IProfile"/>
+  <rdf:type rdf:resource="#ReuseClassASteelBeam"/>
+  <rdf:type rdf:resource="#HProfile"/>
   <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileHeight>
-  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.0</hasProfileWidth>
+  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileWidth>
   <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasFlangeThickness>
-  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</hasWebThickness>
+  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasWebThickness>
   <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110.0</hasWebHeight>
-  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500.0</hasLength>
-  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</hasAge>
+  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400.0</hasLength>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasAge>
 </SteelBeam>
 
-<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_e508f6c3-d1e7-4352-9e22-e97189571e8f">
+<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_5e93d945-b7ed-446a-93c9-ce6e20858e5b">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </DamageDocumentation>
 
-<OriginalCEMarking rdf:about="#OriginalCEMarking_SteelBeam_e508f6c3-d1e7-4352-9e22-e97189571e8f">
+<Damage rdf:about="#Damage_SteelBeam_5e93d945-b7ed-446a-93c9-ce6e20858e5b">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Damage>
+
+<OriginalCEMarking rdf:about="#OriginalCEMarking_SteelBeam_5e93d945-b7ed-446a-93c9-ce6e20858e5b">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </OriginalCEMarking>
 
-<OriginalMaterialDocumentation rdf:about="#OriginalMaterialDocumentation_SteelBeam_e508f6c3-d1e7-4352-9e22-e97189571e8f">
+<OriginalMaterialDocumentation rdf:about="#OriginalMaterialDocumentation_SteelBeam_5e93d945-b7ed-446a-93c9-ce6e20858e5b">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </OriginalMaterialDocumentation>
 
-<OriginalTestCertificatesDocumentation rdf:about="#OriginalTestCertificatesDocumentation_SteelBeam_e508f6c3-d1e7-4352-9e22-e97189571e8f">
+<OriginalTestCertificatesDocumentation rdf:about="#OriginalTestCertificatesDocumentation_SteelBeam_5e93d945-b7ed-446a-93c9-ce6e20858e5b">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </OriginalTestCertificatesDocumentation>
 
-<ReuseAudit rdf:about="#Audit_5d796af3-a8b1-4b60-b864-203e54d5d02a">
+<ReuseAudit rdf:about="#Audit_00add93c-da86-4e45-96d0-84d7a8ca23d6">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </ReuseAudit>
 
-<SteelBeam rdf:about="#SteelBeam_196594a7-9293-434c-9f30-c613de9b40a9">
+<SteelBeam rdf:about="#SteelBeam_8a15d858-68de-45f9-9d8d-18e26931a670">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <coveredByReuseAudit rdf:resource="#Audit_5d796af3-a8b1-4b60-b864-203e54d5d02a"/>
-  <hasOriginalCEMarking rdf:resource="#OriginalCEMarking_SteelBeam_196594a7-9293-434c-9f30-c613de9b40a9"/>
-  <hasOriginalMaterialDocumentation rdf:resource="#OriginalMaterialDocumentation_SteelBeam_196594a7-9293-434c-9f30-c613de9b40a9"/>
-  <hasOriginalTestCertificatesDocumentation rdf:resource="#OriginalTestCertificatesDocumentation_SteelBeam_196594a7-9293-434c-9f30-c613de9b40a9"/>
+  <coveredByReuseAudit rdf:resource="#Audit_00add93c-da86-4e45-96d0-84d7a8ca23d6"/>
+  <hasDamageDocumentation rdf:resource="#DamageDocumentation_SteelBeam_8a15d858-68de-45f9-9d8d-18e26931a670"/>
+  <hasDamage rdf:resource="#Damage_SteelBeam_8a15d858-68de-45f9-9d8d-18e26931a670"/>
   <rdf:type rdf:resource="#Inspection"/>
   <rdf:type rdf:resource="#ReuseAudit"/>
-  <rdf:type rdf:resource="#IProfile"/>
+  <rdf:type rdf:resource="#HProfile"/>
   <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileHeight>
-  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.0</hasProfileWidth>
+  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileWidth>
   <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasFlangeThickness>
-  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110.0</hasWebThickness>
+  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasWebThickness>
   <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110.0</hasWebHeight>
-  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500.0</hasLength>
-  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</hasAge>
+  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400.0</hasLength>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasAge>
 </SteelBeam>
 
-<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_196594a7-9293-434c-9f30-c613de9b40a9">
+<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_8a15d858-68de-45f9-9d8d-18e26931a670">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </DamageDocumentation>
 
-<OriginalCEMarking rdf:about="#OriginalCEMarking_SteelBeam_196594a7-9293-434c-9f30-c613de9b40a9">
+<Damage rdf:about="#Damage_SteelBeam_8a15d858-68de-45f9-9d8d-18e26931a670">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</OriginalCEMarking>
-
-<OriginalMaterialDocumentation rdf:about="#OriginalMaterialDocumentation_SteelBeam_196594a7-9293-434c-9f30-c613de9b40a9">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</OriginalMaterialDocumentation>
-
-<OriginalTestCertificatesDocumentation rdf:about="#OriginalTestCertificatesDocumentation_SteelBeam_196594a7-9293-434c-9f30-c613de9b40a9">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</OriginalTestCertificatesDocumentation>
-
-<ReuseAudit rdf:about="#Audit_45c84e13-efcf-477f-a8d9-892f474303ce">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</ReuseAudit>
-
-<SteelBeam rdf:about="#SteelBeam_8c50ac06-3621-49ec-b15d-a7bdd3ad0815">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <coveredByReuseAudit rdf:resource="#Audit_45c84e13-efcf-477f-a8d9-892f474303ce"/>
-  <hasOriginalCEMarking rdf:resource="#OriginalCEMarking_SteelBeam_8c50ac06-3621-49ec-b15d-a7bdd3ad0815"/>
-  <hasOriginalMaterialDocumentation rdf:resource="#OriginalMaterialDocumentation_SteelBeam_8c50ac06-3621-49ec-b15d-a7bdd3ad0815"/>
-  <hasOriginalTestCertificatesDocumentation rdf:resource="#OriginalTestCertificatesDocumentation_SteelBeam_8c50ac06-3621-49ec-b15d-a7bdd3ad0815"/>
-  <rdf:type rdf:resource="#Inspection"/>
-  <rdf:type rdf:resource="#ReuseAudit"/>
-  <rdf:type rdf:resource="#IProfile"/>
-  <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileHeight>
-  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.0</hasProfileWidth>
-  <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasFlangeThickness>
-  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110.0</hasWebThickness>
-  <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110.0</hasWebHeight>
-  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500.0</hasLength>
-  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</hasAge>
-</SteelBeam>
-
-<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_8c50ac06-3621-49ec-b15d-a7bdd3ad0815">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</DamageDocumentation>
-
-<OriginalCEMarking rdf:about="#OriginalCEMarking_SteelBeam_8c50ac06-3621-49ec-b15d-a7bdd3ad0815">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</OriginalCEMarking>
-
-<OriginalMaterialDocumentation rdf:about="#OriginalMaterialDocumentation_SteelBeam_8c50ac06-3621-49ec-b15d-a7bdd3ad0815">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</OriginalMaterialDocumentation>
-
-<OriginalTestCertificatesDocumentation rdf:about="#OriginalTestCertificatesDocumentation_SteelBeam_8c50ac06-3621-49ec-b15d-a7bdd3ad0815">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</OriginalTestCertificatesDocumentation>
+</Damage>
 
 <swrl:Imp>
   <swrl:body>

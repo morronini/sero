@@ -137,21 +137,22 @@ def run_reasoner(args):
             new_AdequacyTestingDocumentation = onto.AdequacyTestingDocumentation('AdequacyTestingDocumentation_'+name_new_steelbeam)
             new_steelbeam.hasAdequacyTestingDocumentation.append(new_AdequacyTestingDocumentation)
 
-    print(new_steelbeam)
-    print(vars(new_steelbeam))
-
+    # Run Reasoner
     with onto:
         sync_reasoner_pellet()
 
+    # print Steelbeam and damage for checking
     print(vars(new_steelbeam))
-    print(vars(new_damage))
+    if is_given(args, "Damages_IO"):
+        if args["Damages_IO"] == "Yes.":
+            print(vars(new_damage))
 
     results_dic = {
         "Name_of_SteelBeam": new_steelbeam.name, #
-        "Type_of_Profile": '',# TODO Leo
+        "Type_of_Profile": '',
         "Reusability": '',
         "Cause": '',
-        "Reuse_Class": ''# TODO Leo
+        "Reuse_Class": ''
     }
     # assign Type of Profile
     if 'SERO_Scenario1.IProfile' in new_steelbeam.is_a:

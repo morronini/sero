@@ -17,5 +17,3 @@ onto = get_ontology(join(path_dir,name_onto)).load()
 #for i in onto.classes():print(i)
 #for y in onto.rules(): print(y)
 #for x in onto.object_properties(): print(x)
-
-

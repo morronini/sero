@@ -164,7 +164,6 @@
 <owl:ObjectProperty rdf:about="#hasReuseClassA">
   <rdfs:subPropertyOf rdf:resource="#isReusable"/>
   <rdfs:domain rdf:resource="#SteelBeam"/>
-  <rdfs:range rdf:resource="#ReuseClassA"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="#isReusable">
@@ -179,13 +178,11 @@
 <owl:ObjectProperty rdf:about="#hasReuseClassB">
   <rdfs:subPropertyOf rdf:resource="#isReusable"/>
   <rdfs:domain rdf:resource="#SteelBeam"/>
-  <rdfs:range rdf:resource="#ReuseClassB"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="#hasReuseClassC">
   <rdfs:subPropertyOf rdf:resource="#isReusable"/>
   <rdfs:domain rdf:resource="#SteelBeam"/>
-  <rdfs:range rdf:resource="#ReuseClassC"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="#isNonReusable">
@@ -471,10 +468,6 @@ Should be extended with domain-specific subclasses.</rdfs:comment>
           <owl:onProperty rdf:resource="#hasCausation"/>
           <owl:hasValue rdf:resource="#CorrosiveExposure"/>
         </owl:Restriction>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#hasCausation"/>
-          <owl:hasValue rdf:resource="#Radiation"/>
-        </owl:Restriction>
       </owl:intersectionOf>
     </owl:Class>
   </owl:equivalentClass>
@@ -568,7 +561,7 @@ Should be extended with domain-specific subclasses.</rdfs:comment>
 </owl:Class>
 
 <owl:Class rdf:about="#MaterialHunter">
-  <rdfs:subClassOf rdf:resource="#Person"/>
+  <rdfs:subClassOf rdf:resource="#Reuse-Expert"/>
   <rdfs:comment xml:lang="en">A Person gathering information on the built environment (among other tasks) to find building components and materials that have potential for reuse</rdfs:comment>
   <rdfs:label xml:lang="en">Materialhunter</rdfs:label>
 </owl:Class>
@@ -624,12 +617,6 @@ Should be extended with domain-specific subclasses.</rdfs:comment>
   <rdfs:label xml:lang="en">Steel Beam</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="#ReuseClassA">
-  <rdfs:subClassOf rdf:resource="#Reusable"/>
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-</owl:Class>
-
 <owl:Class rdf:about="#Reusable">
   <rdfs:subClassOf rdf:resource="#ReusePotential"/>
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -637,18 +624,6 @@ Should be extended with domain-specific subclasses.</rdfs:comment>
 </owl:Class>
 
 <owl:Class rdf:about="#ReusePotential"/>
-
-<owl:Class rdf:about="#ReuseClassB">
-  <rdfs:subClassOf rdf:resource="#Reusable"/>
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-</owl:Class>
-
-<owl:Class rdf:about="#ReuseClassC">
-  <rdfs:subClassOf rdf:resource="#Reusable"/>
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-</owl:Class>
 
 <owl:Class rdf:about="#HProfile">
   <owl:equivalentClass>
@@ -729,14 +704,18 @@ sharp-edged L, U and T profiles, profiles for caterpillar tracks, etc. [DIN EN 1
 
 <owl:Class rdf:about="#MaterialEntity"/>
 
-<owl:Class rdf:about="#MaterialObjectStructure">
-  <rdfs:subClassOf rdf:resource="#BuildingObject"/>
+<owl:Class rdf:about="#Reuse-Expert">
+  <rdfs:subClassOf rdf:resource="#Person"/>
 </owl:Class>
 
 <owl:Class rdf:about="#CEMarking">
   <rdfs:subClassOf rdf:resource="#Documentation"/>
   <rdfs:comment xml:lang="en">The CE (Conformité Européenne) mark, is an authentication symbol for products that can be legally sold in Europe. The CE mark ostensibly means that the product manufacturer(s) take responsibility for each products’ compliance with European Directives.</rdfs:comment>
   <rdfs:label>CE Marking</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MaterialObjectStructure">
+  <rdfs:subClassOf rdf:resource="#BuildingObject"/>
 </owl:Class>
 
 <owl:Class rdf:about="#Beam-BEAM">
@@ -760,10 +739,6 @@ sharp-edged L, U and T profiles, profiles for caterpillar tracks, etc. [DIN EN 1
   <rdfs:comment xml:lang="en">A dot:Damage instance that is not further classified with domain-specific classes (subclasses of dot:ClassifiedDamage). 
 This class can be used in cases where the damage classification is unknown.</rdfs:comment>
   <rdfs:label xml:lang="en">Unclassified Damage</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="#CoatingDamage">
-  <rdfs:subClassOf rdf:resource="#ClassifiedDamage"/>
 </owl:Class>
 
 <owl:Class rdf:about="#Defect">
@@ -900,6 +875,13 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
   <rdfs:subClassOf rdf:resource="#SteelBeam"/>
 </owl:Class>
 
+<owl:Class rdf:about="#ReuseClassA">
+  <rdfs:subClassOf rdf:resource="#Reusable"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
 <owl:Class rdf:about="#ReuseClassASteelBeam">
   <rdfs:subClassOf rdf:resource="#ReusableSteelBeam"/>
   <owl:disjointWith rdf:resource="#ReuseClassBSteelBeam"/>
@@ -907,6 +889,20 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
 
 <owl:Class rdf:about="#ReuseClassBSteelBeam">
   <rdfs:subClassOf rdf:resource="#ReusableSteelBeam"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ReuseClassB">
+  <rdfs:subClassOf rdf:resource="#Reusable"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ReuseClassC">
+  <rdfs:subClassOf rdf:resource="#Reusable"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 </owl:Class>
 
 <owl:Class rdf:about="#ReuseClassCSteelBeam">
@@ -926,10 +922,6 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </SteelDamageCausation>
 
-<SteelDamageCausation rdf:about="#Radiation">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</SteelDamageCausation>
-
 <SteelDamageCausation rdf:about="#Fire">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </SteelDamageCausation>
@@ -942,6 +934,10 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </SteelDamageCausation>
 
+<SteelDamageCausation rdf:about="#Radiation">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</SteelDamageCausation>
+
 <MetallicMaterial rdf:about="#Steel">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </MetallicMaterial>
@@ -950,9 +946,9 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </SteelDamageCausation>
 
-<owl:Thing rdf:about="#AdequacyTestingDocumentation_SteelBeam02">
+<AdequacyTestingDocumentation rdf:about="#AdequacyTestingDocumentation_SteelBeam_7a2f96a8-bf21-4edf-b0c8-836386ff0505">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</owl:Thing>
+</AdequacyTestingDocumentation>
 
 <owl:Thing rdf:about="#Age">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -962,86 +958,362 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </MetallicMaterial>
 
+<ReuseAudit rdf:about="#Audit_229f1f47-4480-4947-b008-b65e67eaf756">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ReuseAudit>
+
+<ReuseAudit rdf:about="#Audit_3bc509be-462c-492d-9a7d-40752ad2f4c0">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ReuseAudit>
+
+<ReuseAudit rdf:about="#Audit_41093557-181b-4ade-9aca-9704a4106085">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ReuseAudit>
+
+<ReuseAudit rdf:about="#Audit_5ade6478-df77-4a10-8769-03d0b815f572">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ReuseAudit>
+
+<ReuseAudit rdf:about="#Audit_620d1a95-215c-42d5-9940-c0844bcfba08">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ReuseAudit>
+
+<ReuseAudit rdf:about="#Audit_aa6401d7-648c-423b-bc75-298a8bad2d04">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ReuseAudit>
+
+<ReuseAudit rdf:about="#Audit_cc184617-3c05-4319-b0ca-9213d930180d">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ReuseAudit>
+
+<ReuseAudit rdf:about="#Audit_e1eb1111-b645-4225-bdfb-c8c0b6de3361">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ReuseAudit>
+
+<ReuseAudit rdf:about="#Audit_f8fc247d-befe-48cd-8687-1d3c91da36c3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ReuseAudit>
+
 <MetallicMaterial rdf:about="#CastIron">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label>CastIron</rdfs:label>
 </MetallicMaterial>
 
-<owl:Thing rdf:about="#Damage01_SteelBeam03">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</owl:Thing>
-
-<PhysicalDamageRadiation rdf:about="#Damage01_SteelBeam04">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <owl:differentFrom rdf:resource="#Damage02_SteelBeam04"/>
-  <coveredByReuseAudit rdf:resource="#ReclamationAudit01"/>
-  <coveredInDocumentation rdf:resource="#DamageDocumentation_SteelBeam04"/>
-  <hasCausation rdf:resource="#Radiation"/>
-</PhysicalDamageRadiation>
-
-<Damage rdf:about="#Damage02_SteelBeam04">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <coveredByReuseAudit rdf:resource="#ReclamationAudit01"/>
-  <coveredInDocumentation rdf:resource="#DamageDocumentation_SteelBeam04"/>
-  <hasCausation rdf:resource="#CorrosiveExposure"/>
-</Damage>
-
-<ReuseAudit rdf:about="#ReclamationAudit01">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</ReuseAudit>
-
-<Documentation rdf:about="#DamageDocumentation_SteelBeam04">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Documentation>
-
-<Damage rdf:about="#Damage01_SteelBeam06">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <coveredByReuseAudit rdf:resource="#ReclamationAudit01"/>
-  <hasCausation rdf:resource="#Fire"/>
-</Damage>
-
-<PhysicalDamageRadiation rdf:about="#Damage01_SteelBeam07">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasCausation rdf:resource="#Radiation"/>
-</PhysicalDamageRadiation>
-
-<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam01">
+<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_1da87106-b4e5-400f-98b2-bf43a066dee7">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </DamageDocumentation>
 
-<owl:Thing rdf:about="#DamageDocumentation_SteelBeam02">
+<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_377db681-b7c2-4dc1-a59c-8c722785e3d8">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</owl:Thing>
+</DamageDocumentation>
 
-<owl:Thing rdf:about="#DamageDocumentation_SteelBeam06">
+<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_3d812c79-a00f-4e1f-b678-2b3f92139c17">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</owl:Thing>
+</DamageDocumentation>
+
+<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_546a84bf-5371-485c-836e-2e26649d5e4a">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</DamageDocumentation>
+
+<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_64e7bc6d-b317-4d12-8256-6408577012e6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</DamageDocumentation>
+
+<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_75567d5c-cedb-4aa3-810f-5032d5933dc2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</DamageDocumentation>
+
+<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_7a2f96a8-bf21-4edf-b0c8-836386ff0505">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</DamageDocumentation>
+
+<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_8125f446-36ae-4705-993e-b3deac502c88">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</DamageDocumentation>
+
+<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_b529391b-e323-4ec4-be2a-428923710f02">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</DamageDocumentation>
+
+<Damage rdf:about="#Damage_SteelBeam_377db681-b7c2-4dc1-a59c-8c722785e3d8">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#PhysicalDamageRadiation"/>
+  <hasCausation rdf:resource="#Radiation"/>
+</Damage>
+
+<Damage rdf:about="#Damage_SteelBeam_3d812c79-a00f-4e1f-b678-2b3f92139c17">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Damage>
+
+<Damage rdf:about="#Damage_SteelBeam_546a84bf-5371-485c-836e-2e26649d5e4a">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Damage>
+
+<Damage rdf:about="#Damage_SteelBeam_64e7bc6d-b317-4d12-8256-6408577012e6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Damage>
+
+<Damage rdf:about="#Damage_SteelBeam_75567d5c-cedb-4aa3-810f-5032d5933dc2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#PhysicalDamageRadiation"/>
+  <hasCausation rdf:resource="#Radiation"/>
+</Damage>
+
+<Damage rdf:about="#Damage_SteelBeam_b529391b-e323-4ec4-be2a-428923710f02">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#PhysicalDamageRadiation"/>
+  <hasCausation rdf:resource="#Radiation"/>
+</Damage>
 
 <owl:Thing rdf:about="#NewCEMarking_SteelBeam02">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </owl:Thing>
 
-<owl:Thing rdf:about="#OriginalCEMarking_SteelBeam01">
+<NewCEMarking rdf:about="#NewCEMarking_SteelBeam_7a2f96a8-bf21-4edf-b0c8-836386ff0505">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</owl:Thing>
+</NewCEMarking>
 
-<OriginalMaterialDocumentation rdf:about="#OriginalMaterialDocumentation_SteelBeam01">
+<OriginalCEMarking rdf:about="#OriginalCEMarking_SteelBeam_377db681-b7c2-4dc1-a59c-8c722785e3d8">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</OriginalCEMarking>
+
+<OriginalCEMarking rdf:about="#OriginalCEMarking_SteelBeam_3d812c79-a00f-4e1f-b678-2b3f92139c17">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</OriginalCEMarking>
+
+<OriginalCEMarking rdf:about="#OriginalCEMarking_SteelBeam_64e7bc6d-b317-4d12-8256-6408577012e6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</OriginalCEMarking>
+
+<OriginalCEMarking rdf:about="#OriginalCEMarking_SteelBeam_75567d5c-cedb-4aa3-810f-5032d5933dc2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</OriginalCEMarking>
+
+<OriginalCEMarking rdf:about="#OriginalCEMarking_SteelBeam_8125f446-36ae-4705-993e-b3deac502c88">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</OriginalCEMarking>
+
+<OriginalMaterialDocumentation rdf:about="#OriginalMaterialDocumentation_SteelBeam_377db681-b7c2-4dc1-a59c-8c722785e3d8">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </OriginalMaterialDocumentation>
 
-<OriginalTestCertificatesDocumentation rdf:about="#OriginalTestCertificatesDocumentation_SteelBeam01">
+<OriginalMaterialDocumentation rdf:about="#OriginalMaterialDocumentation_SteelBeam_3d812c79-a00f-4e1f-b678-2b3f92139c17">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</OriginalMaterialDocumentation>
+
+<OriginalMaterialDocumentation rdf:about="#OriginalMaterialDocumentation_SteelBeam_64e7bc6d-b317-4d12-8256-6408577012e6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</OriginalMaterialDocumentation>
+
+<OriginalMaterialDocumentation rdf:about="#OriginalMaterialDocumentation_SteelBeam_75567d5c-cedb-4aa3-810f-5032d5933dc2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</OriginalMaterialDocumentation>
+
+<OriginalMaterialDocumentation rdf:about="#OriginalMaterialDocumentation_SteelBeam_8125f446-36ae-4705-993e-b3deac502c88">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</OriginalMaterialDocumentation>
+
+<OriginalTestCertificatesDocumentation rdf:about="#OriginalTestCertificatesDocumentation_SteelBeam_377db681-b7c2-4dc1-a59c-8c722785e3d8">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </OriginalTestCertificatesDocumentation>
 
-<owl:Thing rdf:about="#ReliabilityTestingDocumentation_SteelBeam02">
+<OriginalTestCertificatesDocumentation rdf:about="#OriginalTestCertificatesDocumentation_SteelBeam_3d812c79-a00f-4e1f-b678-2b3f92139c17">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</owl:Thing>
+</OriginalTestCertificatesDocumentation>
 
-<owl:Thing rdf:about="#TestingProtocolDocumentation_SteelBeam06">
+<OriginalTestCertificatesDocumentation rdf:about="#OriginalTestCertificatesDocumentation_SteelBeam_64e7bc6d-b317-4d12-8256-6408577012e6">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</owl:Thing>
+</OriginalTestCertificatesDocumentation>
+
+<OriginalTestCertificatesDocumentation rdf:about="#OriginalTestCertificatesDocumentation_SteelBeam_75567d5c-cedb-4aa3-810f-5032d5933dc2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</OriginalTestCertificatesDocumentation>
+
+<OriginalTestCertificatesDocumentation rdf:about="#OriginalTestCertificatesDocumentation_SteelBeam_8125f446-36ae-4705-993e-b3deac502c88">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</OriginalTestCertificatesDocumentation>
+
+<ReliabilityTestingDocumentation rdf:about="#ReliabilityTestingDocumentation_SteelBeam_7a2f96a8-bf21-4edf-b0c8-836386ff0505">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</ReliabilityTestingDocumentation>
+
+<HProfile rdf:about="#SteelBeam_1da87106-b4e5-400f-98b2-bf43a066dee7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Inspection"/>
+  <rdf:type rdf:resource="#ReuseAudit"/>
+  <rdf:type rdf:resource="#SteelBeam"/>
+  <coveredByReuseAudit rdf:resource="#Audit_5ade6478-df77-4a10-8769-03d0b815f572"/>
+  <hasDamageDocumentation rdf:resource="#DamageDocumentation_SteelBeam_1da87106-b4e5-400f-98b2-bf43a066dee7"/>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</hasAge>
+  <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasFlangeThickness>
+  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2300.0</hasLength>
+  <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileHeight>
+  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileWidth>
+  <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110.0</hasWebHeight>
+  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasWebThickness>
+</HProfile>
+
+<IProfile rdf:about="#SteelBeam_377db681-b7c2-4dc1-a59c-8c722785e3d8">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Inspection"/>
+  <rdf:type rdf:resource="#NonReusableSteelBeam"/>
+  <rdf:type rdf:resource="#ReuseAudit"/>
+  <rdf:type rdf:resource="#SteelBeam"/>
+  <coveredByReuseAudit rdf:resource="#Audit_e1eb1111-b645-4225-bdfb-c8c0b6de3361"/>
+  <hasDamage rdf:resource="#Damage_SteelBeam_377db681-b7c2-4dc1-a59c-8c722785e3d8"/>
+  <hasDamageDocumentation rdf:resource="#DamageDocumentation_SteelBeam_377db681-b7c2-4dc1-a59c-8c722785e3d8"/>
+  <hasOriginalCEMarking rdf:resource="#OriginalCEMarking_SteelBeam_377db681-b7c2-4dc1-a59c-8c722785e3d8"/>
+  <hasOriginalMaterialDocumentation rdf:resource="#OriginalMaterialDocumentation_SteelBeam_377db681-b7c2-4dc1-a59c-8c722785e3d8"/>
+  <hasOriginalTestCertificatesDocumentation rdf:resource="#OriginalTestCertificatesDocumentation_SteelBeam_377db681-b7c2-4dc1-a59c-8c722785e3d8"/>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</hasAge>
+  <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hasFlangeThickness>
+  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15000.0</hasLength>
+  <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">420.0</hasProfileHeight>
+  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileWidth>
+  <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400.0</hasWebHeight>
+  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hasWebThickness>
+</IProfile>
+
+<IProfile rdf:about="#SteelBeam_3d812c79-a00f-4e1f-b678-2b3f92139c17">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Inspection"/>
+  <rdf:type rdf:resource="#ReuseAudit"/>
+  <rdf:type rdf:resource="#ReuseClassASteelBeam"/>
+  <rdf:type rdf:resource="#SteelBeam"/>
+  <coveredByReuseAudit rdf:resource="#Audit_aa6401d7-648c-423b-bc75-298a8bad2d04"/>
+  <hasDamage rdf:resource="#Damage_SteelBeam_3d812c79-a00f-4e1f-b678-2b3f92139c17"/>
+  <hasDamageDocumentation rdf:resource="#DamageDocumentation_SteelBeam_3d812c79-a00f-4e1f-b678-2b3f92139c17"/>
+  <hasOriginalCEMarking rdf:resource="#OriginalCEMarking_SteelBeam_3d812c79-a00f-4e1f-b678-2b3f92139c17"/>
+  <hasOriginalMaterialDocumentation rdf:resource="#OriginalMaterialDocumentation_SteelBeam_3d812c79-a00f-4e1f-b678-2b3f92139c17"/>
+  <hasOriginalTestCertificatesDocumentation rdf:resource="#OriginalTestCertificatesDocumentation_SteelBeam_3d812c79-a00f-4e1f-b678-2b3f92139c17"/>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</hasAge>
+  <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hasFlangeThickness>
+  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15000.0</hasLength>
+  <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">420.0</hasProfileHeight>
+  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileWidth>
+  <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400.0</hasWebHeight>
+  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hasWebThickness>
+</IProfile>
+
+<HProfile rdf:about="#SteelBeam_546a84bf-5371-485c-836e-2e26649d5e4a">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Inspection"/>
+  <rdf:type rdf:resource="#ReuseAudit"/>
+  <rdf:type rdf:resource="#SteelBeam"/>
+  <coveredByReuseAudit rdf:resource="#Audit_620d1a95-215c-42d5-9940-c0844bcfba08"/>
+  <hasDamage rdf:resource="#Damage_SteelBeam_546a84bf-5371-485c-836e-2e26649d5e4a"/>
+  <hasDamageDocumentation rdf:resource="#DamageDocumentation_SteelBeam_546a84bf-5371-485c-836e-2e26649d5e4a"/>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasAge>
+  <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasFlangeThickness>
+  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400.0</hasLength>
+  <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileHeight>
+  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileWidth>
+  <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110.0</hasWebHeight>
+  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasWebThickness>
+</HProfile>
+
+<IProfile rdf:about="#SteelBeam_64e7bc6d-b317-4d12-8256-6408577012e6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Inspection"/>
+  <rdf:type rdf:resource="#ReuseAudit"/>
+  <rdf:type rdf:resource="#SteelBeam"/>
+  <coveredByReuseAudit rdf:resource="#Audit_41093557-181b-4ade-9aca-9704a4106085"/>
+  <hasDamage rdf:resource="#Damage_SteelBeam_64e7bc6d-b317-4d12-8256-6408577012e6"/>
+  <hasDamageDocumentation rdf:resource="#DamageDocumentation_SteelBeam_64e7bc6d-b317-4d12-8256-6408577012e6"/>
+  <hasOriginalCEMarking rdf:resource="#OriginalCEMarking_SteelBeam_64e7bc6d-b317-4d12-8256-6408577012e6"/>
+  <hasOriginalMaterialDocumentation rdf:resource="#OriginalMaterialDocumentation_SteelBeam_64e7bc6d-b317-4d12-8256-6408577012e6"/>
+  <hasOriginalTestCertificatesDocumentation rdf:resource="#OriginalTestCertificatesDocumentation_SteelBeam_64e7bc6d-b317-4d12-8256-6408577012e6"/>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</hasAge>
+  <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hasFlangeThickness>
+  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15000.0</hasLength>
+  <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">420.0</hasProfileHeight>
+  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileWidth>
+  <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400.0</hasWebHeight>
+  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hasWebThickness>
+</IProfile>
+
+<IProfile rdf:about="#SteelBeam_75567d5c-cedb-4aa3-810f-5032d5933dc2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Inspection"/>
+  <rdf:type rdf:resource="#NonReusableSteelBeam"/>
+  <rdf:type rdf:resource="#ReuseAudit"/>
+  <rdf:type rdf:resource="#SteelBeam"/>
+  <coveredByReuseAudit rdf:resource="#Audit_3bc509be-462c-492d-9a7d-40752ad2f4c0"/>
+  <hasDamage rdf:resource="#Damage_SteelBeam_75567d5c-cedb-4aa3-810f-5032d5933dc2"/>
+  <hasDamageDocumentation rdf:resource="#DamageDocumentation_SteelBeam_75567d5c-cedb-4aa3-810f-5032d5933dc2"/>
+  <hasOriginalCEMarking rdf:resource="#OriginalCEMarking_SteelBeam_75567d5c-cedb-4aa3-810f-5032d5933dc2"/>
+  <hasOriginalMaterialDocumentation rdf:resource="#OriginalMaterialDocumentation_SteelBeam_75567d5c-cedb-4aa3-810f-5032d5933dc2"/>
+  <hasOriginalTestCertificatesDocumentation rdf:resource="#OriginalTestCertificatesDocumentation_SteelBeam_75567d5c-cedb-4aa3-810f-5032d5933dc2"/>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</hasAge>
+  <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hasFlangeThickness>
+  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15000.0</hasLength>
+  <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">420.0</hasProfileHeight>
+  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileWidth>
+  <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400.0</hasWebHeight>
+  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hasWebThickness>
+</IProfile>
+
+<IProfile rdf:about="#SteelBeam_7a2f96a8-bf21-4edf-b0c8-836386ff0505">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Inspection"/>
+  <rdf:type rdf:resource="#ReuseAudit"/>
+  <rdf:type rdf:resource="#ReuseClassBSteelBeam"/>
+  <rdf:type rdf:resource="#SteelBeam"/>
+  <coveredByReuseAudit rdf:resource="#Audit_229f1f47-4480-4947-b008-b65e67eaf756"/>
+  <hasAdequacyTestingDocumentation rdf:resource="#AdequacyTestingDocumentation_SteelBeam_7a2f96a8-bf21-4edf-b0c8-836386ff0505"/>
+  <hasDamageDocumentation rdf:resource="#DamageDocumentation_SteelBeam_7a2f96a8-bf21-4edf-b0c8-836386ff0505"/>
+  <hasNewCEMarking rdf:resource="#NewCEMarking_SteelBeam_7a2f96a8-bf21-4edf-b0c8-836386ff0505"/>
+  <hasReliabilityTestingDocumentation rdf:resource="#ReliabilityTestingDocumentation_SteelBeam_7a2f96a8-bf21-4edf-b0c8-836386ff0505"/>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</hasAge>
+  <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hasFlangeThickness>
+  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15000.0</hasLength>
+  <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">420.0</hasProfileHeight>
+  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileWidth>
+  <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400.0</hasWebHeight>
+  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hasWebThickness>
+</IProfile>
+
+<IProfile rdf:about="#SteelBeam_8125f446-36ae-4705-993e-b3deac502c88">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Inspection"/>
+  <rdf:type rdf:resource="#ReuseAudit"/>
+  <rdf:type rdf:resource="#ReuseClassASteelBeam"/>
+  <rdf:type rdf:resource="#SteelBeam"/>
+  <coveredByReuseAudit rdf:resource="#Audit_f8fc247d-befe-48cd-8687-1d3c91da36c3"/>
+  <hasDamageDocumentation rdf:resource="#DamageDocumentation_SteelBeam_8125f446-36ae-4705-993e-b3deac502c88"/>
+  <hasOriginalCEMarking rdf:resource="#OriginalCEMarking_SteelBeam_8125f446-36ae-4705-993e-b3deac502c88"/>
+  <hasOriginalMaterialDocumentation rdf:resource="#OriginalMaterialDocumentation_SteelBeam_8125f446-36ae-4705-993e-b3deac502c88"/>
+  <hasOriginalTestCertificatesDocumentation rdf:resource="#OriginalTestCertificatesDocumentation_SteelBeam_8125f446-36ae-4705-993e-b3deac502c88"/>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasAge>
+  <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hasFlangeThickness>
+  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1200.0</hasLength>
+  <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300.0</hasProfileHeight>
+  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileWidth>
+  <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">280.0</hasWebHeight>
+  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.0</hasWebThickness>
+</IProfile>
+
+<IProfile rdf:about="#SteelBeam_b529391b-e323-4ec4-be2a-428923710f02">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Inspection"/>
+  <rdf:type rdf:resource="#NonReusableSteelBeam"/>
+  <rdf:type rdf:resource="#ReuseAudit"/>
+  <rdf:type rdf:resource="#SteelBeam"/>
+  <coveredByReuseAudit rdf:resource="#Audit_cc184617-3c05-4319-b0ca-9213d930180d"/>
+  <hasDamage rdf:resource="#Damage_SteelBeam_b529391b-e323-4ec4-be2a-428923710f02"/>
+  <hasDamageDocumentation rdf:resource="#DamageDocumentation_SteelBeam_b529391b-e323-4ec4-be2a-428923710f02"/>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</hasAge>
+  <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasFlangeThickness>
+  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300.0</hasLength>
+  <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileHeight>
+  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</hasProfileWidth>
+  <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110.0</hasWebHeight>
+  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasWebThickness>
+</IProfile>
 
 <swrl:Variable rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
+
+<swrl:Variable rdf:about="#d"/>
 
 <swrl:Variable rdf:about="#sb"/>
 
@@ -1053,150 +1325,136 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
 
 <swrl:Variable rdf:about="#ip"/>
 
-<swrl:Variable rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+<swrl:Variable rdf:about="#dd"/>
 
-<swrl:Variable rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/dd"/>
+<swrl:Variable rdf:about="#rtd"/>
 
-<swrl:Variable rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/rtd"/>
+<swrl:Variable rdf:about="#atd"/>
 
-<swrl:Variable rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/atd"/>
+<swrl:Variable rdf:about="#ncem"/>
 
-<swrl:Variable rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ncem"/>
+<swrl:Variable rdf:about="#rp"/>
 
-<swrl:Variable rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ocem"/>
+<swrl:Variable rdf:about="#ocem"/>
 
-<swrl:Variable rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/omd"/>
+<swrl:Variable rdf:about="#omd"/>
 
-<swrl:Variable rdf:about="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/otcd"/>
+<swrl:Variable rdf:about="#otcd"/>
 
 <swrl:Variable rdf:about="#y"/>
 
 <swrl:Variable rdf:about="#x"/>
 
-<ReuseAudit rdf:about="#Audit_620d1a95-215c-42d5-9940-c0844bcfba08">
+<ReuseAudit rdf:about="#Audit_01cd4966-2a9f-4e08-92f4-5410f51709c3">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </ReuseAudit>
 
-<SteelBeam rdf:about="#SteelBeam_546a84bf-5371-485c-836e-2e26649d5e4a">
+<SteelBeam rdf:about="#SteelBeam_00be9743-c3dd-4a7d-bf60-455799181039">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <coveredByReuseAudit rdf:resource="#Audit_620d1a95-215c-42d5-9940-c0844bcfba08"/>
-  <hasDamageDocumentation rdf:resource="#DamageDocumentation_SteelBeam_546a84bf-5371-485c-836e-2e26649d5e4a"/>
-  <hasDamage rdf:resource="#Damage_SteelBeam_546a84bf-5371-485c-836e-2e26649d5e4a"/>
+  <coveredByReuseAudit rdf:resource="#Audit_01cd4966-2a9f-4e08-92f4-5410f51709c3"/>
+  <hasDamageDocumentation rdf:resource="#DamageDocumentation_SteelBeam_00be9743-c3dd-4a7d-bf60-455799181039"/>
+  <hasDamage rdf:resource="#Damage_SteelBeam_00be9743-c3dd-4a7d-bf60-455799181039"/>
   <rdf:type rdf:resource="#Inspection"/>
   <rdf:type rdf:resource="#ReuseAudit"/>
-  <rdf:type rdf:resource="#HProfile"/>
-  <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileHeight>
-  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileWidth>
-  <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasFlangeThickness>
-  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasWebThickness>
-  <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110.0</hasWebHeight>
-  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400.0</hasLength>
-  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasAge>
-</SteelBeam>
-
-<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_546a84bf-5371-485c-836e-2e26649d5e4a">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</DamageDocumentation>
-
-<Damage rdf:about="#Damage_SteelBeam_546a84bf-5371-485c-836e-2e26649d5e4a">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</Damage>
-
-<ReuseAudit rdf:about="#Audit_f8fc247d-befe-48cd-8687-1d3c91da36c3">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</ReuseAudit>
-
-<SteelBeam rdf:about="#SteelBeam_8125f446-36ae-4705-993e-b3deac502c88">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <coveredByReuseAudit rdf:resource="#Audit_f8fc247d-befe-48cd-8687-1d3c91da36c3"/>
-  <hasDamageDocumentation rdf:resource="#DamageDocumentation_SteelBeam_8125f446-36ae-4705-993e-b3deac502c88"/>
-  <hasOriginalCEMarking rdf:resource="#OriginalCEMarking_SteelBeam_8125f446-36ae-4705-993e-b3deac502c88"/>
-  <hasOriginalMaterialDocumentation rdf:resource="#OriginalMaterialDocumentation_SteelBeam_8125f446-36ae-4705-993e-b3deac502c88"/>
-  <hasOriginalTestCertificatesDocumentation rdf:resource="#OriginalTestCertificatesDocumentation_SteelBeam_8125f446-36ae-4705-993e-b3deac502c88"/>
-  <rdf:type rdf:resource="#Inspection"/>
-  <rdf:type rdf:resource="#ReuseAudit"/>
-  <rdf:type rdf:resource="#ReuseClassASteelBeam"/>
   <rdf:type rdf:resource="#IProfile"/>
-  <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300.0</hasProfileHeight>
-  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileWidth>
+  <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">320.0</hasProfileHeight>
+  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</hasProfileWidth>
   <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hasFlangeThickness>
-  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.0</hasWebThickness>
-  <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">280.0</hasWebHeight>
-  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1200.0</hasLength>
-  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasAge>
+  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hasWebThickness>
+  <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300.0</hasWebHeight>
+  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1300.0</hasLength>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</hasAge>
 </SteelBeam>
 
-<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_8125f446-36ae-4705-993e-b3deac502c88">
+<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_00be9743-c3dd-4a7d-bf60-455799181039">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </DamageDocumentation>
 
-<OriginalCEMarking rdf:about="#OriginalCEMarking_SteelBeam_8125f446-36ae-4705-993e-b3deac502c88">
+<Damage rdf:about="#Damage_SteelBeam_00be9743-c3dd-4a7d-bf60-455799181039">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</OriginalCEMarking>
-
-<OriginalMaterialDocumentation rdf:about="#OriginalMaterialDocumentation_SteelBeam_8125f446-36ae-4705-993e-b3deac502c88">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</OriginalMaterialDocumentation>
-
-<OriginalTestCertificatesDocumentation rdf:about="#OriginalTestCertificatesDocumentation_SteelBeam_8125f446-36ae-4705-993e-b3deac502c88">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</OriginalTestCertificatesDocumentation>
-
-<ReuseAudit rdf:about="#Audit_cc184617-3c05-4319-b0ca-9213d930180d">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</ReuseAudit>
-
-<SteelBeam rdf:about="#SteelBeam_b529391b-e323-4ec4-be2a-428923710f02">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <coveredByReuseAudit rdf:resource="#Audit_cc184617-3c05-4319-b0ca-9213d930180d"/>
-  <hasDamageDocumentation rdf:resource="#DamageDocumentation_SteelBeam_b529391b-e323-4ec4-be2a-428923710f02"/>
-  <hasDamage rdf:resource="#Damage_SteelBeam_b529391b-e323-4ec4-be2a-428923710f02"/>
-  <rdf:type rdf:resource="#Inspection"/>
-  <rdf:type rdf:resource="#ReuseAudit"/>
-  <rdf:type rdf:resource="#NonReusableSteelBeam"/>
-  <rdf:type rdf:resource="#IProfile"/>
-  <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileHeight>
-  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</hasProfileWidth>
-  <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasFlangeThickness>
-  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasWebThickness>
-  <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110.0</hasWebHeight>
-  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300.0</hasLength>
-  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</hasAge>
-</SteelBeam>
-
-<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_b529391b-e323-4ec4-be2a-428923710f02">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</DamageDocumentation>
-
-<Damage rdf:about="#Damage_SteelBeam_b529391b-e323-4ec4-be2a-428923710f02">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <hasCausation rdf:resource="#Radiation"/>
-  <rdf:type rdf:resource="#PhysicalDamageRadiation"/>
+  <hasCausation rdf:resource="#Fire"/>
 </Damage>
 
-<ReuseAudit rdf:about="#Audit_5ade6478-df77-4a10-8769-03d0b815f572">
+<ReuseAudit rdf:about="#Audit_862f7f23-8ef5-4077-a0dc-8263bb0ce7e7">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </ReuseAudit>
 
-<SteelBeam rdf:about="#SteelBeam_1da87106-b4e5-400f-98b2-bf43a066dee7">
+<SteelBeam rdf:about="#SteelBeam_976cb296-d3e7-443f-a815-8d1f266a8c7e">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <coveredByReuseAudit rdf:resource="#Audit_5ade6478-df77-4a10-8769-03d0b815f572"/>
-  <hasDamageDocumentation rdf:resource="#DamageDocumentation_SteelBeam_1da87106-b4e5-400f-98b2-bf43a066dee7"/>
+  <coveredByReuseAudit rdf:resource="#Audit_862f7f23-8ef5-4077-a0dc-8263bb0ce7e7"/>
+  <hasDamageDocumentation rdf:resource="#DamageDocumentation_SteelBeam_976cb296-d3e7-443f-a815-8d1f266a8c7e"/>
+  <hasDamage rdf:resource="#Damage_SteelBeam_976cb296-d3e7-443f-a815-8d1f266a8c7e"/>
   <rdf:type rdf:resource="#Inspection"/>
   <rdf:type rdf:resource="#ReuseAudit"/>
-  <rdf:type rdf:resource="#HProfile"/>
-  <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileHeight>
-  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</hasProfileWidth>
-  <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasFlangeThickness>
-  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hasWebThickness>
-  <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110.0</hasWebHeight>
-  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2300.0</hasLength>
-  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</hasAge>
+  <rdf:type rdf:resource="#IProfile"/>
+  <hasProfileHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">320.0</hasProfileHeight>
+  <hasProfileWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</hasProfileWidth>
+  <hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hasFlangeThickness>
+  <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hasWebThickness>
+  <hasWebHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300.0</hasWebHeight>
+  <hasLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1300.0</hasLength>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</hasAge>
 </SteelBeam>
 
-<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_1da87106-b4e5-400f-98b2-bf43a066dee7">
+<DamageDocumentation rdf:about="#DamageDocumentation_SteelBeam_976cb296-d3e7-443f-a815-8d1f266a8c7e">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </DamageDocumentation>
+
+<Damage rdf:about="#Damage_SteelBeam_976cb296-d3e7-443f-a815-8d1f266a8c7e">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasCausation rdf:resource="#Fire"/>
+</Damage>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#HProfile"/>
+    <rdf:Description rdf:about="#HollowProfile"/>
+    <rdf:Description rdf:about="#IProfile"/>
+    <rdf:Description rdf:about="#LProfile"/>
+    <rdf:Description rdf:about="#SolidProfile"/>
+    <rdf:Description rdf:about="#TProfile"/>
+    <rdf:Description rdf:about="#UProfile"/>
+    <rdf:Description rdf:about="#ZProfile"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#ProfileShapeH"/>
+    <rdf:Description rdf:about="#ProfileShapeI"/>
+    <rdf:Description rdf:about="#ProfileShapeL"/>
+    <rdf:Description rdf:about="#ProfileShapeT"/>
+    <rdf:Description rdf:about="#ProfileShapeU"/>
+    <rdf:Description rdf:about="#ProfileShapeZ"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#ReuseClassA"/>
+    <rdf:Description rdf:about="#ReuseClassB"/>
+    <rdf:Description rdf:about="#ReuseClassC"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Aluminium"/>
+    <rdf:Description rdf:about="#CastIron"/>
+    <rdf:Description rdf:about="#Steel"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="#CorrosiveExposure"/>
+    <rdf:Description rdf:about="#Earthquake"/>
+    <rdf:Description rdf:about="#Fire"/>
+    <rdf:Description rdf:about="#Impact"/>
+    <rdf:Description rdf:about="#Radiation"/>
+    <rdf:Description rdf:about="#Wear"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
 
 <swrl:Imp>
   <swrl:body>
@@ -1204,121 +1462,58 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
       <rdf:first>
         <swrl:IndividualPropertyAtom>
           <swrl:propertyPredicate rdf:resource="#hasCausation"/>
-          <swrl:argument1 rdf:resource="#y"/>
+          <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
           <swrl:argument2 rdf:resource="#Radiation"/>
         </swrl:IndividualPropertyAtom>
       </rdf:first>
       <rdf:rest>
         <swrl:AtomList>
           <rdf:first>
-            <swrl:IndividualPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#hasDamage"/>
-              <swrl:argument1 rdf:resource="#x"/>
-              <swrl:argument2 rdf:resource="#y"/>
-            </swrl:IndividualPropertyAtom>
-          </rdf:first>
-          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-        </swrl:AtomList>
-      </rdf:rest>
-    </swrl:AtomList>
-  </swrl:body>
-  <swrl:head>
-    <swrl:AtomList>
-      <rdf:first>
-        <swrl:IndividualPropertyAtom>
-          <swrl:propertyPredicate rdf:resource="#hasReusePotential"/>
-          <swrl:argument1 rdf:resource="#x"/>
-          <swrl:argument2 rdf:resource="#NonReusable"/>
-        </swrl:IndividualPropertyAtom>
-      </rdf:first>
-      <rdf:rest>
-        <swrl:AtomList>
-          <rdf:first>
             <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#NonReusable"/>
-              <swrl:argument1 rdf:resource="#x"/>
+              <swrl:classPredicate rdf:resource="#Damage"/>
+              <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
             </swrl:ClassAtom>
           </rdf:first>
           <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
         </swrl:AtomList>
       </rdf:rest>
     </swrl:AtomList>
+  </swrl:body>
+  <swrl:head>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#PhysicalDamageRadiation"/>
+          <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </swrl:AtomList>
   </swrl:head>
   <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
-  <rdfs:comment>Render an Element non reusable due to the Damage "Radiation"</rdfs:comment>
-  <rdfs:label>NonReusable - Radiation</rdfs:label>
+  <rdfs:comment>Define a Damage as PhysicalDamageRadiation</rdfs:comment>
+  <rdfs:label>Damage - Radiation</rdfs:label>
 </swrl:Imp>
 
 <swrl:Imp>
   <swrl:body>
     <swrl:AtomList>
       <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#SteelBeam"/>
-          <swrl:argument1 rdf:resource="#sb"/>
-        </swrl:ClassAtom>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#hasCausation"/>
+          <swrl:argument1 rdf:resource="#d"/>
+          <swrl:argument2 rdf:resource="#CorrosiveExposure"/>
+        </swrl:IndividualPropertyAtom>
       </rdf:first>
       <rdf:rest>
         <swrl:AtomList>
           <rdf:first>
-            <swrl:DatavaluedPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#hasWebHeight"/>
-              <swrl:argument1 rdf:resource="#sb"/>
-              <swrl:argument2 rdf:resource="#wh"/>
-            </swrl:DatavaluedPropertyAtom>
+            <swrl:ClassAtom>
+              <swrl:classPredicate rdf:resource="#Damage"/>
+              <swrl:argument1 rdf:resource="#d"/>
+            </swrl:ClassAtom>
           </rdf:first>
-          <rdf:rest>
-            <swrl:AtomList>
-              <rdf:first>
-                <swrl:BuiltinAtom>
-                  <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
-                  <swrl:arguments>
-                    <rdf:List>
-                      <rdf:first rdf:resource="#pw"/>
-                      <rdf:rest>
-                        <rdf:List>
-                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</rdf:first>
-                        </rdf:List>
-                      </rdf:rest>
-                    </rdf:List>
-                  </swrl:arguments>
-                </swrl:BuiltinAtom>
-              </rdf:first>
-              <rdf:rest>
-                <swrl:AtomList>
-                  <rdf:first>
-                    <swrl:DatavaluedPropertyAtom>
-                      <swrl:propertyPredicate rdf:resource="#hasProfileWidth"/>
-                      <swrl:argument1 rdf:resource="#sb"/>
-                      <swrl:argument2 rdf:resource="#pw"/>
-                    </swrl:DatavaluedPropertyAtom>
-                  </rdf:first>
-                  <rdf:rest>
-                    <swrl:AtomList>
-                      <rdf:first>
-                        <swrl:BuiltinAtom>
-                          <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
-                          <swrl:arguments>
-                            <rdf:Description>
-                              <rdf:first rdf:resource="#pw"/>
-                              <rdf:rest>
-                                <rdf:Description>
-                                  <rdf:first rdf:resource="#wh"/>
-                                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                </rdf:Description>
-                              </rdf:rest>
-                            </rdf:Description>
-                          </swrl:arguments>
-                        </swrl:BuiltinAtom>
-                      </rdf:first>
-                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </swrl:AtomList>
-                  </rdf:rest>
-                </swrl:AtomList>
-              </rdf:rest>
-            </swrl:AtomList>
-          </rdf:rest>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
         </swrl:AtomList>
       </rdf:rest>
     </swrl:AtomList>
@@ -1327,62 +1522,92 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
     <swrl:AtomList>
       <rdf:first>
         <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#IProfile"/>
-          <swrl:argument1 rdf:resource="#sb"/>
+          <swrl:classPredicate rdf:resource="#ChemicalDamageCorrosion"/>
+          <swrl:argument1 rdf:resource="#d"/>
         </swrl:ClassAtom>
       </rdf:first>
       <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     </swrl:AtomList>
   </swrl:head>
   <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
-  <rdfs:comment>Rule to detect to which Profile-Class SteelBeam-Individuals belong</rdfs:comment>
-  <rdfs:label>I-Profile</rdfs:label>
+  <rdfs:comment>Define a Damage as ChemicalDamageCorrosion</rdfs:comment>
+  <rdfs:label>Damage - Corrosion</rdfs:label>
 </swrl:Imp>
 
 <swrl:Imp>
   <swrl:body>
     <swrl:AtomList>
       <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#SteelBeam"/>
-          <swrl:argument1 rdf:resource="#sb"/>
-        </swrl:ClassAtom>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#hasCausation"/>
+          <swrl:argument1 rdf:resource="#d"/>
+          <swrl:argument2 rdf:resource="#CorrosiveExposure"/>
+        </swrl:IndividualPropertyAtom>
       </rdf:first>
       <rdf:rest>
         <swrl:AtomList>
           <rdf:first>
-            <swrl:DatavaluedPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#hasWebHeight"/>
-              <swrl:argument1 rdf:resource="#sb"/>
-              <swrl:argument2 rdf:resource="#wh"/>
-            </swrl:DatavaluedPropertyAtom>
+            <swrl:ClassAtom>
+              <swrl:classPredicate rdf:resource="#Damage"/>
+              <swrl:argument1 rdf:resource="#d"/>
+            </swrl:ClassAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:body>
+  <swrl:head>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#PhysicalDamageEmbrittlement"/>
+          <swrl:argument1 rdf:resource="#d"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </swrl:AtomList>
+  </swrl:head>
+  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+  <rdfs:comment>Define a Damage as PhysicalDamageEmbrittlement</rdfs:comment>
+  <rdfs:label>Damage - Embrittlement</rdfs:label>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#hasCausation"/>
+          <swrl:argument1 rdf:resource="#d"/>
+          <swrl:argument2 rdf:resource="#Fire"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#hasCausation"/>
+              <swrl:argument1 rdf:resource="#d"/>
+              <swrl:argument2 rdf:resource="#Impact"/>
+            </swrl:IndividualPropertyAtom>
           </rdf:first>
           <rdf:rest>
             <swrl:AtomList>
               <rdf:first>
-                <swrl:DatavaluedPropertyAtom>
-                  <swrl:propertyPredicate rdf:resource="#hasProfileWidth"/>
-                  <swrl:argument1 rdf:resource="#sb"/>
-                  <swrl:argument2 rdf:resource="#pw"/>
-                </swrl:DatavaluedPropertyAtom>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#hasCausation"/>
+                  <swrl:argument1 rdf:resource="#d"/>
+                  <swrl:argument2 rdf:resource="#Earthquake"/>
+                </swrl:IndividualPropertyAtom>
               </rdf:first>
               <rdf:rest>
                 <swrl:AtomList>
                   <rdf:first>
-                    <swrl:BuiltinAtom>
-                      <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
-                      <swrl:arguments>
-                        <rdf:List>
-                          <rdf:first rdf:resource="#pw"/>
-                          <rdf:rest>
-                            <rdf:List>
-                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</rdf:first>
-                            </rdf:List>
-                          </rdf:rest>
-                        </rdf:List>
-                      </swrl:arguments>
-                    </swrl:BuiltinAtom>
+                    <swrl:ClassAtom>
+                      <swrl:classPredicate rdf:resource="#Damage"/>
+                      <swrl:argument1 rdf:resource="#d"/>
+                    </swrl:ClassAtom>
                   </rdf:first>
                   <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                 </swrl:AtomList>
@@ -1397,138 +1622,46 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
     <swrl:AtomList>
       <rdf:first>
         <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#HProfile"/>
-          <swrl:argument1 rdf:resource="#sb"/>
+          <swrl:classPredicate rdf:resource="#PhysicalDamagePlasticDeformation"/>
+          <swrl:argument1 rdf:resource="#d"/>
         </swrl:ClassAtom>
       </rdf:first>
       <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     </swrl:AtomList>
   </swrl:head>
   <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
-  <rdfs:comment>Rule to detect to which Profile-Class SteelBeam-Individuals belong</rdfs:comment>
-  <rdfs:label>H-Profile_03</rdfs:label>
+  <rdfs:comment>Define a Damage as PhysicalDamagePlasticDeformation</rdfs:comment>
+  <rdfs:label>Damage - Deformation</rdfs:label>
 </swrl:Imp>
 
 <swrl:Imp>
   <swrl:body>
     <swrl:AtomList>
       <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#SteelBeam"/>
-          <swrl:argument1 rdf:resource="#sb"/>
-        </swrl:ClassAtom>
-      </rdf:first>
-      <rdf:rest>
-        <swrl:AtomList>
-          <rdf:first>
-            <swrl:DatavaluedPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#hasWebHeight"/>
-              <swrl:argument1 rdf:resource="#sb"/>
-              <swrl:argument2 rdf:resource="#wh"/>
-            </swrl:DatavaluedPropertyAtom>
-          </rdf:first>
-          <rdf:rest>
-            <swrl:AtomList>
-              <rdf:first>
-                <swrl:DatavaluedPropertyAtom>
-                  <swrl:propertyPredicate rdf:resource="#hasProfileWidth"/>
-                  <swrl:argument1 rdf:resource="#sb"/>
-                  <swrl:argument2 rdf:resource="#pw"/>
-                </swrl:DatavaluedPropertyAtom>
-              </rdf:first>
-              <rdf:rest>
-                <swrl:AtomList>
-                  <rdf:first>
-                    <swrl:BuiltinAtom>
-                      <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
-                      <swrl:arguments>
-                        <rdf:Description>
-                          <rdf:first rdf:resource="#pw"/>
-                          <rdf:rest>
-                            <rdf:Description>
-                              <rdf:first rdf:resource="#wh"/>
-                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                          </rdf:rest>
-                        </rdf:Description>
-                      </swrl:arguments>
-                    </swrl:BuiltinAtom>
-                  </rdf:first>
-                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                </swrl:AtomList>
-              </rdf:rest>
-            </swrl:AtomList>
-          </rdf:rest>
-        </swrl:AtomList>
-      </rdf:rest>
-    </swrl:AtomList>
-  </swrl:body>
-  <swrl:head>
-    <swrl:AtomList>
-      <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#HProfile"/>
-          <swrl:argument1 rdf:resource="#sb"/>
-        </swrl:ClassAtom>
-      </rdf:first>
-      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    </swrl:AtomList>
-  </swrl:head>
-  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
-  <rdfs:comment>Rule to detect to which Profile-Class SteelBeam-Individuals belong</rdfs:comment>
-  <rdfs:label>H-Profile_01</rdfs:label>
-</swrl:Imp>
-
-<swrl:Imp>
-  <swrl:body>
-    <swrl:AtomList>
-      <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#SteelBeam"/>
-          <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-        </swrl:ClassAtom>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#hasCausation"/>
+          <swrl:argument1 rdf:resource="#d"/>
+          <swrl:argument2 rdf:resource="#Fire"/>
+        </swrl:IndividualPropertyAtom>
       </rdf:first>
       <rdf:rest>
         <swrl:AtomList>
           <rdf:first>
             <swrl:IndividualPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#hasDamageDocumentation"/>
-              <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-              <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/dd"/>
+              <swrl:propertyPredicate rdf:resource="#hasCausation"/>
+              <swrl:argument1 rdf:resource="#d"/>
+              <swrl:argument2 rdf:resource="#Impact"/>
             </swrl:IndividualPropertyAtom>
           </rdf:first>
           <rdf:rest>
             <swrl:AtomList>
               <rdf:first>
-                <swrl:IndividualPropertyAtom>
-                  <swrl:propertyPredicate rdf:resource="#hasOriginalCEMarking"/>
-                  <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                  <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ocem"/>
-                </swrl:IndividualPropertyAtom>
+                <swrl:ClassAtom>
+                  <swrl:classPredicate rdf:resource="#Damage"/>
+                  <swrl:argument1 rdf:resource="#d"/>
+                </swrl:ClassAtom>
               </rdf:first>
-              <rdf:rest>
-                <swrl:AtomList>
-                  <rdf:first>
-                    <swrl:IndividualPropertyAtom>
-                      <swrl:propertyPredicate rdf:resource="#hasOriginalMaterialDocumentation"/>
-                      <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                      <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/omd"/>
-                    </swrl:IndividualPropertyAtom>
-                  </rdf:first>
-                  <rdf:rest>
-                    <swrl:AtomList>
-                      <rdf:first>
-                        <swrl:IndividualPropertyAtom>
-                          <swrl:propertyPredicate rdf:resource="#hasOriginalTestCertificatesDocumentation"/>
-                          <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                          <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/otcd"/>
-                        </swrl:IndividualPropertyAtom>
-                      </rdf:first>
-                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </swrl:AtomList>
-                  </rdf:rest>
-                </swrl:AtomList>
-              </rdf:rest>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
             </swrl:AtomList>
           </rdf:rest>
         </swrl:AtomList>
@@ -1539,70 +1672,37 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
     <swrl:AtomList>
       <rdf:first>
         <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#ReuseClassASteelBeam"/>
-          <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+          <swrl:classPredicate rdf:resource="#PhysicalDamageFatigue"/>
+          <swrl:argument1 rdf:resource="#d"/>
         </swrl:ClassAtom>
       </rdf:first>
       <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     </swrl:AtomList>
   </swrl:head>
   <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
-  <rdfs:comment>Determine if a SteelBeam belongs to ReuseClassA</rdfs:comment>
-  <rdfs:label>ReuseClassASteelBeam</rdfs:label>
+  <rdfs:comment>Define a Damage as PhysicalDamageFatigue</rdfs:comment>
+  <rdfs:label>Damage - Cracks (Fatigue)</rdfs:label>
 </swrl:Imp>
 
 <swrl:Imp>
   <swrl:body>
     <swrl:AtomList>
       <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#SteelBeam"/>
-          <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-        </swrl:ClassAtom>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#hasCausation"/>
+          <swrl:argument1 rdf:resource="#d"/>
+          <swrl:argument2 rdf:resource="#Wear"/>
+        </swrl:IndividualPropertyAtom>
       </rdf:first>
       <rdf:rest>
         <swrl:AtomList>
           <rdf:first>
-            <swrl:IndividualPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#hasDamageDocumentation"/>
-              <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-              <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/dd"/>
-            </swrl:IndividualPropertyAtom>
+            <swrl:ClassAtom>
+              <swrl:classPredicate rdf:resource="#Damage"/>
+              <swrl:argument1 rdf:resource="#d"/>
+            </swrl:ClassAtom>
           </rdf:first>
-          <rdf:rest>
-            <swrl:AtomList>
-              <rdf:first>
-                <swrl:IndividualPropertyAtom>
-                  <swrl:propertyPredicate rdf:resource="#hasReliabilityTestingDocumentation"/>
-                  <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                  <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/rtd"/>
-                </swrl:IndividualPropertyAtom>
-              </rdf:first>
-              <rdf:rest>
-                <swrl:AtomList>
-                  <rdf:first>
-                    <swrl:IndividualPropertyAtom>
-                      <swrl:propertyPredicate rdf:resource="#hasAdequacyTestingDocumentation"/>
-                      <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                      <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/atd"/>
-                    </swrl:IndividualPropertyAtom>
-                  </rdf:first>
-                  <rdf:rest>
-                    <swrl:AtomList>
-                      <rdf:first>
-                        <swrl:IndividualPropertyAtom>
-                          <swrl:propertyPredicate rdf:resource="#hasNewCEMarking"/>
-                          <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
-                          <swrl:argument2 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/ncem"/>
-                        </swrl:IndividualPropertyAtom>
-                      </rdf:first>
-                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </swrl:AtomList>
-                  </rdf:rest>
-                </swrl:AtomList>
-              </rdf:rest>
-            </swrl:AtomList>
-          </rdf:rest>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
         </swrl:AtomList>
       </rdf:rest>
     </swrl:AtomList>
@@ -1611,16 +1711,16 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
     <swrl:AtomList>
       <rdf:first>
         <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#ReuseClassBSteelBeam"/>
-          <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/sb"/>
+          <swrl:classPredicate rdf:resource="#PhysicalDamageAbrasion"/>
+          <swrl:argument1 rdf:resource="#d"/>
         </swrl:ClassAtom>
       </rdf:first>
       <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     </swrl:AtomList>
   </swrl:head>
   <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
-  <rdfs:comment>Determine if a SteelBeam belongs to ReuseClassB</rdfs:comment>
-  <rdfs:label>ReuseClassBSteelBeam</rdfs:label>
+  <rdfs:comment>Define a Damage as PhysicalDamageAbrasion</rdfs:comment>
+  <rdfs:label>Damage - Abrasion</rdfs:label>
 </swrl:Imp>
 
 <swrl:Imp>
@@ -1718,19 +1818,478 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
   <swrl:body>
     <swrl:AtomList>
       <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#SteelBeam"/>
+          <swrl:argument1 rdf:resource="#sb"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#hasDamageDocumentation"/>
+              <swrl:argument1 rdf:resource="#sb"/>
+              <swrl:argument2 rdf:resource="#dd"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <swrl:AtomList>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#hasReliabilityTestingDocumentation"/>
+                  <swrl:argument1 rdf:resource="#sb"/>
+                  <swrl:argument2 rdf:resource="#rtd"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <swrl:AtomList>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="#hasAdequacyTestingDocumentation"/>
+                      <swrl:argument1 rdf:resource="#sb"/>
+                      <swrl:argument2 rdf:resource="#atd"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <swrl:AtomList>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="#hasNewCEMarking"/>
+                          <swrl:argument1 rdf:resource="#sb"/>
+                          <swrl:argument2 rdf:resource="#ncem"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <swrl:AtomList>
+                          <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                              <swrl:propertyPredicate rdf:resource="#hasReusePotential"/>
+                              <swrl:argument1 rdf:resource="#sb"/>
+                              <swrl:argument2 rdf:resource="#rp"/>
+                            </swrl:IndividualPropertyAtom>
+                          </rdf:first>
+                          <rdf:rest>
+                            <swrl:AtomList>
+                              <rdf:first>
+                                <swrl:BuiltinAtom>
+                                  <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#booleanNot"/>
+                                  <swrl:arguments>
+                                    <rdf:Description>
+                                      <rdf:first rdf:resource="#rp"/>
+                                      <rdf:rest>
+                                        <rdf:Description>
+                                          <rdf:first rdf:resource="#NonReusable"/>
+                                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                        </rdf:Description>
+                                      </rdf:rest>
+                                    </rdf:Description>
+                                  </swrl:arguments>
+                                </swrl:BuiltinAtom>
+                              </rdf:first>
+                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </swrl:AtomList>
+                          </rdf:rest>
+                        </swrl:AtomList>
+                      </rdf:rest>
+                    </swrl:AtomList>
+                  </rdf:rest>
+                </swrl:AtomList>
+              </rdf:rest>
+            </swrl:AtomList>
+          </rdf:rest>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:body>
+  <swrl:head>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#ReuseClassBSteelBeam"/>
+          <swrl:argument1 rdf:resource="#sb"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#hasReusePotential"/>
+              <swrl:argument1 rdf:resource="#sb"/>
+              <swrl:argument2 rdf:resource="#Reusable"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:head>
+  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+  <rdfs:comment>Determine if a SteelBeam belongs to ReuseClassB</rdfs:comment>
+  <rdfs:label>ReuseClassBSteelBeam</rdfs:label>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#SteelBeam"/>
+          <swrl:argument1 rdf:resource="#sb"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#hasDamageDocumentation"/>
+              <swrl:argument1 rdf:resource="#sb"/>
+              <swrl:argument2 rdf:resource="#dd"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <swrl:AtomList>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#hasOriginalCEMarking"/>
+                  <swrl:argument1 rdf:resource="#sb"/>
+                  <swrl:argument2 rdf:resource="#ocem"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <swrl:AtomList>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="#hasOriginalMaterialDocumentation"/>
+                      <swrl:argument1 rdf:resource="#sb"/>
+                      <swrl:argument2 rdf:resource="#omd"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <swrl:AtomList>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="#hasOriginalTestCertificatesDocumentation"/>
+                          <swrl:argument1 rdf:resource="#sb"/>
+                          <swrl:argument2 rdf:resource="#otcd"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <swrl:AtomList>
+                          <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                              <swrl:propertyPredicate rdf:resource="#hasReusePotential"/>
+                              <swrl:argument1 rdf:resource="#sb"/>
+                              <swrl:argument2 rdf:resource="#rp"/>
+                            </swrl:IndividualPropertyAtom>
+                          </rdf:first>
+                          <rdf:rest>
+                            <swrl:AtomList>
+                              <rdf:first>
+                                <swrl:BuiltinAtom>
+                                  <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#booleanNot"/>
+                                  <swrl:arguments>
+                                    <rdf:Description>
+                                      <rdf:first rdf:resource="#rp"/>
+                                      <rdf:rest>
+                                        <rdf:Description>
+                                          <rdf:first rdf:resource="#NonReusable"/>
+                                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                        </rdf:Description>
+                                      </rdf:rest>
+                                    </rdf:Description>
+                                  </swrl:arguments>
+                                </swrl:BuiltinAtom>
+                              </rdf:first>
+                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </swrl:AtomList>
+                          </rdf:rest>
+                        </swrl:AtomList>
+                      </rdf:rest>
+                    </swrl:AtomList>
+                  </rdf:rest>
+                </swrl:AtomList>
+              </rdf:rest>
+            </swrl:AtomList>
+          </rdf:rest>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:body>
+  <swrl:head>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#ReuseClassASteelBeam"/>
+          <swrl:argument1 rdf:resource="#sb"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#hasReusePotential"/>
+              <swrl:argument1 rdf:resource="#sb"/>
+              <swrl:argument2 rdf:resource="#Reusable"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:head>
+  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+  <rdfs:comment>Determine if a SteelBeam belongs to ReuseClassA</rdfs:comment>
+  <rdfs:label>ReuseClassASteelBeam</rdfs:label>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#SteelBeam"/>
+          <swrl:argument1 rdf:resource="#sb"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:DatavaluedPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#hasWebHeight"/>
+              <swrl:argument1 rdf:resource="#sb"/>
+              <swrl:argument2 rdf:resource="#wh"/>
+            </swrl:DatavaluedPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <swrl:AtomList>
+              <rdf:first>
+                <swrl:DatavaluedPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#hasProfileWidth"/>
+                  <swrl:argument1 rdf:resource="#sb"/>
+                  <swrl:argument2 rdf:resource="#pw"/>
+                </swrl:DatavaluedPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <swrl:AtomList>
+                  <rdf:first>
+                    <swrl:BuiltinAtom>
+                      <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                      <swrl:arguments>
+                        <rdf:Description>
+                          <rdf:first rdf:resource="#pw"/>
+                          <rdf:rest>
+                            <rdf:Description>
+                              <rdf:first rdf:resource="#wh"/>
+                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                          </rdf:rest>
+                        </rdf:Description>
+                      </swrl:arguments>
+                    </swrl:BuiltinAtom>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </swrl:AtomList>
+              </rdf:rest>
+            </swrl:AtomList>
+          </rdf:rest>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:body>
+  <swrl:head>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#HProfile"/>
+          <swrl:argument1 rdf:resource="#sb"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </swrl:AtomList>
+  </swrl:head>
+  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+  <rdfs:comment>Rule to detect to which Profile-Class SteelBeam-Individuals belong</rdfs:comment>
+  <rdfs:label>H-Profile_01</rdfs:label>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#SteelBeam"/>
+          <swrl:argument1 rdf:resource="#sb"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:DatavaluedPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#hasWebHeight"/>
+              <swrl:argument1 rdf:resource="#sb"/>
+              <swrl:argument2 rdf:resource="#wh"/>
+            </swrl:DatavaluedPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <swrl:AtomList>
+              <rdf:first>
+                <swrl:DatavaluedPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#hasProfileWidth"/>
+                  <swrl:argument1 rdf:resource="#sb"/>
+                  <swrl:argument2 rdf:resource="#pw"/>
+                </swrl:DatavaluedPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <swrl:AtomList>
+                  <rdf:first>
+                    <swrl:BuiltinAtom>
+                      <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                      <swrl:arguments>
+                        <rdf:List>
+                          <rdf:first rdf:resource="#pw"/>
+                          <rdf:rest>
+                            <rdf:List>
+                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</rdf:first>
+                            </rdf:List>
+                          </rdf:rest>
+                        </rdf:List>
+                      </swrl:arguments>
+                    </swrl:BuiltinAtom>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </swrl:AtomList>
+              </rdf:rest>
+            </swrl:AtomList>
+          </rdf:rest>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:body>
+  <swrl:head>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#HProfile"/>
+          <swrl:argument1 rdf:resource="#sb"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </swrl:AtomList>
+  </swrl:head>
+  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+  <rdfs:comment>Rule to detect to which Profile-Class SteelBeam-Individuals belong</rdfs:comment>
+  <rdfs:label>H-Profile_03</rdfs:label>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#SteelBeam"/>
+          <swrl:argument1 rdf:resource="#sb"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:DatavaluedPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#hasWebHeight"/>
+              <swrl:argument1 rdf:resource="#sb"/>
+              <swrl:argument2 rdf:resource="#wh"/>
+            </swrl:DatavaluedPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <swrl:AtomList>
+              <rdf:first>
+                <swrl:BuiltinAtom>
+                  <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                  <swrl:arguments>
+                    <rdf:List>
+                      <rdf:first rdf:resource="#pw"/>
+                      <rdf:rest>
+                        <rdf:List>
+                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</rdf:first>
+                        </rdf:List>
+                      </rdf:rest>
+                    </rdf:List>
+                  </swrl:arguments>
+                </swrl:BuiltinAtom>
+              </rdf:first>
+              <rdf:rest>
+                <swrl:AtomList>
+                  <rdf:first>
+                    <swrl:DatavaluedPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="#hasProfileWidth"/>
+                      <swrl:argument1 rdf:resource="#sb"/>
+                      <swrl:argument2 rdf:resource="#pw"/>
+                    </swrl:DatavaluedPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <swrl:AtomList>
+                      <rdf:first>
+                        <swrl:BuiltinAtom>
+                          <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                          <swrl:arguments>
+                            <rdf:Description>
+                              <rdf:first rdf:resource="#pw"/>
+                              <rdf:rest>
+                                <rdf:Description>
+                                  <rdf:first rdf:resource="#wh"/>
+                                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                </rdf:Description>
+                              </rdf:rest>
+                            </rdf:Description>
+                          </swrl:arguments>
+                        </swrl:BuiltinAtom>
+                      </rdf:first>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </swrl:AtomList>
+                  </rdf:rest>
+                </swrl:AtomList>
+              </rdf:rest>
+            </swrl:AtomList>
+          </rdf:rest>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:body>
+  <swrl:head>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#IProfile"/>
+          <swrl:argument1 rdf:resource="#sb"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </swrl:AtomList>
+  </swrl:head>
+  <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
+  <rdfs:comment>Rule to detect to which Profile-Class SteelBeam-Individuals belong</rdfs:comment>
+  <rdfs:label>I-Profile</rdfs:label>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <swrl:AtomList>
+      <rdf:first>
         <swrl:IndividualPropertyAtom>
           <swrl:propertyPredicate rdf:resource="#hasCausation"/>
-          <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
+          <swrl:argument1 rdf:resource="#y"/>
           <swrl:argument2 rdf:resource="#Radiation"/>
         </swrl:IndividualPropertyAtom>
       </rdf:first>
       <rdf:rest>
         <swrl:AtomList>
           <rdf:first>
-            <swrl:ClassAtom>
-              <swrl:classPredicate rdf:resource="#Damage"/>
-              <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
-            </swrl:ClassAtom>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#hasDamage"/>
+              <swrl:argument1 rdf:resource="#x"/>
+              <swrl:argument2 rdf:resource="#y"/>
+            </swrl:IndividualPropertyAtom>
           </rdf:first>
           <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
         </swrl:AtomList>
@@ -1740,69 +2299,29 @@ Horizontal element of a beam, resisting most of the bending moment.</rdfs:commen
   <swrl:head>
     <swrl:AtomList>
       <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#PhysicalDamageRadiation"/>
-          <swrl:argument1 rdf:resource="http://www.semanticweb.org/leosc/ontologies/2023/2/SteelElementReuseOntology/d"/>
-        </swrl:ClassAtom>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#hasReusePotential"/>
+          <swrl:argument1 rdf:resource="#x"/>
+          <swrl:argument2 rdf:resource="#NonReusable"/>
+        </swrl:IndividualPropertyAtom>
       </rdf:first>
-      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:ClassAtom>
+              <swrl:classPredicate rdf:resource="#NonReusable"/>
+              <swrl:argument1 rdf:resource="#x"/>
+            </swrl:ClassAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </swrl:AtomList>
+      </rdf:rest>
     </swrl:AtomList>
   </swrl:head>
   <swrl2:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl2:isRuleEnabled>
-  <rdfs:comment>Define a Damage as PhysicalDamageRadiation</rdfs:comment>
-  <rdfs:label>Damage - Radiation</rdfs:label>
+  <rdfs:comment>Render an Element non reusable due to the Damage "Radiation"</rdfs:comment>
+  <rdfs:label>NonReusable - Radiation</rdfs:label>
 </swrl:Imp>
-
-<owl:AllDifferent>
-  <owl:distinctMembers rdf:parseType="Collection">
-    <rdf:Description rdf:about="#CorrosiveExposure"/>
-    <rdf:Description rdf:about="#Earthquake"/>
-    <rdf:Description rdf:about="#Fire"/>
-    <rdf:Description rdf:about="#Impact"/>
-    <rdf:Description rdf:about="#Radiation"/>
-    <rdf:Description rdf:about="#Wear"/>
-  </owl:distinctMembers>
-</owl:AllDifferent>
-
-<owl:AllDifferent>
-  <owl:distinctMembers rdf:parseType="Collection">
-    <rdf:Description rdf:about="#Aluminium"/>
-    <rdf:Description rdf:about="#CastIron"/>
-    <rdf:Description rdf:about="#Steel"/>
-  </owl:distinctMembers>
-</owl:AllDifferent>
-
-<owl:AllDisjointClasses>
-  <owl:members rdf:parseType="Collection">
-    <rdf:Description rdf:about="#ReuseClassA"/>
-    <rdf:Description rdf:about="#ReuseClassB"/>
-    <rdf:Description rdf:about="#ReuseClassC"/>
-  </owl:members>
-</owl:AllDisjointClasses>
-
-<owl:AllDisjointClasses>
-  <owl:members rdf:parseType="Collection">
-    <rdf:Description rdf:about="#ProfileShapeH"/>
-    <rdf:Description rdf:about="#ProfileShapeI"/>
-    <rdf:Description rdf:about="#ProfileShapeL"/>
-    <rdf:Description rdf:about="#ProfileShapeT"/>
-    <rdf:Description rdf:about="#ProfileShapeU"/>
-    <rdf:Description rdf:about="#ProfileShapeZ"/>
-  </owl:members>
-</owl:AllDisjointClasses>
-
-<owl:AllDisjointClasses>
-  <owl:members rdf:parseType="Collection">
-    <rdf:Description rdf:about="#HProfile"/>
-    <rdf:Description rdf:about="#HollowProfile"/>
-    <rdf:Description rdf:about="#IProfile"/>
-    <rdf:Description rdf:about="#LProfile"/>
-    <rdf:Description rdf:about="#SolidProfile"/>
-    <rdf:Description rdf:about="#TProfile"/>
-    <rdf:Description rdf:about="#UProfile"/>
-    <rdf:Description rdf:about="#ZProfile"/>
-  </owl:members>
-</owl:AllDisjointClasses>
 
 
 </rdf:RDF>

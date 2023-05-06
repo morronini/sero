@@ -92,16 +92,29 @@ def run_reasoner(args):
         new_steelbeam.hasAge = int(args["ElementAge_YY"])
 
     # DAMAGE - CQ2
+    cause_IRI = {
+        'Radioactivity': ['http://www.sero.org/SteelElementReuseOntology#Radiation'],  # Radioactivity
+        'Deformation': ['http://www.sero.org/SteelElementReuseOntology#Impact',
+                        'http://www.sero.org/SteelElementReuseOntology#Fire',
+                        'http://www.sero.org/SteelElementReuseOntology#Earthquake'],  # Plastic Deformation
+        'Corrosion': ['http://www.sero.org/SteelElementReuseOntology#CorrosiveExposure'],  # Corrosion
+        'Cracks': ['http://www.sero.org/SteelElementReuseOntology#Fire',
+                   'http://www.sero.org/SteelElementReuseOntology#Impact'],  # Fatigue
+        'Wear': ['http://www.sero.org/SteelElementReuseOntology#Wear'],  # Wear, Abrasion
+        'Abrasion': ['http://www.sero.org/SteelElementReuseOntology#Wear'],  # Abrasion
+        'Embrittlement': ['http://www.sero.org/SteelElementReuseOntology#CorrosiveExposure'],  # Embirttlement
+    }
+
     # only if a damage is selected, a new damage should be created
     if is_given(args, "Damages_IO"):
         if args["Damages_IO"] == "Yes.":
             new_damage = onto.Damage("Damage_"+name_new_steelbeam)
             new_steelbeam.hasDamage.append(new_damage)
             if "DamageType" in args.keys():
-                # insert here new_damage.hasCausation.append(CAUSATION OF DAMAGE) --> needed: dictionary where damage and causation are linked
-                if args["DamageType"] == "Radioactivity":
-                    cause_radio = onto.search_one(iri = 'http://www.sero.org/SteelElementReuseOntology#Radiation')
-                    new_damage.hasCausation.append(cause_radio)
+                for key in cause_IRI.keys():
+                    if args["DamageType"] == key:
+                        cause = onto.search_one(iri = str(cause_IRI[key][0]))
+                        new_damage.hasCausation.append(cause)
 
     # REUSE CLASS - CQ3
     # if selected in Browser OriginalCEMarking; OriginalMaterialDocumentation; OriginalTestCertificatesDocumentation
@@ -142,7 +155,7 @@ def run_reasoner(args):
 
     # Run Reasoner
     with onto:
-        sync_reasoner_pellet()
+        sync_reasoner_pellet(debug = 0)
 
     # print Steelbeam and damage for checking
     print(vars(new_steelbeam))
@@ -192,7 +205,9 @@ def run_reasoner(args):
         results_dic["Reusability"] = f'This beam should be reusable!'
 
     # assing Reuse_Class
-    if onto.ReuseClassASteelBeam in new_steelbeam.is_a:
+    if onto.NonReusableSteelBeam in new_steelbeam.is_a:
+        results_dic["Reuse_Class"] = f'This beam is not reusable!'
+    elif onto.ReuseClassASteelBeam in new_steelbeam.is_a:
         results_dic["Reuse_Class"] = f'This beam is a Reuse Class A steel beam'
     elif onto.ReuseClassBSteelBeam in new_steelbeam.is_a:
         results_dic["Reuse_Class"] = f'This beam is a Reuse Class B steel beam'

@@ -6,17 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5a382026-8899-491a-9921-82acbf4fbdfc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reuse_02.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SERO.py" beforeDir="false" afterPath="$PROJECT_DIR$/SERO.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SERO_ont/SERO_Scenario1.rdf" beforeDir="false" afterPath="$PROJECT_DIR$/SERO_ont/SERO_Scenario1.rdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SERO_ontSERO_Scenario1.rdf" beforeDir="false" afterPath="$PROJECT_DIR$/SERO_ontSERO_Scenario1.rdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SERO_ontSERO_Scenario1.rdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Sandbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sandbox.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reasoner.py" beforeDir="false" afterPath="$PROJECT_DIR$/reasoner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Images/811e7d7887c5a94c9c910f0e53e3bf7e8c6b1ed9ad96b2eb2cd50593baff3ad9.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Seite-1.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/Seite-1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/nicepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/nicepage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Seite-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Seite-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/userinput_custom_06.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/userinput_custom_06.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,6 +226,7 @@
       <workItem from="1683269283706" duration="2548000" />
       <workItem from="1683312909376" duration="12600000" />
       <workItem from="1683326189107" duration="14000" />
+      <workItem from="1683362046382" duration="4601000" />
     </task>
     <servers />
   </component>

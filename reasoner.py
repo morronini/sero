@@ -205,14 +205,17 @@ def run_reasoner(args):
         results_dic["Reusability"] = f'This beam should be reusable!'
 
     # assing Reuse_Class
+    #
     if onto.NonReusableSteelBeam in new_steelbeam.is_a:
         results_dic["Reuse_Class"] = f'This beam is not reusable!'
     elif onto.ReuseClassASteelBeam in new_steelbeam.is_a:
         results_dic["Reuse_Class"] = f'This beam is a Reuse Class A steel beam'
     elif onto.ReuseClassBSteelBeam in new_steelbeam.is_a:
         results_dic["Reuse_Class"] = f'This beam is a Reuse Class B steel beam'
+    #elif not new_steelbeam.hasDamage:
+
     else:
-        results_dic["Reuse_Class"] = f'This beams Reuse Class cannot be determined. Nevertheless, this beam should be reusable, consider it Reuse Class C ;)!'
+        results_dic["Reuse_Class"] = f'This beams Reuse Class cannot be determined. Nevertheless, this beam should be reusable, consider it Reuse Class C!'
 
     # save ontology
     onto.save(file = join(path_dir,name_onto), format= "rdfxml")
